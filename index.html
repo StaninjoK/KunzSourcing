@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Kunz Sourcing – Premium Merinowolle in Container-Volumen aus Uruguay</title>
+    <meta name="description" content="Container-Import von Premium Merinowolle (17–30 Mikron) aus Uruguay für die europäische Textilindustrie.">
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #FAF7F2;
+            --color-wool: #F5EDE3;
+            --color-sand: #D4C4B0;
+            --color-forest: #2C5F2D;
+            --color-forest-light: #3A7A3B;
+            --color-charcoal: #2B2B2B;
+            --color-gray: #6B6B6B;
+            --color-light-gray: #E8E4DE;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-charcoal);
+            background: var(--color-cream);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-light-gray);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-forest);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding-right: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .logo img {
+            height: 2rem;
+            width: 2rem;
+            display: block;
+        }
+        .logo span { font-weight: 400; color: var(--color-charcoal); }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            position: relative;
+            white-space: nowrap;
+        }
+        .nav-links a:hover { color: var(--color-forest); }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--color-forest);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--color-forest);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.8rem !important;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { background: var(--color-forest-light); color: white !important; }
+        .lang-switcher {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+            background: var(--color-wool);
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-light-gray);
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+            opacity: 0.5;
+        }
+        .lang-btn:hover { opacity: 0.8; background: rgba(0,0,0,0.05); }
+        .lang-btn.active { opacity: 1; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+        .hero-content { flex: 1; }
+        .hero-visual { flex: 1; position: relative; }
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            line-height: 1.15;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--color-forest);
+        }
+        .hero-sub {
+            font-size: 1.15rem;
+            color: var(--color-gray);
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+            line-height: 1.7;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--color-forest);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-forest);
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: var(--color-forest-light);
+            border-color: var(--color-forest-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(44, 95, 45, 0.2);
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--color-forest);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            border: 2px solid var(--color-forest);
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+        .btn-secondary:hover {
+            background: var(--color-forest);
+            color: white;
+        }
+        .hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--color-wool) 0%, var(--color-sand) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-image-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 200%; height: 200%;
+            background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);
+            animation: slide 20s linear infinite;
+        }
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(0, 0); }
+        }
+        .hero-image-placeholder span {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--color-charcoal);
+            opacity: 0.6;
+            z-index: 1;
+            text-align: center;
+            padding: 1rem;
+        }
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+        }
+        .section-header p {
+            color: var(--color-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .micron-spectrum {
+            background: white;
+            padding: 6rem 2rem;
+        }
+        .spectrum-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .spectrum-bar {
+            display: flex;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 3rem 0 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .spectrum-segment {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        .spectrum-segment:nth-child(1) { background: #8B9A7B; }
+        .spectrum-segment:nth-child(2) { background: #A89B7B; }
+        .spectrum-segment:nth-child(3) { background: #C4A57B; }
+        .spectrum-labels {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .spectrum-label {
+            flex: 1;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .spectrum-label h4 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .spectrum-label p {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--color-light-gray);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .product-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: var(--color-wool);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray);
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+        .product-info { padding: 2rem; }
+        .product-info h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .product-info .subtitle {
+            color: var(--color-forest);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .product-info p {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .specs {
+            background: var(--color-cream);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+        .specs strong { color: var(--color-charcoal); }
+        .logistics-section {
+            background: var(--color-charcoal);
+            color: white;
+            padding: 6rem 2rem;
+        }
+        .logistics-section .section-header h2,
+        .logistics-section .section-header p { color: white; }
+        .logistics-section .section-header p { opacity: 0.8; }
+        .container-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .container-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        .container-card .icon-box {
+            width: 80px;
+            height: 80px;
+            background: var(--color-forest);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+        .container-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .container-card .weight {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-sand);
+            margin: 1rem 0;
+        }
+        .container-card p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .timeline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .timeline-item {
+            text-align: center;
+            flex: 1;
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: var(--color-forest);
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+        }
+        .timeline-item span {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        .timeline-line {
+            flex: 0.5;
+            height: 2px;
+            background: rgba(255,255,255,0.2);
+            margin-bottom: 1.2rem;
+        }
+        .process-section {
+            background: linear-gradient(to bottom, var(--color-cream), white);
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -1rem;
+            top: 1.5rem;
+            color: var(--color-sand);
+            font-size: 1.2rem;
+            opacity: 0.5;
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--color-forest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            color: white;
+        }
+        .step h4 {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .step p {
+            font-size: 0.85rem;
+            color: var(--color-gray);
+            line-height: 1.5;
+        }
+        .pricing-section {
+            background: white;
+            padding: 6rem 2rem;
+        }
+        .pricing-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 3rem;
+            border: 2px solid var(--color-forest);
+            border-radius: 8px;
+            background: var(--color-cream);
+        }
+        .pricing-box h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .pricing-box p {
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+        }
+        .pricing-factors {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .pricing-factor {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--color-light-gray);
+        }
+        .pricing-factor strong {
+            display: block;
+            color: var(--color-charcoal);
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+        .pricing-factor span {
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--color-sand), var(--color-wool));
+            border-radius: 8px;
+            overflow: hidden;
+            display: block;
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+        .about-text h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-text p {
+            color: var(--color-gray);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-wool);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-forest);
+            margin-top: 1rem;
+        }
+        .contact-section {
+            background: white;
+            padding: 6rem 2rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-info h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-info > p {
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-detail .icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-wool);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .contact-detail div strong {
+            display: block;
+            color: var(--color-charcoal);
+            margin-bottom: 0.2rem;
+        }
+        .contact-detail div span,
+        .contact-detail div a {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .contact-detail div a:hover { color: var(--color-forest); }
+        .contact-form {
+            background: var(--color-cream);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-light-gray);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--color-light-gray);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            background: white;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-forest);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-submit {
+            width: 100%;
+            background: var(--color-forest);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .form-submit:hover {
+            background: var(--color-forest-light);
+            transform: translateY(-1px);
+        }
+        .form-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--color-gray);
+        }
+        .small-link-banner {
+            background: var(--color-wool);
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            margin-top: 60px;
+        }
+        .small-link-banner a {
+            color: var(--color-forest);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .small-link-banner a:hover { text-decoration: underline; }
+        footer {
+            background: var(--color-charcoal);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer .footer-content {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            text-align: center;
+        }
+        footer .footer-content > div {
+            flex: 1 1 200px;
+            max-width: 260px;
+        }
+        footer h4 {
+            color: white;
+            font-family: var(--font-serif);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: white; }
+        .footer-logo {
+            display: block;
+            margin: 0 auto 1.5rem;
+            height: 56px;
+            width: 56px;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 1100px) {
+            .nav-links { gap: 1.2rem; }
+            .nav-links a { font-size: 0.82rem; }
+        }
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; padding-top: 6rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-visual { width: 100%; }
+            .products-grid, .container-grid, .contact-grid, .pricing-factors, .about-content { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .step:not(:last-child)::after { display: none; }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-cream); flex-direction: column; padding: 1rem 2rem; border-bottom: 1px solid var(--color-light-gray); }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .btn-secondary { margin-left: 0; margin-top: 1rem; display: block; text-align: center; }
+            footer .footer-content { flex-direction: column; align-items: center; }
+            .spectrum-bar { flex-direction: column; height: auto; }
+            .spectrum-segment { padding: 1rem; }
+            .nav-right { gap: 0.5rem; }
+            .lang-switcher { padding: 0.2rem 0.3rem; }
+            .lang-btn { font-size: 0.95rem; padding: 0.15rem 0.3rem; }
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+            .whatsapp-float svg { width: 24px; height: 24px; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo"><img src="Images/Logo.png" alt="Kunz Sourcing Logo">Kunz <span>Sourcing</span></a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#feingrade" data-i18n="nav_feingrade">Feingrade</a></li>
+                    <li><a href="#produkte" data-i18n="nav_produkte">Produkte</a></li>
+                    <li><a href="#logistik" data-i18n="nav_logistik">Logistik</a></li>
+                    <li><a href="#prozess" data-i18n="nav_prozess">Prozess</a></li>
+                    <li><a href="#ueber" data-i18n="nav_ueber">Über uns</a></li>
+                    <li><a href="#kontakt" data-i18n="nav_kontakt">Kontakt</a></li>
+                    <li><a href="handfearbereien.html" class="nav-cta" data-i18n="nav_klein">Kleinbestellungen (ab 20 kg) →</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
+                    <button class="lang-btn" onclick="setLanguage('en')" title="English">🇪🇳</button>
+                    <button class="lang-btn" onclick="setLanguage('ru')" title="Русский">🇷🇺</button>
+                    <button class="lang-btn" onclick="setLanguage('pl')" title="Polski">🇵🇱</button>
+                    <button class="lang-btn" onclick="setLanguage('es')" title="Español">🇪🇸</button>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü öffnen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="small-link-banner">
+        <span data-i18n="banner_text">Sie suchen kleinere Mengen ab 20 kg, Singles oder ein 1-Kilo-Testpaket? →</span> <a href="handfearbereien.html" data-i18n="banner_link">Zur Handfärbereien-Seite</a>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero_h1">Premium Merinowolle in Container-Volumen – <em>Direkt aus Uruguay für die europäische Textilindustrie.</em></h1>
+            <p class="hero-sub" data-i18n="hero_sub">
+                Wir verarbeiten Wolle mit einer Feinheit zwischen 17 und 30 Mikron. 
+                Gekämmte Tops und gewaschene Vliese für die Kammgarn-, Kardier- und Karbonisierungsindustrie. 
+                Seefracht in ca. 40 Tagen. Preise auf Anfrage – je nach Menge, Volumen und Kundentreue.
+            </p>
+            <div>
+                <a href="#kontakt" class="btn-primary" data-i18n="cta_primary">Individuelles Angebot anfordern</a>
+                <a href="handfearbereien.html" class="btn-secondary" data-i18n="cta_secondary">Für Handfärbereien & Kleinunternehmer</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+    <!-- Hier wird das echte Bild aus deinem images-Ordner geladen -->
+    <img src="images/Verladung.jpg" alt="Große Mengen Merinowolle in Ballen / Container-Verladung in Uruguay" class="hero-img">
+</div>
+
+<!-- Das CSS wird in ein <style>-Tag gepackt, damit der Browser es kapiert und nicht als Text anzeigt -->
+<style>
+.hero-img {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;    /* Passt sich der Höhe deines Textes links an */
+    object-fit: cover;    /* Das Bild schneidet sich perfekt zu, ohne verzerrt zu werden */
+    border-radius: 8px;   /* Macht die Ecken elegant rund */
+    display: block;
+}
+</style>    </section>
+
+    <section class="micron-spectrum" id="feingrade">
+        <div class="spectrum-container">
+            <div class="section-header">
+                <h2 data-i18n="spectrum_title">Unser Feingrade-Spektrum: 17 – 30 Mikron</h2>
+                <p data-i18n="spectrum_desc">Von ultrafeinem Luxus-Kammgarn bis hin zu robustem Industrie-Rohmaterial – wir liefern die passende Fraktion für Ihren Verarbeitungsprozess.</p>
+            </div>
+            <div class="spectrum-bar">
+                <div class="spectrum-segment">17 – 21 µ</div>
+                <div class="spectrum-segment">21 – 24 µ</div>
+                <div class="spectrum-segment">24 – 30 µ</div>
+            </div>
+            <div class="spectrum-labels">
+                <div class="spectrum-label">
+                    <h4 data-i18n="label_ultra">Ultrafein</h4>
+                    <p data-i18n="desc_ultra">17 – 21 Mikron<br>Luxus-Kammgarn, hochwertige Feinstrickwaren, exklusive Textilien. Höchste Faserqualität mit seidigem Griff.</p>
+                </div>
+                <div class="spectrum-label">
+                    <h4 data-i18n="label_fine">Fein</h4>
+                    <p data-i18n="desc_fine">21 – 24 Mikron<br>Standard-Kammgarn für Pullover, Socken und Alltagsbekleidung. Optimales Preis-Leistungs-Verhältnis.</p>
+                </div>
+                <div class="spectrum-label">
+                    <h4 data-i18n="label_robust">Medium – Robust</h4>
+                    <p data-i18n="desc_robust">24 – 30 Mikron<br>Kardierwolle, Filzwolle, Teppichgarn und industrielle Verarbeitung. Strapazierfähig und voluminös.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="produkte">
+    <div class="section-header">
+        <h2 data-i18n="products_title">Produkte für die Textilindustrie</h2>
+        <p data-i18n="products_desc">Gekämmt oder gewaschen – in der Feinheit und Menge, die Ihr Produktionsplan vorsieht.</p>
+    </div>
+    <div class="products-grid">
+        
+        <!-- 1. Gekämmte Merino-Tops -->
+        <div class="product-card">
+            <img src="images/merino-tops.jpg" alt="Gekämmte Merino-Tops in industriellem Umfang" class="product-image">
+            <div class="product-info">
+                <span class="subtitle" data-i18n="sub_tops">Kammgarnindustrie</span>
+                <h3 data-i18n="title_tops">Gekämmte Merino-Tops</h3>
+                <p data-i18n="text_tops">Professionell gekämmte Tops in verschiedenen Micron-Fraktionen. Gleichmäßige Faserlänge, minimale Verunreinigung, bereit für die Weiterverarbeitung zu Kammgarn.</p>
+                <div class="specs">
+                    <strong data-i18n="specs_avail">Verfügbar:</strong> 
+                    <span data-i18n="specs_tops">Feingrade 17–30 Mikron · Fraktionen nach Kundenwunsch · Ballen oder lose Tops · Preis auf Anfrage</span>
+                </div>
+                <a href="#kontakt" class="btn-primary" onclick="selectProduct('tops')" data-i18n="btn_tops">Angebot für Tops anfordern</a>
+            </div>
+        </div>
+
+        <!-- 2. Gewaschene Merino-Vliese -->
+        <div class="product-card">
+            <img src="images/merino-vliese.jpg" alt="Gewaschene Merino-Vliese in Bulk-Verpackung" class="product-image">
+            <div class="product-info">
+                <span class="subtitle" data-i18n="sub_vliese">Kardier- & Karbonisierungsindustrie</span>
+                <h3 data-i18n="title_vliese">Gewaschene Merino-Vliese</h3>
+                <p data-i18n="text_vliese">Sorgfältig gewaschene Rohwolle in Vliesform. Ideal für Kardieranlagen, Karbonisierungsbetriebe und die Weiterverarbeitung zu Streichgarn oder Filzprodukten.</p>
+                <div class="specs">
+                    <strong data-i18n="specs_avail">Verfügbar:</strong> 
+                    <span data-i18n="specs_vliese">Feingrade 17–30 Mikron · Gewaschen und getrocknet · Bulkware in Ballen · Preis auf Anfrage</span>
+                </div>
+                <a href="#kontakt" class="btn-primary" onclick="selectProduct('vliese')" data-i18n="btn_vliese">Angebot für Vliese anfordern</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+/* Überschreibt die alten KI-Karten-Abstände radikal */
+#produkte .products-grid .product-card {
+    padding: 0 !important; 
+    margin: 0 !important;
+    overflow: hidden !important;
+    background-color: #ffffff !important;
+}
+
+/* Zwingt das Bild, den beigen Hintergrund und das alte Platzhalter-Padding zu löschen */
+#produkte .products-grid .product-card .product-image {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    display: block !important;
+    padding: 0 !important;           /* Löscht den inneren beigen Rahmen */
+    margin: 0 !important;            /* Löscht eventuelle Außenabstände */
+    background: transparent !important; /* Macht den alten beigen Hintergrund unsichtbar */
+    border: none !important;         /* Sicher ist sicher */
+}
+
+/* Gibt dem Textbereich darunter wieder seinen sauberen, geschützten Abstand */
+#produkte .products-grid .product-card .product-info {
+    padding: 25px !important;
+}
+</style>    <section class="logistics-section" id="logistik">
+        <div class="section-header">
+            <h2 data-i18n="logistics_title">Container-Logistik & Seefracht</h2>
+            <p data-i18n="logistics_desc">Direktversand aus Uruguay nach Europa. Transparent, planbar und in Industriemengen.</p>
+        </div>
+        <div class="container-grid">
+            <div class="container-card">
+                <div class="icon-box">📦</div>
+                <h3 data-i18n="cont20_title">20ft Standard-Container</h3>
+                <div class="weight" data-i18n="cont20_weight">bis 10,5 t</div>
+                <p data-i18n="cont20_desc">Merinowolle pro Container<br>Ideal für mittlere Volumen und erste Testlieferungen in größerem Maßstab.</p>
+            </div>
+            <div class="container-card">
+                <div class="icon-box">🚢</div>
+                <h3 data-i18n="cont40_title">40ft Standard-Container</h3>
+                <div class="weight" data-i18n="cont40_weight">bis 21 t</div>
+                <p data-i18n="cont40_desc">Merinowolle pro Container<br>Die effizienteste Lösung für Großabnehmer und kontinuierliche Versorgung.</p>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item"><div class="timeline-dot"></div><span data-i18n="tl_prod">Produktion & QC<br>Uruguay</span></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><span data-i18n="tl_load">Verladung<br>Montevideo</span></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><span data-i18n="tl_sea">Seefracht<br>ca. 40 Tage</span></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><span data-i18n="tl_arrive">Ankunft<br>Hamburg / Bremerhaven</span></div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><span data-i18n="tl_customs">Zollabfertigung<br>& Übergabe</span></div>
+        </div>
+    </section>
+
+    <section class="process-section" id="prozess">
+        <div class="section-header">
+            <h2 data-i18n="process_title">Unser B2B-Prozess für Industriekunden</h2>
+            <p data-i18n="process_desc">Von der ersten Anfrage bis zur Ankunft im Hafen – persönlich, transparent und auf Augenhöhe.</p>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4 data-i18n="step1_title">Anfrage</h4>
+                <p data-i18n="step1_desc">Sie nennen Menge, Feingrade und Verarbeitungszustand.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4 data-i18n="step2_title">Angebot & Proben</h4>
+                <p data-i18n="step2_desc">Wir erstellen ein individuelles Angebot und senden Laborwerte bzw. Muster.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4 data-i18n="step3_title">Vertrag</h4>
+                <p data-i18n="step3_desc">Bei Einigung: Vertragsabschluss und Anzahlung.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4 data-i18n="step4_title">Produktion</h4>
+                <p data-i18n="step4_desc">Qualitätskontrolle vor Ort in Uruguay durch Stanley Kunz persönlich.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h4 data-i18n="step5_title">Seefracht</h4>
+                <p data-i18n="step5_desc">Verladung, Seefracht-Tracking und ca. 40 Tage Transport.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <h4 data-i18n="step6_title">Ankunft</h4>
+                <p data-i18n="step6_desc">Ankunft im Zielhafen. Zollabfertigung durch Sie als Importeur.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="preise">
+        <div class="pricing-box">
+            <h3 data-i18n="pricing_title">Preise auf Anfrage</h3>
+            <p data-i18n="pricing_desc">Als Direktimporteur aus Uruguay kalkulieren wir fair und individuell. Ihr Preis hängt von mehreren Faktoren ab:</p>
+            <div class="pricing-factors">
+                <div class="pricing-factor">
+                    <strong data-i18n="factor1_title">Menge</strong>
+                    <span data-i18n="factor1_desc">20ft oder 40ft Container? Teilladung? Je höher das Volumen, desto günstiger der Kilopreis.</span>
+                </div>
+                <div class="pricing-factor">
+                    <strong data-i18n="factor2_title">Feingrade</strong>
+                    <span data-i18n="factor2_desc">17–21 Mikron ist premiumbewertet, 24–30 Mikron bietet maximales Volumen für die Industrie.</span>
+                </div>
+                <div class="pricing-factor">
+                    <strong data-i18n="factor3_title">Kundentreue</strong>
+                    <span data-i18n="factor3_desc">Bestandskunden und Wiederholungsbesteller profitieren von Rabattstaffeln und Prioritätsproduktion.</span>
+                </div>
+            </div>
+            <a href="#kontakt" class="btn-primary" data-i18n="pricing_cta">Individuelles Angebot anfordern</a>
+        </div>
+    </section>
+
+    <section id="ueber">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Images/Stanley.jpeg" alt="Foto: Stanley in Uruguay mit Wolle" data-i18n-alt="about_img">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="about_title">Ihr direkter Draht nach Südamerika</h2>
+                <p data-i18n="about_p1">
+                    Ich bin Stanley Kunz – vor Ort in Uruguay, wo die besten Merinoschafe der Welt grasen. 
+                    Ich kenne die Produktionsstätten persönlich, spreche die Sprache der Produzenten und 
+                    verstehe die Ansprüche deutscher Textilkünstler.
+                </p>
+                <p data-i18n="about_p2">
+                    Mit Kunz Sourcing schlage ich die Brücke zwischen südamerikanischer Premium-Qualität 
+                    und der deutschen Handfärberei-Szene. Kein Opaque-Handel, keine Überraschungen – 
+                    nur erstklassige Rohwolle, die Ihre Farben zum Leuchten bringt.
+                </p>
+                <div class="location-badge">
+                    <span>📍</span> <span data-i18n="location">Direkt aus Uruguay – Montevideo &amp; Umland</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="kontakt">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 data-i18n="contact_title">Kontakt für Industrieanfragen</h2>
+                <p data-i18n="contact_desc">
+                    Teilen Sie uns Ihre geplante Menge, den gewünschten Feingrade und den Verarbeitungszustand mit. 
+                    Wir melden uns innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot.
+                </p>
+                <div class="contact-detail">
+                    <div class="icon">📧</div>
+                    <div>
+                        <strong data-i18n="lbl_email">E-Mail</strong>
+                        <a href="mailto:Stanley@kunzsourcing.com">Stanley@kunzsourcing.com</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">
+                        <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor" style="color: var(--color-charcoal);"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115.1-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-13.4-32.3-18.3-44.2-4.8-11.6-9.7-10-13.4-10.2-3.5-.2-7.5-.2-11.5-.2-4 0-10.5 1.5-16 7.4-5.5 5.9-21.1 20.6-21.1 50.2 0 29.6 21.6 58.2 24.6 62.3 3 4.1 41.3 63.1 101.6 88.5 50.5 21.2 60.8 17 71.8 15.8 11-1.2 33.3-13.6 38-26.8 4.7-13.2 4.7-24.6 3.3-26.8-1.4-2.3-5.1-3.7-10.7-6.5z"/></svg>
+                    </div>
+                    <div>
+                        <strong data-i18n="lbl_phone">Telefon & WhatsApp</strong>
+                        <a href="https://wa.me/message/FDT6WPLEOMFAE1" target="_blank" rel="noopener noreferrer">+49 6344 9269681</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-charcoal);">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <strong data-i18n="lbl_insta">Instagram</strong>
+                        <a href="https://www.instagram.com/kunzsourcing?igsh=bng0b2xrcGgyMmNp" target="_blank" rel="noopener noreferrer">@kunzsourcing</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">
+                        <svg width="20" height="20" viewBox="0 0 320 512" fill="currentColor" style="color: var(--color-charcoal);"><path d="M279.14 288l14.22-92.66h-88.91v-59.8c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                    </div>
+                    <div>
+                        <strong data-i18n="lbl_fb">Facebook</strong>
+                        <a href="https://www.facebook.com/share/1ELX6g9reX/" target="_blank" rel="noopener noreferrer">Kunz Sourcing</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">📦</div>
+                    <div>
+                        <strong data-i18n="lbl_ship">Versand</strong>
+                        <span data-i18n="val_ship">Seefracht ab Montevideo, Uruguay</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">💶</div>
+                    <div>
+                        <strong data-i18n="lbl_pay">Zahlung</strong>
+                        <span data-i18n="val_pay">SEPA-Überweisung in Euro / Anzahlung & Restzahlung</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firma" data-i18n="form_firma">Firmenname *</label>
+                        <input type="text" id="firma" name="firma" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" data-i18n="form_name">Ansprechpartner *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" data-i18n="form_email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon" data-i18n="form_phone">Telefon / WhatsApp</label>
+                        <input type="tel" id="telefon" name="telefon">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="menge" data-i18n="form_menge">Gewünschte Menge *</label>
+                    <select id="menge" name="menge" required>
+                        <option value="" data-i18n="opt_select">Bitte wählen...</option>
+                        <option value="20-100kg" data-i18n="opt_20_100">20 – 100 kg (Teilladung)</option>
+                        <option value="100-500kg" data-i18n="opt_100_500">100 – 500 kg</option>
+                        <option value="500kg-10t" data-i18n="opt_500_10t">500 kg – 10 Tonnen</option>
+                        <option value="20ft" data-i18n="opt_20ft">20ft Container (bis 10,5 t)</option>
+                        <option value="40ft" data-i18n="opt_40ft">40ft Container (bis 21 t)</option>
+                        <option value="mehrere" data-i18n="opt_multi">Mehrere Container / Dauerlieferung</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="feingrade" data-i18n="form_feingrade">Gewünschter Feingrade *</label>
+                        <select id="feingrade" name="feingrade" required>
+                            <option value="" data-i18n="opt_select">Bitte wählen...</option>
+                            <option value="17-21" data-i18n="opt_17_21">17 – 21 Mikron (Ultrafein)</option>
+                            <option value="21-24" data-i18n="opt_21_24">21 – 24 Mikron (Fein)</option>
+                            <option value="24-30" data-i18n="opt_24_30">24 – 30 Mikron (Medium/Robust)</option>
+                            <option value="gemischt" data-i18n="opt_mixed">Gemischte Fraktionen</option>
+                            <option value="keine" data-i18n="opt_advice">Keine Präferenz – beraten Sie mich</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zustand" data-i18n="form_zustand">Verarbeitungszustand *</label>
+                        <select id="zustand" name="zustand" required>
+                            <option value="" data-i18n="opt_select">Bitte wählen...</option>
+                            <option value="gekaemmt" data-i18n="opt_tops">Gekämmte Tops</option>
+                            <option value="gewaschen" data-i18n="opt_fleece">Gewaschene Vliese</option>
+                            <option value="beides" data-i18n="opt_both">Beides – je nach Verfügbarkeit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="termin" data-i18n="form_termin">Gewünschter Lieferzeitraum</label>
+                    <input type="text" id="termin" name="termin" placeholder="z. B. Q4 2026 oder flexibel">
+                </div>
+                <div class="form-group">
+                    <label for="nachricht" data-i18n="form_msg">Nachricht & Besonderheiten</label>
+                    <textarea id="nachricht" name="nachricht" placeholder="Haben Sie spezielle Anforderungen an die Faserlänge, Farbe (crudo/weiß), Verpackung oder Zertifizierung?"></textarea>
+                </div>
+                <button type="submit" class="form-submit" data-i18n="form_submit">Industrieanfrage senden</button>
+                <p class="form-note" data-i18n="form_note">Kein automatischer Kaufvertrag. Wir prüfen Verfügbarkeit und melden uns mit einem maßgeschneiderten Angebot.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <img src="Images/Logo.png" alt="Kunz Sourcing Logo" class="footer-logo">
+        <div class="footer-content">
+            <div>
+                <h4>Kunz Sourcing</h4>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6;" data-i18n="footer_desc">
+                    Premium Merinowolle in Container-Volumen direkt aus Uruguay für die europäische Textilindustrie.
+                </p>
+            </div>
+            <div>
+                <h4 data-i18n="footer_legal">Rechtliches</h4>
+                <a href="impressum.html" data-i18n="footer_imp">Impressum</a>
+                <a href="datenschutz.html" data-i18n="footer_priv">Datenschutz</a>
+                <a href="agb.html" data-i18n="footer_agb">AGB</a>
+            </div>
+            <div>
+                <h4 data-i18n="footer_contact">Kontakt</h4>
+                <a href="mailto:Stanley@kunzsourcing.com">Stanley@kunzsourcing.com</a>
+                <a href="https://wa.me/message/FDT6WPLEOMFAE1" target="_blank" rel="noopener noreferrer">+49 6344 9269681</a>
+                <span style="color: rgba(255,255,255,0.4); display: block; font-size: 0.75rem; margin-top: -0.3rem; margin-bottom: 0.3rem;">(WhatsApp)</span>
+                <span style="color: rgba(255,255,255,0.6); display: block; margin-top: 0.8rem; font-size: 0.85rem;">
+                    Kunz Sourcing<br>
+                    Stanley Kunz Pazer<br>
+                    80100 Kiyú / Libertad<br>
+                    San José, Uruguay
+                </span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kunz Sourcing. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span> Made with 🧶 in Uruguay.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            de: {
+                page_title: "Kunz Sourcing – Premium Merinowolle in Container-Volumen aus Uruguay",
+                nav_feingrade: "Feingrade",
+                nav_produkte: "Produkte",
+                nav_logistik: "Logistik",
+                nav_prozess: "Prozess",
+                nav_ueber: "Über uns",
+                nav_kontakt: "Kontakt",
+                nav_klein: "Kleinbestellungen (ab 20 kg) →",
+                banner_text: "Sie suchen kleinere Mengen ab 20 kg, Singles oder ein 1-Kilo-Testpaket? →",
+                banner_link: "Zur Handfärbereien-Seite",
+                hero_h1: "Premium Merinowolle in Container-Volumen – <em>Direkt aus Uruguay für die europäische Textilindustrie.</em>",
+                hero_sub: "Wir verarbeiten Wolle mit einer Feinheit zwischen 17 und 30 Mikron. Gekämmte Tops und gewaschene Vliese für die Kammgarn-, Kardier- und Karbonisierungsindustrie. Seefracht in ca. 40 Tagen. Preise auf Anfrage – je nach Menge, Volumen und Kundentreue.",
+                cta_primary: "Individuelles Angebot anfordern",
+                cta_secondary: "Für Handfärbereien & Kleinunternehmer",
+                hero_img: "Foto: Große Mengen Merinowolle in Ballen / Container-Verladung in Uruguay",
+                spectrum_title: "Unser Feingrade-Spektrum: 17 – 30 Mikron",
+                spectrum_desc: "Von ultrafeinem Luxus-Kammgarn bis hin zu robustem Industrie-Rohmaterial – wir liefern die passende Fraktion für Ihren Verarbeitungsprozess.",
+                label_ultra: "Ultrafein",
+                desc_ultra: "17 – 21 Mikron<br>Luxus-Kammgarn, hochwertige Feinstrickwaren, exklusive Textilien. Höchste Faserqualität mit seidigem Griff.",
+                label_fine: "Fein",
+                desc_fine: "21 – 24 Mikron<br>Standard-Kammgarn für Pullover, Socken und Alltagsbekleidung. Optimales Preis-Leistungs-Verhältnis.",
+                label_robust: "Medium – Robust",
+                desc_robust: "24 – 30 Mikron<br>Kardierwolle, Filzwolle, Teppichgarn und industrielle Verarbeitung. Strapazierfähig und voluminös.",
+                products_title: "Produkte für die Textilindustrie",
+                products_desc: "Gekämmt oder gewaschen – in der Feinheit und Menge, die Ihr Produktionsplan vorsieht.",
+                img_tops: "Foto: Gekämmte Merino-Tops in industriellem Umfang",
+                sub_tops: "Kammgarnindustrie",
+                title_tops: "Gekämmte Merino-Tops",
+                text_tops: "Professionell gekämmte Tops in verschiedenen Micron-Fraktionen. Gleichmäßige Faserlänge, minimale Verunreinigung, bereit für die Weiterverarbeitung zu Kammgarn.",
+                specs_avail: "Verfügbar:",
+                specs_tops: "Feingrade 17–30 Mikron · Fraktionen nach Kundenwunsch · Ballen oder lose Tops · Preis auf Anfrage",
+                btn_tops: "Angebot für Tops anfordern",
+                img_vliese: "Foto: Gewaschene Merino-Vliese in Bulk-Verpackung",
+                sub_vliese: "Kardier- & Karbonisierungsindustrie",
+                title_vliese: "Gewaschene Merino-Vliese",
+                text_vliese: "Sorgfältig gewaschene Rohwolle in Vliesform. Ideal für Kardieranlagen, Karbonisierungsbetriebe und die Weiterverarbeitung zu Streichgarn oder Filzprodukten.",
+                specs_vliese: "Feingrade 17–30 Mikron · Gewaschen und getrocknet · Bulkware in Ballen · Preis auf Anfrage",
+                btn_vliese: "Angebot für Vliese anfordern",
+                logistics_title: "Container-Logistik & Seefracht",
+                logistics_desc: "Direktversand aus Uruguay nach Europa. Transparent, planbar und in Industriemengen.",
+                cont20_title: "20ft Standard-Container",
+                cont20_weight: "bis 10,5 t",
+                cont20_desc: "Merinowolle pro Container<br>Ideal für mittlere Volumen und erste Testlieferungen in größerem Maßstab.",
+                cont40_title: "40ft Standard-Container",
+                cont40_weight: "bis 21 t",
+                cont40_desc: "Merinowolle pro Container<br>Die effizienteste Lösung für Großabnehmer und kontinuierliche Versorgung.",
+                tl_prod: "Produktion & QC<br>Uruguay",
+                tl_load: "Verladung<br>Montevideo",
+                tl_sea: "Seefracht<br>ca. 40 Tage",
+                tl_arrive: "Ankunft<br>Hamburg / Bremerhaven",
+                tl_customs: "Zollabfertigung<br>& Übergabe",
+                process_title: "Unser B2B-Prozess für Industriekunden",
+                process_desc: "Von der ersten Anfrage bis zur Ankunft im Hafen – persönlich, transparent und auf Augenhöhe.",
+                step1_title: "Anfrage",
+                step1_desc: "Sie nennen Menge, Feingrade und Verarbeitungszustand.",
+                step2_title: "Angebot & Proben",
+                step2_desc: "Wir erstellen ein individuelles Angebot und senden Laborwerte bzw. Muster.",
+                step3_title: "Vertrag",
+                step3_desc: "Bei Einigung: Vertragsabschluss und Anzahlung.",
+                step4_title: "Produktion",
+                step4_desc: "Qualitätskontrolle vor Ort in Uruguay durch Stanley Kunz persönlich.",
+                step5_title: "Seefracht",
+                step5_desc: "Verladung, Seefracht-Tracking und ca. 40 Tage Transport.",
+                step6_title: "Ankunft",
+                step6_desc: "Ankunft im Zielhafen. Zollabfertigung durch Sie als Importeur.",
+                pricing_title: "Preise auf Anfrage",
+                pricing_desc: "Als Direktimporteur aus Uruguay kalkulieren wir fair und individuell. Ihr Preis hängt von mehreren Faktoren ab:",
+                factor1_title: "Menge",
+                factor1_desc: "20ft oder 40ft Container? Teilladung? Je höher das Volumen, desto günstiger der Kilopreis.",
+                factor2_title: "Feingrade",
+                factor2_desc: "17–21 Mikron ist premiumbewertet, 24–30 Mikron bietet maximales Volumen für die Industrie.",
+                factor3_title: "Kundentreue",
+                factor3_desc: "Bestandskunden und Wiederholungsbesteller profitieren von Rabattstaffeln und Prioritätsproduktion.",
+                pricing_cta: "Individuelles Angebot anfordern",
+                contact_title: "Kontakt für Industrieanfragen",
+                contact_desc: "Teilen Sie uns Ihre geplante Menge, den gewünschten Feingrade und den Verarbeitungszustand mit. Wir melden uns innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot.",
+                lbl_email: "E-Mail",
+                lbl_phone: "Telefon & WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Versand",
+                val_ship: "Seefracht ab Montevideo, Uruguay",
+                lbl_pay: "Zahlung",
+                val_pay: "SEPA-Überweisung in Euro / Anzahlung & Restzahlung",
+                form_firma: "Firmenname *",
+                form_name: "Ansprechpartner *",
+                form_email: "E-Mail *",
+                form_phone: "Telefon / WhatsApp",
+                form_menge: "Gewünschte Menge *",
+                opt_select: "Bitte wählen...",
+                opt_20_100: "20 – 100 kg (Teilladung)",
+                opt_100_500: "100 – 500 kg",
+                opt_500_10t: "500 kg – 10 Tonnen",
+                opt_20ft: "20ft Container (bis 10,5 t)",
+                opt_40ft: "40ft Container (bis 21 t)",
+                opt_multi: "Mehrere Container / Dauerlieferung",
+                form_feingrade: "Gewünschter Feingrade *",
+                opt_17_21: "17 – 21 Mikron (Ultrafein)",
+                opt_21_24: "21 – 24 Mikron (Fein)",
+                opt_24_30: "24 – 30 Mikron (Medium/Robust)",
+                opt_mixed: "Gemischte Fraktionen",
+                opt_advice: "Keine Präferenz – beraten Sie mich",
+                form_zustand: "Verarbeitungszustand *",
+                opt_tops: "Gekämmte Tops",
+                opt_fleece: "Gewaschene Vliese",
+                opt_both: "Beides – je nach Verfügbarkeit",
+                form_termin: "Gewünschter Lieferzeitraum",
+                form_msg: "Nachricht & Besonderheiten",
+                form_submit: "Industrieanfrage senden",
+                form_note: "Kein automatischer Kaufvertrag. Wir prüfen Verfügbarkeit und melden uns mit einem maßgeschneiderten Angebot.",
+                about_img: "Foto: Stanley in Uruguay mit Wolle",
+                about_title: "Ihr direkter Draht nach Südamerika",
+                about_p1: "Ich bin Stanley Kunz – vor Ort in Uruguay, wo die besten Merinoschafe der Welt grasen. Ich kenne die Produktionsstätten persönlich, spreche die Sprache der Produzenten und verstehe die Ansprüche deutscher Textilkünstler.",
+                about_p2: "Mit Kunz Sourcing schlage ich die Brücke zwischen südamerikanischer Premium-Qualität und der deutschen Handfärberei-Szene. Kein Opaque-Handel, keine Überraschungen – nur erstklassige Rohwolle, die Ihre Farben zum Leuchten bringt.",
+                location: "Direkt aus Uruguay – Montevideo & Umland",
+                footer_desc: "Premium Merinowolle in Container-Volumen direkt aus Uruguay für die europäische Textilindustrie.",
+                footer_legal: "Rechtliches",
+                footer_imp: "Impressum",
+                footer_priv: "Datenschutz",
+                footer_agb: "AGB",
+                footer_contact: "Kontakt",
+                footer_rights: "Alle Rechte vorbehalten."
+            },
+            en: {
+                page_title: "Kunz Sourcing – Premium Merino Wool in Container Volumes from Uruguay",
+                nav_feingrade: "Micron Grades",
+                nav_produkte: "Products",
+                nav_logistik: "Logistics",
+                nav_prozess: "Process",
+                nav_ueber: "About Us",
+                nav_kontakt: "Contact",
+                nav_klein: "Small Orders (from 20 kg) →",
+                banner_text: "Looking for smaller quantities from 20 kg, singles or a 1-kg sample pack? →",
+                banner_link: "To the Hand Dyers Page",
+                hero_h1: "Premium Merino Wool in Container Volumes – <em>Directly from Uruguay for the European textile industry.</em>",
+                hero_sub: "We process wool with a fineness between 17 and 30 micron. Combed tops and washed fleeces for the worsted, carding and carbonising industry. Sea freight in approx. 40 days. Prices on request – depending on quantity, volume and customer loyalty.",
+                cta_primary: "Request individual offer",
+                cta_secondary: "For hand dyers & small businesses",
+                hero_img: "Photo: Large quantities of Merino wool in bales / Container loading in Uruguay",
+                spectrum_title: "Our Micron Grade Spectrum: 17 – 30 Micron",
+                spectrum_desc: "From ultra-fine luxury worsted to robust industrial raw material – we deliver the right fraction for your processing needs.",
+                label_ultra: "Ultra-Fine",
+                desc_ultra: "17 – 21 Micron<br>Luxury worsted, high-quality fine knitwear, exclusive textiles. Highest fibre quality with a silky handle.",
+                label_fine: "Fine",
+                desc_fine: "21 – 24 Micron<br>Standard worsted for jumpers, socks and everyday clothing. Optimal price-performance ratio.",
+                label_robust: "Medium – Robust",
+                desc_robust: "24 – 30 Micron<br>Carding wool, felting wool, carpet yarn and industrial processing. Durable and voluminous.",
+                products_title: "Products for the Textile Industry",
+                products_desc: "Combed or washed – in the fineness and quantity that your production plan requires.",
+                img_tops: "Photo: Combed Merino tops in industrial quantities",
+                sub_tops: "Worsted Industry",
+                title_tops: "Combed Merino Tops",
+                text_tops: "Professionally combed tops in various micron fractions. Uniform fibre length, minimal contamination, ready for further processing into worsted yarn.",
+                specs_avail: "Available:",
+                specs_tops: "Micron grades 17–30 · Fractions according to customer request · Bales or loose tops · Price on request",
+                btn_tops: "Request offer for tops",
+                img_vliese: "Photo: Washed Merino fleeces in bulk packaging",
+                sub_vliese: "Carding & Carbonising Industry",
+                title_vliese: "Washed Merino Fleeces",
+                text_vliese: "Carefully washed raw wool in fleece form. Ideal for carding plants, carbonising plants and further processing into woollen yarn or felt products.",
+                specs_vliese: "Micron grades 17–30 · Washed and dried · Bulk goods in bales · Price on request",
+                btn_vliese: "Request offer for fleeces",
+                logistics_title: "Container Logistics & Sea Freight",
+                logistics_desc: "Direct shipping from Uruguay to Europe. Transparent, plannable and in industrial quantities.",
+                cont20_title: "20ft Standard Container",
+                cont20_weight: "up to 10.5 t",
+                cont20_desc: "Merino wool per container<br>Ideal for medium volumes and first test deliveries on a larger scale.",
+                cont40_title: "40ft Standard Container",
+                cont40_weight: "up to 21 t",
+                cont40_desc: "Merino wool per container<br>The most efficient solution for large buyers and continuous supply.",
+                tl_prod: "Production & QC<br>Uruguay",
+                tl_load: "Loading<br>Montevideo",
+                tl_sea: "Sea Freight<br>approx. 40 days",
+                tl_arrive: "Arrival<br>Hamburg / Bremerhaven",
+                tl_customs: "Customs Clearance<br>& Handover",
+                process_title: "Our B2B Process for Industrial Customers",
+                process_desc: "From the first enquiry to arrival at the port – personal, transparent and on equal terms.",
+                step1_title: "Enquiry",
+                step1_desc: "You specify quantity, micron grade and processing state.",
+                step2_title: "Offer & Samples",
+                step2_desc: "We create a customised offer and send lab values or samples.",
+                step3_title: "Contract",
+                step3_desc: "Upon agreement: contract conclusion and down payment.",
+                step4_title: "Production",
+                step4_desc: "Quality control on site in Uruguay by Stanley Kunz personally.",
+                step5_title: "Sea Freight",
+                step5_desc: "Loading, sea freight tracking and approx. 40 days transport.",
+                step6_title: "Arrival",
+                step6_desc: "Arrival at the destination port. Customs clearance by you as the importer.",
+                pricing_title: "Prices on Request",
+                pricing_desc: "As a direct importer from Uruguay, we calculate fairly and individually. Your price depends on several factors:",
+                factor1_title: "Quantity",
+                factor1_desc: "20ft or 40ft container? Part load? The higher the volume, the lower the price per kilo.",
+                factor2_title: "Micron Grade",
+                factor2_desc: "17–21 micron is premium priced, 24–30 micron offers maximum volume for industry.",
+                factor3_title: "Customer Loyalty",
+                factor3_desc: "Regular customers and repeat buyers benefit from discount scales and priority production.",
+                pricing_cta: "Request individual offer",
+                contact_title: "Contact for Industrial Enquiries",
+                contact_desc: "Tell us your planned quantity, desired micron grade and processing state. We will get back to you within 24 hours with a customised offer.",
+                lbl_email: "E-Mail",
+                lbl_phone: "Phone & WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Shipping",
+                val_ship: "Sea freight from Montevideo, Uruguay",
+                lbl_pay: "Payment",
+                val_pay: "SEPA bank transfer in Euro / Down payment & final payment",
+                form_firma: "Company Name *",
+                form_name: "Contact Person *",
+                form_email: "E-Mail *",
+                form_phone: "Phone / WhatsApp",
+                form_menge: "Desired Quantity *",
+                opt_select: "Please select...",
+                opt_20_100: "20 – 100 kg (Part load)",
+                opt_100_500: "100 – 500 kg",
+                opt_500_10t: "500 kg – 10 tonnes",
+                opt_20ft: "20ft container (up to 10.5 t)",
+                opt_40ft: "40ft container (up to 21 t)",
+                opt_multi: "Multiple containers / Continuous supply",
+                form_feingrade: "Desired Micron Grade *",
+                opt_17_21: "17 – 21 micron (Ultra-fine)",
+                opt_21_24: "21 – 24 micron (Fine)",
+                opt_24_30: "24 – 30 micron (Medium/Robust)",
+                opt_mixed: "Mixed fractions",
+                opt_advice: "No preference – advise me",
+                form_zustand: "Processing State *",
+                opt_tops: "Combed tops",
+                opt_fleece: "Washed fleeces",
+                opt_both: "Both – depending on availability",
+                form_termin: "Desired Delivery Period",
+                form_msg: "Message & Special Requirements",
+                form_submit: "Send industrial enquiry",
+                form_note: "No automatic purchase contract. We check availability and get back to you with a customised offer.",
+                about_img: "Photo: Stanley in Uruguay with wool",
+                about_title: "Your direct line to South America",
+                about_p1: "I am Stanley Kunz – on site in Uruguay, where the best Merino sheep in the world graze. I know the production facilities personally, speak the language of the producers and understand the demands of German textile artists.",
+                about_p2: "With Kunz Sourcing, I bridge the gap between South American premium quality and the German hand-dyeing scene. No opaque trading, no surprises – just first-class raw wool that makes your colours shine.",
+                location: "Directly from Uruguay – Montevideo & surroundings",
+                footer_desc: "Premium Merino wool in container volumes directly from Uruguay for the European textile industry.",
+                footer_legal: "Legal",
+                footer_imp: "Legal Notice",
+                footer_priv: "Privacy Policy",
+                footer_agb: "Terms & Conditions",
+                footer_contact: "Contact",
+                footer_rights: "All rights reserved."
+            },
+            ru: {
+                page_title: "Kunz Sourcing – Премиальная мериносовая шерсть в контейнерных объемах из Уругвая",
+                nav_feingrade: "Тонина",
+                nav_produkte: "Продукция",
+                nav_logistik: "Логистика",
+                nav_prozess: "Процесс",
+                nav_ueber: "О нас",
+                nav_kontakt: "Контакты",
+                nav_klein: "Мелкие заказы (от 20 кг) →",
+                banner_text: "Ищете небольшие объемы от 20 кг, синглсы или тестовый набор 1 кг? →",
+                banner_link: "На страницу для красильщиков",
+                hero_h1: "Премиальная мериносовая шерсть в контейнерных объемах – <em>Напрямую из Уругвая для европейской текстильной промышленности.</em>",
+                hero_sub: "Мы обрабатываем шерсть с тониной от 17 до 30 микрон. Гребенные топсы и промытые флисы для гребенной, чесальной и карбонизирующей промышленности. Морская доставка около 40 дней. Цены по запросу – в зависимости от количества, объема и лояльности клиента.",
+                cta_primary: "Запросить индивидуальное предложение",
+                cta_secondary: "Для красильщиков и малых предприятий",
+                hero_img: "Фото: Большие объемы мериносовой шерсти в тюках / Погрузка контейнера в Уругвае",
+                spectrum_title: "Наш спектр тонины: 17 – 30 микрон",
+                spectrum_desc: "От ультратонкого люкс-камгарна до прочного промышленного сырья – мы поставляем нужную фракцию для вашего производственного процесса.",
+                label_ultra: "Ультратонкая",
+                desc_ultra: "17 – 21 микрон<br>Люкс-камгарн, высококачественное трикотажное белье, эксклюзивные текстильные изделия. Высочайшее качество волокна с шелковистой текстурой.",
+                label_fine: "Тонкая",
+                desc_fine: "21 – 24 микрон<br>Стандартный камгарн для свитеров, носков и повседневной одежды. Оптимальное соотношение цены и качества.",
+                label_robust: "Средняя – Прочная",
+                desc_robust: "24 – 30 микрон<br>Чесальная шерсть, валяльная шерсть, ковровая пряжа и промышленная переработка. Прочная и объемная.",
+                products_title: "Продукция для текстильной промышленности",
+                products_desc: "Гребенная или промытая – в нужной тонине и количестве по вашему производственному плану.",
+                img_tops: "Фото: Гребенные мериносовые топсы в промышленных объемах",
+                sub_tops: "Камгарная промышленность",
+                title_tops: "Гребенные мериносовые топсы",
+                text_tops: "Профессионально гребенные топсы в различных микронных фракциях. Равномерная длина волокна, минимальное загрязнение, готовы к дальнейшей переработке в камгарн.",
+                specs_avail: "Доступно:",
+                specs_tops: "Тонина 17–30 микрон · Фракции по запросу клиента · Тюки или россыпные топсы · Цена по запросу",
+                btn_tops: "Запросить предложение на топсы",
+                img_vliese: "Фото: Промытые мериносовые флисы в бульках",
+                sub_vliese: "Чесальная и карбонизирующая промышленность",
+                title_vliese: "Промытые мериносовые флисы",
+                text_vliese: "Тщательно промытая шерсть-сырец в виде флисов. Идеально для чесальных установок, карбонизирующих предприятий и дальнейшей переработки в шерстяную пряжу или войлочные изделия.",
+                specs_vliese: "Тонина 17–30 микрон · Промытые и высушенные · Бульки в тюках · Цена по запросу",
+                btn_vliese: "Запросить предложение на флисы",
+                logistics_title: "Контейнерная логистика и морские перевозки",
+                logistics_desc: "Прямая доставка из Уругвая в Европу. Прозрачно, планируемо и в промышленных объемах.",
+                cont20_title: "20-футовый стандартный контейнер",
+                cont20_weight: "до 10,5 т",
+                cont20_desc: "Мериносовая шерсть на контейнер<br>Идеально для средних объемов и первых тестовых поставок в крупном масштабе.",
+                cont40_title: "40-футовый стандартный контейнер",
+                cont40_weight: "до 21 т",
+                cont40_desc: "Мериносовая шерсть на контейнер<br>Самое эффективное решение для крупных заказчиков и постоянного снабжения.",
+                tl_prod: "Производство и ОТК<br>Уругвай",
+                tl_load: "Погрузка<br>Монтевидео",
+                tl_sea: "Морская перевозка<br>около 40 дней",
+                tl_arrive: "Прибытие<br>Гамбург / Бремерхафен",
+                tl_customs: "Таможенное оформление<br>& Передача",
+                process_title: "Наш B2B-процесс для промышленных клиентов",
+                process_desc: "От первого запроса до прибытия в порт – лично, прозрачно и на равных.",
+                step1_title: "Запрос",
+                step1_desc: "Вы указываете количество, тонину и состояние обработки.",
+                step2_title: "Предложение и образцы",
+                step2_desc: "Мы составляем индивидуальное предложение и отправляем лабораторные данные или образцы.",
+                step3_title: "Договор",
+                step3_desc: "При согласии: заключение договора и предоплата.",
+                step4_title: "Производство",
+                step4_desc: "Контроль качества на месте в Уругвае лично Стэнли Кунцем.",
+                step5_title: "Морская перевозка",
+                step5_desc: "Погрузка, отслеживание морской перевозки и около 40 дней в пути.",
+                step6_title: "Прибытие",
+                step6_desc: "Прибытие в порт назначения. Таможенное оформление вами как импортера.",
+                pricing_title: "Цены по запросу",
+                pricing_desc: "Как прямой импортер из Уругвая, мы рассчитываем справедливо и индивидуально. Ваша цена зависит от нескольких факторов:",
+                factor1_title: "Количество",
+                factor1_desc: "20-футовый или 40-футовый контейнер? Частичная загрузка? Чем больше объем, тем ниже цена за килограмм.",
+                factor2_title: "Тонина",
+                factor2_desc: "17–21 микрон премиального класса, 24–30 микрон – максимальный объем для промышленности.",
+                factor3_title: "Лояльность клиента",
+                factor3_desc: "Постоянные клиенты и повторные покупатели получают скидки и приоритетное производство.",
+                pricing_cta: "Запросить индивидуальное предложение",
+                contact_title: "Контакты для промышленных запросов",
+                contact_desc: "Сообщите нам планируемое количество, желаемую тонину и состояние обработки. Мы ответим в течение 24 часов с индивидуальным предложением.",
+                lbl_email: "Эл. почта",
+                lbl_phone: "Телефон и WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Доставка",
+                val_ship: "Морская доставка из Монтевидео, Уругвай",
+                lbl_pay: "Оплата",
+                val_pay: "SEPA-перевод в евро / Предоплата и окончательный расчет",
+                form_firma: "Название компании *",
+                form_name: "Контактное лицо *",
+                form_email: "Эл. почта *",
+                form_phone: "Телефон / WhatsApp",
+                form_menge: "Желаемое количество *",
+                opt_select: "Выберите...",
+                opt_20_100: "20 – 100 кг (Частичная загрузка)",
+                opt_100_500: "100 – 500 кг",
+                opt_500_10t: "500 кг – 10 тонн",
+                opt_20ft: "20-футовый контейнер (до 10,5 т)",
+                opt_40ft: "40-футовый контейнер (до 21 т)",
+                opt_multi: "Несколько контейнеров / Постоянные поставки",
+                form_feingrade: "Желаемая тонина *",
+                opt_17_21: "17 – 21 микрон (Ультратонкая)",
+                opt_21_24: "21 – 24 микрон (Тонкая)",
+                opt_24_30: "24 – 30 микрон (Средняя/Прочная)",
+                opt_mixed: "Смешанные фракции",
+                opt_advice: "Нет предпочтений – проконсультируйте меня",
+                form_zustand: "Состояние обработки *",
+                opt_tops: "Гребенные топсы",
+                opt_fleece: "Промытые флисы",
+                opt_both: "Оба варианта – в зависимости от наличия",
+                form_termin: "Желаемый срок поставки",
+                form_msg: "Сообщение и особые требования",
+                form_submit: "Отправить промышленный запрос",
+                form_note: "Автоматический договор купли-продажи не заключается. Мы проверим наличие и свяжемся с вами с индивидуальным предложением.",
+                about_img: "Фото: Стэнли в Уругвае с шерстью",
+                about_title: "Ваша прямая связь с Южной Америкой",
+                about_p1: "Я Стэнли Кунц – на месте в Уругвае, где пасутся лучшие в мире мериносовые овцы. Я лично знаю производственные объекты, говорю на языке производителей и понимаю требования немецких текстильных художников.",
+                about_p2: "С Kunz Sourcing я строю мост между южноамериканским премиальным качеством и немецкой сценой ручного крашения. Никакого непрозрачного трейдинга, никаких сюрпризов – только первоклассная сырьевая шерсть, которая заставляет ваши цвета сиять.",
+                location: "Напрямую из Уругвая – Монтевидео и окрестности",
+                footer_desc: "Премиальная мериносовая шерсть в контейнерных объемах напрямую из Уругвая для европейской текстильной промышленности.",
+                footer_legal: "Юридическая информация",
+                footer_imp: "Импрессум",
+                footer_priv: "Политика конфиденциальности",
+                footer_agb: "Условия использования",
+                footer_contact: "Контакты",
+                footer_rights: "Все права защищены."
+            },
+            pl: {
+                page_title: "Kunz Sourcing – Wełna merynosowa premium w wolumenach kontenerowych z Urugwaju",
+                nav_feingrade: "Grubość włókna",
+                nav_produkte: "Produkty",
+                nav_logistik: "Logistyka",
+                nav_prozess: "Proces",
+                nav_ueber: "O nas",
+                nav_kontakt: "Kontakt",
+                nav_klein: "Małe zamówienia (od 20 kg) →",
+                banner_text: "Szukasz mniejszych ilości od 20 kg, pojedynczych partii lub 1-kilogramowego zestawu próbnego? →",
+                banner_link: "Do strony dla farbiarni ręcznych",
+                hero_h1: "Wełna merynosowa premium w wolumenach kontenerowych – <em>Bezpośrednio z Urugwaju dla europejskiego przemysłu tekstylnego.</em>",
+                hero_sub: "Przetwarzamy wełnę o grubości włókna od 17 do 30 mikronów. Grzebienie topsy i myte runa dla przemysłu kamgarnowego, kardowania i karbonizacji. Transport morski w ok. 40 dni. Ceny na życzenie – zależnie od ilości, wolumenu i lojalności klienta.",
+                cta_primary: "Zapytaj o indywidualną ofertę",
+                cta_secondary: "Dla farbiarni ręcznych i małych firm",
+                hero_img: "Zdjęcie: duże ilości wełny merynosowej w balach / ładowanie kontenera w Urugwaju",
+                spectrum_title: "Nasze spektrum grubości włókna: 17 – 30 mikronów",
+                spectrum_desc: "Od ultra-cienkiego luksusowego kamgarnu do wytrzymałego surowca przemysłowego – dostarczamy odpowiednią frakcję dla Twojego procesu produkcyjnego.",
+                label_ultra: "Ultra-cienka",
+                desc_ultra: "17 – 21 mikronów<br>Luksusowy kamgarn, wysokiej jakości dzianiny, ekskluzywne tekstylia. Najwyższa jakość włókna o jedwabistym dotyku.",
+                label_fine: "Cienka",
+                desc_fine: "21 – 24 mikrony<br>Standardowy kamgarn na swetry, skarpety i odzież codzienną. Optymalny stosunek ceny do jakości.",
+                label_robust: "Średnia – wytrzymała",
+                desc_robust: "24 – 30 mikronów<br>Wełna kardowana, wełna do filcowania, przędza dywanowa i przetwórstwo przemysłowe. Wytrzymała i obszerna.",
+                products_title: "Produkty dla przemysłu tekstylnego",
+                products_desc: "Grzebieniowana lub myta – w grubości i ilości wymaganej przez Twój plan produkcji.",
+                img_tops: "Zdjęcie: grzebieniowane topsy merynosowe w ilościach przemysłowych",
+                sub_tops: "Przemysł kamgarnowy",
+                title_tops: "Grzebieniowane topsy merynosowe",
+                text_tops: "Profesjonalnie grzebieniowane topsy w różnych frakcjach mikronowych. Równomierna długość włókna, minimalne zanieczyszczenie, gotowe do dalszego przetwarzania na przędzę kamgarnową.",
+                specs_avail: "Dostępne:",
+                specs_tops: "Grubość włókna 17–30 mikronów · Frakcje na życzenie klienta · Bale lub topsy sypkie · Cena na życzenie",
+                btn_tops: "Zapytaj o ofertę na topsy",
+                img_vliese: "Zdjęcie: myte runa merynosowe w opakowaniach zbiorczych",
+                sub_vliese: "Przemysł kardowania i karbonizacji",
+                title_vliese: "Myte runa merynosowe",
+                text_vliese: "Starannie myta wełna surowa w postaci runa. Idealna do zakładów kardowania, karbonizacji oraz dalszego przetwarzania na przędzę czesankową lub produkty filcowe.",
+                specs_vliese: "Grubość włókna 17–30 mikronów · Myte i suszone · Towar sypki w balach · Cena na życzenie",
+                btn_vliese: "Zapytaj o ofertę na runa",
+                logistics_title: "Logistyka kontenerowa i transport morski",
+                logistics_desc: "Wysyłka bezpośrednia z Urugwaju do Europy. Przejrzyście, planowo i w ilościach przemysłowych.",
+                cont20_title: "Kontener standardowy 20ft",
+                cont20_weight: "do 10,5 t",
+                cont20_desc: "Wełna merynosowa na kontener<br>Idealna dla średnich wolumenów i pierwszych dostaw testowych na większą skalę.",
+                cont40_title: "Kontener standardowy 40ft",
+                cont40_weight: "do 21 t",
+                cont40_desc: "Wełna merynosowa na kontener<br>Najbardziej efektywne rozwiązanie dla dużych odbiorców i stałych dostaw.",
+                tl_prod: "Produkcja i kontrola jakości<br>Urugwaj",
+                tl_load: "Załadunek<br>Montevideo",
+                tl_sea: "Transport morski<br>ok. 40 dni",
+                tl_arrive: "Przybycie<br>Hamburg / Bremerhaven",
+                tl_customs: "Odprawa celna<br>i przekazanie",
+                process_title: "Nasz proces B2B dla klientów przemysłowych",
+                process_desc: "Od pierwszego zapytania do przybycia w porcie – osobiście, przejrzyście i na równych zasadach.",
+                step1_title: "Zapytanie",
+                step1_desc: "Podajesz ilość, grubość włókna i stan przetworzenia.",
+                step2_title: "Oferta i próbki",
+                step2_desc: "Przygotowujemy indywidualną ofertę i wysyłamy wyniki badań laboratoryjnych lub próbki.",
+                step3_title: "Umowa",
+                step3_desc: "Po uzgodnieniu: zawarcie umowy i wpłata zaliczki.",
+                step4_title: "Produkcja",
+                step4_desc: "Kontrola jakości na miejscu w Urugwaju, osobiście przez Stanleya Kunza.",
+                step5_title: "Transport morski",
+                step5_desc: "Załadunek, śledzenie transportu morskiego i ok. 40 dni podróży.",
+                step6_title: "Przybycie",
+                step6_desc: "Przybycie do portu docelowego. Odprawa celna przez Ciebie jako importera.",
+                pricing_title: "Ceny na życzenie",
+                pricing_desc: "Jako bezpośredni importer z Urugwaju kalkulujemy uczciwie i indywidualnie. Twoja cena zależy od kilku czynników:",
+                factor1_title: "Ilość",
+                factor1_desc: "Kontener 20ft czy 40ft? Częściowy załadunek? Im większy wolumen, tym niższa cena za kilogram.",
+                factor2_title: "Grubość włókna",
+                factor2_desc: "17–21 mikronów jest wyceniana premium, 24–30 mikronów oferuje maksymalny wolumen dla przemysłu.",
+                factor3_title: "Lojalność klienta",
+                factor3_desc: "Stali klienci i osoby powtarzające zamówienia korzystają ze zniżek i priorytetowej produkcji.",
+                pricing_cta: "Zapytaj o indywidualną ofertę",
+                contact_title: "Kontakt dla zapytań przemysłowych",
+                contact_desc: "Podaj nam planowaną ilość, żądaną grubość włókna i stan przetworzenia. Odpowiemy w ciągu 24 godzin z indywidualną ofertą.",
+                lbl_email: "E-mail",
+                lbl_phone: "Telefon i WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Wysyłka",
+                val_ship: "Transport morski z Montevideo, Urugwaj",
+                lbl_pay: "Płatność",
+                val_pay: "Przelew SEPA w euro / zaliczka i płatność końcowa",
+                form_firma: "Nazwa firmy *",
+                form_name: "Osoba kontaktowa *",
+                form_email: "E-mail *",
+                form_phone: "Telefon / WhatsApp",
+                form_menge: "Żądana ilość *",
+                opt_select: "Wybierz...",
+                opt_20_100: "20 – 100 kg (częściowy załadunek)",
+                opt_100_500: "100 – 500 kg",
+                opt_500_10t: "500 kg – 10 ton",
+                opt_20ft: "Kontener 20ft (do 10,5 t)",
+                opt_40ft: "Kontener 40ft (do 21 t)",
+                opt_multi: "Wiele kontenerów / dostawy stałe",
+                form_feingrade: "Żądana grubość włókna *",
+                opt_17_21: "17 – 21 mikronów (ultra-cienka)",
+                opt_21_24: "21 – 24 mikrony (cienka)",
+                opt_24_30: "24 – 30 mikronów (średnia/wytrzymała)",
+                opt_mixed: "Mieszane frakcje",
+                opt_advice: "Brak preferencji – proszę o doradzenie",
+                form_zustand: "Stan przetworzenia *",
+                opt_tops: "Grzebieniowane topsy",
+                opt_fleece: "Myte runa",
+                opt_both: "Obydwa – zależnie od dostępności",
+                form_termin: "Żądany termin dostawy",
+                form_msg: "Wiadomość i szczególne wymagania",
+                form_submit: "Wyślij zapytanie przemysłowe",
+                form_note: "Brak automatycznej umowy kupna. Sprawdzimy dostępność i skontaktujemy się z indywidualną ofertą.",
+                about_img: "Zdjęcie: Stanley w Urugwaju z wełną",
+                about_title: "Twoje bezpośrednie połączenie z Ameryką Południową",
+                about_p1: "Jestem Stanley Kunz – na miejscu w Urugwaju, gdzie wypasają się najlepsze na świecie owce merynosowe. Znam osobiście zakłady produkcyjne, mówię językiem producentów i rozumiem wymagania niemieckich artystów tekstylnych.",
+                about_p2: "Z Kunz Sourcing buduję most między południowoamerykańską jakością premium a niemiecką sceną farbiarni ręcznych. Żadnego niejasnego handlu, żadnych niespodzianek – tylko pierwszorzędna wełna surowa, która sprawia, że Twoje kolory zabłysną.",
+                location: "Bezpośrednio z Urugwaju – Montevideo i okolice",
+                footer_desc: "Wełna merynosowa premium w wolumenach kontenerowych bezpośrednio z Urugwaju dla europejskiego przemysłu tekstylnego.",
+                footer_legal: "Informacje prawne",
+                footer_imp: "Nota prawna",
+                footer_priv: "Polityka prywatności",
+                footer_agb: "OWH",
+                footer_contact: "Kontakt",
+                footer_rights: "Wszelkie prawa zastrzeżone."
+            },
+            es: {
+                page_title: "Kunz Sourcing – Lana merino premium en volúmenes de contenedor desde Uruguay",
+                nav_feingrade: "Grados de finura",
+                nav_produkte: "Productos",
+                nav_logistik: "Logística",
+                nav_prozess: "Proceso",
+                nav_ueber: "Sobre nosotros",
+                nav_kontakt: "Contacto",
+                nav_klein: "Pedidos pequeños (desde 20 kg) →",
+                banner_text: "¿Buscas cantidades más pequeñas desde 20 kg, partidas individuales o un paquete de muestra de 1 kg? →",
+                banner_link: "Ir a la página para tintorerías artesanales",
+                hero_h1: "Lana merino premium en volúmenes de contenedor – <em>Directamente desde Uruguay para la industria textil europea.</em>",
+                hero_sub: "Procesamos lana con una finura entre 17 y 30 micrones. Tops peinados y vellones lavados para la industria de hilado cardado, cardado y carbonizado. Transporte marítimo en aprox. 40 días. Precios a consultar, según cantidad, volumen y fidelidad del cliente.",
+                cta_primary: "Solicitar oferta individual",
+                cta_secondary: "Para tintorerías artesanales y pequeñas empresas",
+                hero_img: "Foto: grandes cantidades de lana merino en fardos / carga de contenedor en Uruguay",
+                spectrum_title: "Nuestro espectro de finura: 17 – 30 micrones",
+                spectrum_desc: "Desde el lujoso hilado ultrafino hasta la robusta materia prima industrial: entregamos la fracción adecuada para tu proceso de producción.",
+                label_ultra: "Ultrafina",
+                desc_ultra: "17 – 21 micrones<br>Hilado de lujo, géneros de punto fino de alta calidad, textiles exclusivos. Máxima calidad de fibra con tacto sedoso.",
+                label_fine: "Fina",
+                desc_fine: "21 – 24 micrones<br>Hilado estándar para jerséis, calcetines y ropa cotidiana. Relación óptima entre precio y calidad.",
+                label_robust: "Media – robusta",
+                desc_robust: "24 – 30 micrones<br>Lana cardada, lana para fieltro, hilo para alfombras y procesamiento industrial. Resistente y voluminosa.",
+                products_title: "Productos para la industria textil",
+                products_desc: "Peinada o lavada, en la finura y cantidad que requiera tu plan de producción.",
+                img_tops: "Foto: tops de merino peinados en cantidades industriales",
+                sub_tops: "Industria de hilado cardado",
+                title_tops: "Tops de merino peinados",
+                text_tops: "Tops peinados profesionalmente en diversas fracciones micronaje. Longitud de fibra uniforme, contaminación mínima, listos para su posterior procesamiento en hilo cardado.",
+                specs_avail: "Disponible:",
+                specs_tops: "Finura 17–30 micrones · Fracciones según petición del cliente · Fardos o tops sueltos · Precio a consultar",
+                btn_tops: "Solicitar oferta de tops",
+                img_vliese: "Foto: vellones de merino lavados en embalaje a granel",
+                sub_vliese: "Industria de cardado y carbonizado",
+                title_vliese: "Vellones de merino lavados",
+                text_vliese: "Lana cruda cuidadosamente lavada en forma de vellón. Ideal para plantas de cardado, empresas de carbonizado y procesamiento posterior en hilo cardado o productos de fieltro.",
+                specs_vliese: "Finura 17–30 micrones · Lavados y secados · Mercancía a granel en fardos · Precio a consultar",
+                btn_vliese: "Solicitar oferta de vellones",
+                logistics_title: "Logística de contenedores y transporte marítimo",
+                logistics_desc: "Envío directo desde Uruguay a Europa. Transparente, planificable y en cantidades industriales.",
+                cont20_title: "Contenedor estándar de 20 pies",
+                cont20_weight: "hasta 10,5 t",
+                cont20_desc: "Lana merino por contenedor<br>Ideal para volúmenes medios y primeras entregas de prueba a mayor escala.",
+                cont40_title: "Contenedor estándar de 40 pies",
+                cont40_weight: "hasta 21 t",
+                cont40_desc: "Lana merino por contenedor<br>La solución más eficiente para grandes compradores y suministro continuo.",
+                tl_prod: "Producción y control de calidad<br>Uruguay",
+                tl_load: "Carga<br>Montevideo",
+                tl_sea: "Transporte marítimo<br>aprox. 40 días",
+                tl_arrive: "Llegada<br>Hamburgo / Bremerhaven",
+                tl_customs: "Despacho de aduanas<br>y entrega",
+                process_title: "Nuestro proceso B2B para clientes industriales",
+                process_desc: "Desde la primera consulta hasta la llegada al puerto: personal, transparente y en igualdad de condiciones.",
+                step1_title: "Consulta",
+                step1_desc: "Indicas la cantidad, la finura y el estado de procesamiento.",
+                step2_title: "Oferta y muestras",
+                step2_desc: "Elaboramos una oferta personalizada y enviamos valores de laboratorio o muestras.",
+                step3_title: "Contrato",
+                step3_desc: "Si hay acuerdo: firma del contrato y pago anticipado.",
+                step4_title: "Producción",
+                step4_desc: "Control de calidad in situ en Uruguay, personalmente por Stanley Kunz.",
+                step5_title: "Transporte marítimo",
+                step5_desc: "Carga, seguimiento del transporte marítimo y aprox. 40 días de trayecto.",
+                step6_title: "Llegada",
+                step6_desc: "Llegada al puerto de destino. Despacho de aduanas a tu cargo como importador.",
+                pricing_title: "Precios a consultar",
+                pricing_desc: "Como importador directo desde Uruguay, calculamos de forma justa e individual. Tu precio depende de varios factores:",
+                factor1_title: "Cantidad",
+                factor1_desc: "¿Contenedor de 20 o 40 pies? ¿Carga parcial? Cuanto mayor sea el volumen, más bajo el precio por kilo.",
+                factor2_title: "Finura",
+                factor2_desc: "17–21 micrones tiene precio premium; 24–30 micrones ofrece el máximo volumen para la industria.",
+                factor3_title: "Fidelidad del cliente",
+                factor3_desc: "Los clientes habituales y compradores recurrentes se benefician de escalas de descuento y producción prioritaria.",
+                pricing_cta: "Solicitar oferta individual",
+                contact_title: "Contacto para consultas industriales",
+                contact_desc: "Indícanos la cantidad prevista, la finura deseada y el estado de procesamiento. Te responderemos en 24 horas con una oferta personalizada.",
+                lbl_email: "Correo electrónico",
+                lbl_phone: "Teléfono y WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Envío",
+                val_ship: "Transporte marítimo desde Montevideo, Uruguay",
+                lbl_pay: "Pago",
+                val_pay: "Transferencia SEPA en euros / anticipo y pago final",
+                form_firma: "Nombre de la empresa *",
+                form_name: "Persona de contacto *",
+                form_email: "Correo electrónico *",
+                form_phone: "Teléfono / WhatsApp",
+                form_menge: "Cantidad deseada *",
+                opt_select: "Seleccione...",
+                opt_20_100: "20 – 100 kg (carga parcial)",
+                opt_100_500: "100 – 500 kg",
+                opt_500_10t: "500 kg – 10 toneladas",
+                opt_20ft: "Contenedor de 20 pies (hasta 10,5 t)",
+                opt_40ft: "Contenedor de 40 pies (hasta 21 t)",
+                opt_multi: "Varios contenedores / suministro continuo",
+                form_feingrade: "Finura deseada *",
+                opt_17_21: "17 – 21 micrones (ultrafina)",
+                opt_21_24: "21 – 24 micrones (fina)",
+                opt_24_30: "24 – 30 micrones (media/robusta)",
+                opt_mixed: "Fracciones mixtas",
+                opt_advice: "Sin preferencia – que me asesoren",
+                form_zustand: "Estado de procesamiento *",
+                opt_tops: "Tops peinados",
+                opt_fleece: "Vellones lavados",
+                opt_both: "Ambos – según disponibilidad",
+                form_termin: "Plazo de entrega deseado",
+                form_msg: "Mensaje y requisitos especiales",
+                form_submit: "Enviar consulta industrial",
+                form_note: "No se genera un contrato de compra automático. Comprobaremos la disponibilidad y te responderemos con una oferta personalizada.",
+                about_img: "Foto: Stanley en Uruguay con lana",
+                about_title: "Tu línea directa a Sudamérica",
+                about_p1: "Soy Stanley Kunz, presente en Uruguay, donde pastan las mejores ovejas merino del mundo. Conozco personalmente las instalaciones de producción, hablo el idioma de los productores y comprendo las exigencias de los artistas textiles alemanes.",
+                about_p2: "Con Kunz Sourcing tiendo un puente entre la calidad premium sudamericana y la escena alemana de tintorerías artesanales. Sin comercio opaco, sin sorpresas: solo lana cruda de primera calidad que hace brillar tus colores.",
+                location: "Directamente desde Uruguay – Montevideo y alrededores",
+                footer_desc: "Lana merino premium en volúmenes de contenedor directamente desde Uruguay para la industria textil europea.",
+                footer_legal: "Aviso legal",
+                footer_imp: "Aviso legal",
+                footer_priv: "Política de privacidad",
+                footer_agb: "Términos y condiciones",
+                footer_contact: "Contacto",
+                footer_rights: "Todos los derechos reservados."
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('ks_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
+            document.documentElement.lang = lang;
+
+            const t = translations[lang];
+            if (!t) return;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    if (el.tagName === 'TITLE') {
+                        document.title = t[key];
+                    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = t[key];
+                    } else if (el.tagName === 'OPTION') {
+                        el.textContent = t[key];
+                    } else {
+                        el.innerHTML = t[key];
+                    }
+                }
+            });
+
+            // Update select option texts
+            document.querySelectorAll('select option[data-i18n]').forEach(opt => {
+                const key = opt.getAttribute('data-i18n');
+                if (t[key] !== undefined) opt.textContent = t[key];
+            });
+        }
+
+        // Init language
+        const savedLang = localStorage.getItem('ks_lang') || 'de';
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(savedLang);
+        });
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        function selectProduct(product) {
+            const select = document.getElementById('zustand');
+            if (select) {
+                if (product === 'tops') select.value = 'gekaemmt';
+                if (product === 'vliese') select.value = 'gewaschen';
+                document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const lang = localStorage.getItem('ks_lang') || 'de';
+            const subjects = { de: 'Container-Anfrage', en: 'Container Enquiry', ru: 'Контейнерный запрос', pl: 'Zapytanie o kontener', es: 'Consulta de contenedor' };
+            const alerts = { 
+                de: 'Vielen Dank für Ihre Anfrage! Ihr E-Mail-Programm wird nun geöffnet. Alternativ erreichen Sie uns unter Stanley@kunzsourcing.com oder +49 6344 9269681 (WhatsApp).',
+                en: 'Thank you for your enquiry! Your email program will now open. Alternatively, you can reach us at Stanley@kunzsourcing.com or +49 6344 9269681 (WhatsApp).',
+                ru: 'Спасибо за ваш запрос! Откроется ваша почтовая программа. Также вы можете связаться с нами по адресу Stanley@kunzsourcing.com или +49 6344 9269681 (WhatsApp).',
+                pl: 'Dziękujemy za zapytanie! Twój program e-mail zostanie teraz otwarty. Alternatywnie możesz się z nami skontaktować pod adresem Stanley@kunzsourcing.com lub +49 6344 9269681 (WhatsApp).',
+                es: '¡Gracias por tu consulta! Tu programa de correo electrónico se abrirá ahora. Alternativamente, puedes contactarnos en Stanley@kunzsourcing.com o +49 6344 9269681 (WhatsApp).'
+            };
+            const subject = subjects[lang] + ' Kunz Sourcing – ' + data.get('firma');
+            const body = `Firma: ${data.get('firma')}
+Ansprechpartner: ${data.get('name')}
+E-Mail: ${data.get('email')}
+Telefon: ${data.get('telefon')}
+Menge: ${data.get('menge')}
+Feingrade: ${data.get('feingrade')}
+Verarbeitungszustand: ${data.get('zustand')}
+Gewünschter Lieferzeitraum: ${data.get('termin')}
+
+Nachricht:
+${data.get('nachricht')}`;
+            window.location.href = `mailto:Stanley@kunzsourcing.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            alert(alerts[lang]);
+        }
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            else header.style.boxShadow = 'none';
+        });
+    </script>
+    <a href="https://wa.me/message/FDT6WPLEOMFAE1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chat" title="WhatsApp Chat">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115.1-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-13.4-32.3-18.3-44.2-4.8-11.6-9.7-10-13.4-10.2-3.5-.2-7.5-.2-11.5-.2-4 0-10.5 1.5-16 7.4-5.5 5.9-21.1 20.6-21.1 50.2 0 29.6 21.6 58.2 24.6 62.3 3 4.1 41.3 63.1 101.6 88.5 50.5 21.2 60.8 17 71.8 15.8 11-1.2 33.3-13.6 38-26.8 4.7-13.2 4.7-24.6 3.3-26.8-1.4-2.3-5.1-3.7-10.7-6.5z"/></svg>
+    </a>
+</body>
+</html>

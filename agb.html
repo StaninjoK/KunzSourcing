@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">AGB – Kunz Sourcing</title>
+    <meta name="description" content="AGB von Kunz Sourcing. Premium Merinogarn direkt aus Uruguay.">
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #FAF7F2;
+            --color-wool: #F5EDE3;
+            --color-sand: #D4C4B0;
+            --color-forest: #2C5F2D;
+            --color-forest-light: #3A7A3B;
+            --color-charcoal: #2B2B2B;
+            --color-gray: #6B6B6B;
+            --color-light-gray: #E8E4DE;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-charcoal);
+            background: var(--color-cream);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-light-gray);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-forest);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding-right: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .logo img {
+            height: 2rem;
+            width: 2rem;
+            display: block;
+        }
+        .logo span { font-weight: 400; color: var(--color-charcoal); }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--color-charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--color-forest); }
+        .lang-switcher {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+            background: var(--color-wool);
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-light-gray);
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+            opacity: 0.5;
+        }
+        .lang-btn:hover { opacity: 0.8; background: rgba(0,0,0,0.05); }
+        .lang-btn.active { opacity: 1; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+        .content h1 {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+            color: var(--color-charcoal);
+        }
+        .content h2 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-forest);
+        }
+        .content h3 {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-charcoal);
+        }
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--color-gray);
+        }
+        .content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-gray);
+        }
+        .content li { margin-bottom: 0.5rem; }
+        .content a { color: var(--color-forest); text-decoration: none; }
+        .content a:hover { text-decoration: underline; }
+        .last-updated {
+            display: block;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-light-gray);
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+        footer {
+            background: var(--color-charcoal);
+            color: rgba(255,255,255,0.6);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: white; }
+        .footer-logo {
+            display: block;
+            margin: 0 auto 1.5rem;
+            height: 56px;
+            width: 56px;
+        }
+        @media (max-width: 600px) {
+            .content { padding: 2rem 1.5rem 4rem; }
+            .content h1 { font-size: 1.8rem; }
+            .nav-right { gap: 0.5rem; }
+            .lang-switcher { padding: 0.2rem 0.3rem; }
+            .lang-btn { font-size: 0.95rem; padding: 0.15rem 0.3rem; }
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+            .whatsapp-float svg { width: 24px; height: 24px; }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="Images/Logo.png" alt="Kunz Sourcing Logo">Kunz <span>Sourcing</span></a>
+            <div class="nav-right">
+                <a href="index.html" class="back-link" data-i18n="back">← Zurück zur Startseite</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
+                    <button class="lang-btn" onclick="setLanguage('en')" title="English">🇪🇳</button>
+                    <button class="lang-btn" onclick="setLanguage('ru')" title="Русский">🇷🇺</button>
+                    <button class="lang-btn" onclick="setLanguage('pl')" title="Polski">🇵🇱</button>
+                    <button class="lang-btn" onclick="setLanguage('es')" title="Español">🇪🇸</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1 data-i18n="title">Allgemeine Geschäftsbedingungen</h1>
+
+        <p><strong data-i18n="scope_title">Geltungsbereich</strong></p>
+        <p data-i18n="scope_text">
+            Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen 
+            <strong>Kunz Sourcing</strong> (im Folgenden: Verkäufer) und <strong>gewerblichen Kunden</strong> 
+            (im Folgenden: Käufer) über die Webseite kunzsourcing.com. 
+            Es handelt sich ausschließlich um B2B-Geschäfte; Privatverbraucher sind ausgeschlossen.
+        </p>
+
+        <h2 data-i18n="sec1_title">§1 Vertragsabschluss</h2>
+        <p data-i18n="sec1_p1">
+            Die Darstellung der Produkte auf der Webseite stellt kein rechtlich bindendes Angebot dar. 
+            Durch das Absenden einer Bestellanfrage über das Kontaktformular, per E-Mail oder WhatsApp 
+            gibt der Käufer ein unverbindliches Interesse ab. 
+        </p>
+        <p data-i18n="sec1_p2">
+            Der Vertrag kommt erst durch die ausdrückliche Annahme der Bestellung durch den Verkäufer 
+            (Zusendung einer offiziellen B2B-Rechnung) und die anschließende Zahlung des Käufers zustande. 
+            Bis dahin ist der Verkäufer an keine Lieferverpflichtung gebunden.
+        </p>
+
+        <h2 data-i18n="sec2_title">§2 Preise und Zahlung</h2>
+        <p data-i18n="sec2_p1">
+            Alle Preise verstehen sich in Euro (€) pro Kilogramm, zuzüglich etwaiger Versandkosten. 
+            Die Mindestabnahmemenge (MOQ) beträgt <strong>20 Kilogramm</strong> pro Bestellung.
+        </p>
+        <p data-i18n="sec2_p2">
+            Die Zahlung erfolgt ausschließlich per Vorkasse mittels <strong>SEPA-Überweisung</strong> 
+            auf das vom Verkäufer mitgeteilte europäische Geschäftskonto. 
+            Die Ware wird erst nach vollständigem Zahlungseingang versendet.
+        </p>
+
+        <h2 data-i18n="sec3_title">§3 Versand und Gefahrenübergang</h2>
+        <p data-i18n="sec3_p1">
+            Der Versand erfolgt direkt aus Uruguay via <strong>EMS (Express Mail Service)</strong>. 
+            Die Lieferzeit beträgt ca. <strong>20–30 Tage</strong> ab Versandbestätigung.
+        </p>
+        <p data-i18n="sec3_p2">
+            Da es sich um ein B2B-Geschäft handelt, geht die Gefahr des zufälligen Untergangs und 
+            der Verschlechterung der Ware auf den Käufer über, sobald der Verkäufer die Ware dem 
+            Versanddienstleister übergeben hat.
+        </p>
+
+        <h2 data-i18n="sec4_title">§4 Einfuhrabgaben und Verzollung</h2>
+        <p data-i18n="sec4_text">
+            Der Käufer ist als Importeur für die ordnungsgemäße Verzollung und die Zahlung etwaiger 
+            <strong>Einfuhrumsatzsteuern, Zölle oder sonstiger Abgaben</strong> in Deutschland verantwortlich. 
+            Der Verkäufer liefert aus Uruguay DDP (Delivered Duty Paid) ist nicht vereinbart, sofern nicht 
+            ausdrücklich anders schriftlich vereinbart.
+        </p>
+
+        <h2 data-i18n="sec5_title">§5 Musterpaket</h2>
+        <p data-i18n="sec5_text">
+            Das 1-Kilo-Musterpaket (88 € inkl. Express-Versand) dient der Qualitätsprüfung vor einer 
+            Hauptbestellung. Bei einer anschließenden 20-Kilo-Bestellung wird der volle Musterpaket-Preis 
+            als Gutschrift verrechnet. Das Musterpaket ist vom Widerruf ausgeschlossen, da es sich um 
+            maßgeschneiderte B2B-Ware handelt.
+        </p>
+
+        <h2 data-i18n="sec6_title">§6 Gewährleistung</h2>
+        <p data-i18n="sec6_text">
+            Gewährleistungsansprüche des Käufers verjähren innerhalb von <strong>12 Monaten</strong> 
+            ab Gefahrenübergang. Der Käufer ist verpflichtet, die Ware unverzüglich nach Erhalt auf 
+            offensichtliche Mängel zu prüfen und diese innerhalb von 7 Tagen schriftlich zu rügen.
+        </p>
+
+        <h2 data-i18n="sec7_title">§7 Haftung</h2>
+        <p data-i18n="sec7_text">
+            Der Verkäufer haftet unbeschränkt nur für Vorsatz und grobe Fahrlässigkeit. 
+            Für leichte Fahrlässigkeit haftet der Verkäufer nur bei Verletzung wesentlicher Vertragspflichten 
+            (Kardinalpflichten), und zwar beschränkt auf den vertragstypischen, vorhersehbaren Schaden. 
+            Eine weitergehende Haftung ist ausgeschlossen.
+        </p>
+
+        <h2 data-i18n="sec8_title">§8 Anwendbares Recht und Gerichtsstand</h2>
+        <p data-i18n="sec8_text">
+            Es gilt das Recht der Republik Uruguay. Für Streitigkeiten aus Verträgen mit Käufern, 
+            die ihren Sitz in Deutschland haben, vereinbaren die Parteien den Gerichtsstand Montevideo, Uruguay, 
+            sofern der Käufer Kaufmann im Sinne des deutschen HGB ist.
+        </p>
+
+        <h2 data-i18n="sec9_title">§9 Salvatorische Klausel</h2>
+        <p data-i18n="sec9_text">
+            Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, 
+            bleibt der Vertrag im Übrigen wirksam. An die Stelle der unwirksamen Bestimmung tritt 
+            eine wirksame Regelung, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.
+        </p>
+
+        <span class="last-updated">Stand: Mai 2026</span>
+    </main>
+
+    <footer>
+        <img src="Images/Logo.png" alt="Kunz Sourcing Logo" class="footer-logo">
+        <p>© 2026 Kunz Sourcing · <a href="impressum.html" data-i18n="footer_imp">Impressum</a> · <a href="agb.html" data-i18n="footer_agb">AGB</a> · <a href="datenschutz.html" data-i18n="footer_priv">Datenschutz</a></p>
+    </footer>
+
+    <script>
+        const translations = {
+            de: {
+                page_title: "AGB – Kunz Sourcing",
+                back: "← Zurück zur Startseite",
+                title: "Allgemeine Geschäftsbedingungen",
+                scope_title: "Geltungsbereich",
+                scope_text: "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Geschäftsbeziehungen zwischen <strong>Kunz Sourcing</strong> (im Folgenden: Verkäufer) und <strong>gewerblichen Kunden</strong> (im Folgenden: Käufer) über die Webseite kunzsourcing.com. Es handelt sich ausschließlich um B2B-Geschäfte; Privatverbraucher sind ausgeschlossen.",
+                sec1_title: "§1 Vertragsabschluss",
+                sec1_p1: "Die Darstellung der Produkte auf der Webseite stellt kein rechtlich bindendes Angebot dar. Durch das Absenden einer Bestellanfrage über das Kontaktformular, per E-Mail oder WhatsApp gibt der Käufer ein unverbindliches Interesse ab.",
+                sec1_p2: "Der Vertrag kommt erst durch die ausdrückliche Annahme der Bestellung durch den Verkäufer (Zusendung einer offiziellen B2B-Rechnung) und die anschließende Zahlung des Käufers zustande. Bis dahin ist der Verkäufer an keine Lieferverpflichtung gebunden.",
+                sec2_title: "§2 Preise und Zahlung",
+                sec2_p1: "Alle Preise verstehen sich in Euro (€) pro Kilogramm, zuzüglich etwaiger Versandkosten. Die Mindestabnahmemenge (MOQ) beträgt <strong>20 Kilogramm</strong> pro Bestellung.",
+                sec2_p2: "Die Zahlung erfolgt ausschließlich per Vorkasse mittels <strong>SEPA-Überweisung</strong> auf das vom Verkäufer mitgeteilte europäische Geschäftskonto. Die Ware wird erst nach vollständigem Zahlungseingang versendet.",
+                sec3_title: "§3 Versand und Gefahrenübergang",
+                sec3_p1: "Der Versand erfolgt direkt aus Uruguay via <strong>EMS (Express Mail Service)</strong>. Die Lieferzeit beträgt ca. <strong>20–30 Tage</strong> ab Versandbestätigung.",
+                sec3_p2: "Da es sich um ein B2B-Geschäft handelt, geht die Gefahr des zufälligen Untergangs und der Verschlechterung der Ware auf den Käufer über, sobald der Verkäufer die Ware dem Versanddienstleister übergeben hat.",
+                sec4_title: "§4 Einfuhrabgaben und Verzollung",
+                sec4_text: "Der Käufer ist als Importeur für die ordnungsgemäße Verzollung und die Zahlung etwaiger <strong>Einfuhrumsatzsteuern, Zölle oder sonstiger Abgaben</strong> in Deutschland verantwortlich. Der Verkäufer liefert aus Uruguay DDP (Delivered Duty Paid) ist nicht vereinbart, sofern nicht ausdrücklich anders schriftlich vereinbart.",
+                sec5_title: "§5 Musterpaket",
+                sec5_text: "Das 1-Kilo-Musterpaket (88 € inkl. Express-Versand) dient der Qualitätsprüfung vor einer Hauptbestellung. Bei einer anschließenden 20-Kilo-Bestellung wird der volle Musterpaket-Preis als Gutschrift verrechnet. Das Musterpaket ist vom Widerruf ausgeschlossen, da es sich um maßgeschneiderte B2B-Ware handelt.",
+                sec6_title: "§6 Gewährleistung",
+                sec6_text: "Gewährleistungsansprüche des Käufers verjähren innerhalb von <strong>12 Monaten</strong> ab Gefahrenübergang. Der Käufer ist verpflichtet, die Ware unverzüglich nach Erhalt auf offensichtliche Mängel zu prüfen und diese innerhalb von 7 Tagen schriftlich zu rügen.",
+                sec7_title: "§7 Haftung",
+                sec7_text: "Der Verkäufer haftet unbeschränkt nur für Vorsatz und grobe Fahrlässigkeit. Für leichte Fahrlässigkeit haftet der Verkäufer nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten), und zwar beschränkt auf den vertragstypischen, vorhersehbaren Schaden. Eine weitergehende Haftung ist ausgeschlossen.",
+                sec8_title: "§8 Anwendbares Recht und Gerichtsstand",
+                sec8_text: "Es gilt das Recht der Republik Uruguay. Für Streitigkeiten aus Verträgen mit Käufern, die ihren Sitz in Deutschland haben, vereinbaren die Parteien den Gerichtsstand Montevideo, Uruguay, sofern der Käufer Kaufmann im Sinne des deutschen HGB ist.",
+                sec9_title: "§9 Salvatorische Klausel",
+                sec9_text: "Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, bleibt der Vertrag im Übrigen wirksam. An die Stelle der unwirksamen Bestimmung tritt eine wirksame Regelung, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.",
+                footer_imp: "Impressum",
+                footer_agb: "AGB",
+                footer_priv: "Datenschutz"
+            },
+            en: {
+                page_title: "Terms & Conditions – Kunz Sourcing",
+                back: "← Back to homepage",
+                title: "Terms & Conditions",
+                scope_title: "Scope of Application",
+                scope_text: "These General Terms and Conditions (T&Cs) apply to all business relationships between <strong>Kunz Sourcing</strong> (hereinafter: Seller) and <strong>commercial customers</strong> (hereinafter: Buyer) via the website kunzsourcing.com. These are exclusively B2B transactions; private consumers are excluded.",
+                sec1_title: "§1 Contract Conclusion",
+                sec1_p1: "The presentation of products on the website does not constitute a legally binding offer. By submitting an order enquiry via the contact form, e-mail or WhatsApp, the Buyer expresses a non-binding interest.",
+                sec1_p2: "The contract is only concluded upon the Seller's express acceptance of the order (sending of an official B2B invoice) and the Buyer's subsequent payment. Until then, the Seller is not bound by any delivery obligation.",
+                sec2_title: "§2 Prices and Payment",
+                sec2_p1: "All prices are quoted in Euros (€) per kilogramme, plus any shipping costs. The minimum order quantity (MOQ) is <strong>20 kilogrammes</strong> per order.",
+                sec2_p2: "Payment is made exclusively by advance payment via <strong>SEPA bank transfer</strong> to the European business account provided by the Seller. The goods will only be shipped after full payment has been received.",
+                sec3_title: "§3 Shipping and Transfer of Risk",
+                sec3_p1: "Shipping takes place directly from Uruguay via <strong>EMS (Express Mail Service)</strong>. The delivery time is approximately <strong>20–30 days</strong> from shipping confirmation.",
+                sec3_p2: "As this is a B2B transaction, the risk of accidental loss and deterioration of the goods passes to the Buyer as soon as the Seller has handed over the goods to the shipping service provider.",
+                sec4_title: "§4 Import Duties and Customs Clearance",
+                sec4_text: "The Buyer is responsible as the importer for proper customs clearance and payment of any <strong>import VAT, customs duties or other charges</strong> in Germany. The Seller delivers from Uruguay; DDP (Delivered Duty Paid) is not agreed unless expressly agreed otherwise in writing.",
+                sec5_title: "§5 Sample Pack",
+                sec5_text: "The 1-kg sample pack (€88 incl. express shipping) is for quality inspection before a main order. Upon a subsequent 20-kg order, the full sample pack price will be credited. The sample pack is excluded from withdrawal as it is customised B2B goods.",
+                sec6_title: "§6 Warranty",
+                sec6_text: "The Buyer's warranty claims expire within <strong>12 months</strong> from the transfer of risk. The Buyer is obliged to inspect the goods immediately upon receipt for obvious defects and to complain about them in writing within 7 days.",
+                sec7_title: "§7 Liability",
+                sec7_text: "The Seller is liable without limitation only for intent and gross negligence. For slight negligence, the Seller is liable only in the event of a breach of essential contractual obligations (cardinal obligations), limited to the typical, foreseeable damage under the contract. Any further liability is excluded.",
+                sec8_title: "§8 Applicable Law and Jurisdiction",
+                sec8_text: "The law of the Republic of Uruguay shall apply. For disputes arising from contracts with Buyers who have their registered office in Germany, the parties agree on the place of jurisdiction Montevideo, Uruguay, provided that the Buyer is a merchant within the meaning of the German Commercial Code (HGB).",
+                sec9_title: "§9 Severability Clause",
+                sec9_text: "Should individual provisions of these T&Cs be or become wholly or partially invalid, the contract shall otherwise remain valid. The invalid provision shall be replaced by a valid provision that comes closest to the economic purpose of the invalid provision.",
+                footer_imp: "Legal Notice",
+                footer_agb: "T&Cs",
+                footer_priv: "Privacy Policy"
+            },
+            ru: {
+                page_title: "Условия использования – Kunz Sourcing",
+                back: "← На главную страницу",
+                title: "Условия использования",
+                scope_title: "Область применения",
+                scope_text: "Настоящие Условия использования применяются ко всем деловым отношениям между <strong>Kunz Sourcing</strong> (далее: Продавец) и <strong>коммерческими клиентами</strong> (далее: Покупатель) через веб-сайт kunzsourcing.com. Это исключительно B2B-сделки; частные потребители исключены.",
+                sec1_title: "§1 Заключение договора",
+                sec1_p1: "Представление продукции на веб-сайте не является юридически обязывающим предложением. Отправляя запрос на заказ через контактную форму, эл. почту или WhatsApp, Покупатель выражает необязывающий интерес.",
+                sec1_p2: "Договор заключается только после явного принятия заказа Продавцом (отправка официального B2B-счета) и последующей оплаты Покупателем. До этого момента Продавец не связан никаким обязательством по поставке.",
+                sec2_title: "§2 Цены и оплата",
+                sec2_p1: "Все цены указаны в евро (€) за килограмм, плюс возможные расходы на доставку. Минимальный заказ (MOQ) составляет <strong>20 килограмм</strong> за заказ.",
+                sec2_p2: "Оплата производится исключительно авансом через <strong>SEPA-перевод</strong> на европейский счет Продавца. Товар отправляется только после полного поступления оплаты.",
+                sec3_title: "§3 Доставка и переход риска",
+                sec3_p1: "Доставка осуществляется напрямую из Уругвая через <strong>EMS (Express Mail Service)</strong>. Срок доставки составляет примерно <strong>20–30 дней</strong> с момента подтверждения отправки.",
+                sec3_p2: "Поскольку это B2B-сделка, риск случайной утраты и ухудшения товара переходит к Покупателю, как только Продавец передает товар службе доставки.",
+                sec4_title: "§4 Таможенные пошлины и оформление",
+                sec4_text: "Покупатель несет ответственность как импортер за надлежащее таможенное оформление и уплату любых <strong>импортного НДС, таможенных пошлин или других сборов</strong> в Германии. Продавец доставляет из Уругвая; DDP (Delivered Duty Paid) не согласовано, если прямо не согласовано иное в письменной форме.",
+                sec5_title: "§5 Тестовый набор",
+                sec5_text: "Тестовый набор 1 кг (88 € включая экспресс-доставку) предназначен для проверки качества перед основным заказом. При последующем заказе на 20 кг полная стоимость тестового набора будет зачтена. Тестовый набор исключен из права отзыва, так как является индивидуальным B2B-товаром.",
+                sec6_title: "§6 Гарантия",
+                sec6_text: "Гарантийные требования Покупателя истекают в течение <strong>12 месяцев</strong> с момента перехода риска. Покупатель обязан немедленно после получения проверить товар на очевидные дефекты и письменно заявить о них в течение 7 дней.",
+                sec7_title: "§7 Ответственность",
+                sec7_text: "Продавец несет неограниченную ответственность только за умысел и грубую неосторожность. За легкую неосторожность Продавец несет ответственность только при нарушении существенных договорных обязательств (кардинальных обязательств), и то ограниченно типичным, предсказуемым ущербом по договору. Любая дальнейшая ответственность исключена.",
+                sec8_title: "§8 Применимое право и подсудность",
+                sec8_text: "Применяется законодательство Республики Уругвай. Для споров, возникающих из договоров с Покупателями, зарегистрированными в Германии, стороны согласовывают подсудность Монтевидео, Уругвай, при условии, что Покупатель является торговцем в смысле немецкого Торгового кодекса (HGB).",
+                sec9_title: "§9 Сепарабельность",
+                sec9_text: "Если отдельные положения настоящих Условий использования станут полностью или частично недействительными, договор в остальном остается действительным. Вместо недействительного положения вступает действительное положение, максимально приближенное к экономической цели недействительного положения.",
+                footer_imp: "Импрессум",
+                footer_agb: "Условия",
+                footer_priv: "Конфиденциальность"
+            },
+            pl: {
+                page_title: "Ogólne Warunki Handlowe – Kunz Sourcing",
+                back: "← Powrót do strony głównej",
+                title: "Ogólne Warunki Handlowe",
+                scope_title: "Zakres obowiązywania",
+                scope_text: "Niniejsze Ogólne Warunki Handlowe (OWH) obowiązują we wszystkich relacjach handlowych między <strong>Kunz Sourcing</strong> (dalej: Sprzedawca) a <strong>klientami komercyjnymi</strong> (dalej: Kupujący) za pośrednictwem strony kunzsourcing.com. Są to wyłącznie transakcje B2B; klienci prywatni są wykluczeni.",
+                sec1_title: "§1 Zawarcie umowy",
+                sec1_p1: "Prezentacja produktów na stronie internetowej nie stanowi wiążącej prawnie oferty. Wysyłając zapytanie o zamówienie za pomocą formularza kontaktowego, e-maila lub WhatsApp, Kupujący wyraża niewiążące zainteresowanie.",
+                sec1_p2: "Umowa zostaje zawarta jedynie po wyraźnym przyjęciu zamówienia przez Sprzedawcę (wysłanie oficjalnej faktury B2B) i następującej po tym płatności Kupującego. Do tego momentu Sprzedawca nie jest związany żadnym obowiązkiem dostawy.",
+                sec2_title: "§2 Ceny i płatność",
+                sec2_p1: "Wszystkie ceny podane są w euro (€) za kilogram, plus ewentualne koszty wysyłki. Minimalna wielkość zamówienia (MOQ) wynosi <strong>20 kilogramów</strong> na zamówienie.",
+                sec2_p2: "Płatność realizowana jest wyłącznie z góry, poprzez <strong>przelew SEPA</strong> na europejskie konto firmowe wskazane przez Sprzedawcę. Towar zostanie wysłany dopiero po otrzymaniu pełnej płatności.",
+                sec3_title: "§3 Wysyłka i przejście ryzyka",
+                sec3_p1: "Wysyłka odbywa się bezpośrednio z Urugwaju za pomocą <strong>EMS (Express Mail Service)</strong>. Czas dostawy wynosi około <strong>20–30 dni</strong> od potwierdzenia wysyłki.",
+                sec3_p2: "Ponieważ jest to transakcja B2B, ryzyko przypadkowej utraty i uszkodzenia towaru przechodzi na Kupującego w momencie przekazania towaru przez Sprzedawcę firmie wysyłkowej.",
+                sec4_title: "§4 Opłaty importowe i odprawa celna",
+                sec4_text: "Kupujący jako importer jest odpowiedzialny za prawidłową odprawę celną oraz zapłatę wszelkich <strong>podatków importowych VAT, ceł lub innych opłat</strong> w Niemczech. Sprzedawca dostarcza towar z Urugwaju; warunki DDP (Delivered Duty Paid) nie są uzgodnione, o ile nie zostanie to wyraźnie inaczej ustalone pisemnie.",
+                sec5_title: "§5 Zestaw próbny",
+                sec5_text: "Zestaw próbny 1 kg (88 € wraz z wysyłką ekspresową) służy do kontroli jakości przed złożeniem głównego zamówienia. Przy kolejnym zamówieniu na 20 kg pełna cena zestawu próbnego zostanie zaliczona jako kredyt. Zestaw próbny jest wyłączony z prawa odstąpienia od umowy, ponieważ jest to towar B2B wykonany na zamówienie.",
+                sec6_title: "§6 Rękojmia",
+                sec6_text: "Roszczenia Kupującego z tytułu rękojmi wygasają w ciągu <strong>12 miesięcy</strong> od przejścia ryzyka. Kupujący jest zobowiązany niezwłocznie po otrzymaniu sprawdzić towar pod względem widocznych wad i zgłosić je pisemnie w ciągu 7 dni.",
+                sec7_title: "§7 Odpowiedzialność",
+                sec7_text: "Sprzedawca odpowiada bez ograniczeń wyłącznie za umyślne działanie i poważne zaniedbanie. Za lekkie zaniedbanie Sprzedawca odpowiada tylko w przypadku naruszenia istotnych obowiązków umownych (obowiązków kardynalnych), i to w zakresie ograniczonym do typowej, przewidywalnej dla umowy szkody. Dalsza odpowiedzialność jest wykluczona.",
+                sec8_title: "§8 Prawo właściwe i jurysdykcja",
+                sec8_text: "Obowiązuje prawo Republiki Urugwaju. W przypadku sporów wynikających z umów z Kupującymi mającymi siedzibę w Niemczech, strony uzgadniają jako miejsce jurysdykcji Montevideo, Urugwaj, o ile Kupujący jest kupcem w rozumieniu niemieckiego Kodeksu Handlowego (HGB).",
+                sec9_title: "§9 Klauzula salwatoryjna",
+                sec9_text: "Jeśli poszczególne postanowienia niniejszych OWH są lub staną się całkowicie lub częściowo nieskuteczne, pozostała część umowy zachowuje ważność. Na miejsce nieskutecznego postanowienia wchodzi skuteczna regulacja, która najbliżej odpowiada celowi gospodarczemu nieskutecznego postanowienia.",
+                footer_imp: "Nota prawna",
+                footer_agb: "OWH",
+                footer_priv: "Prywatność"
+            },
+            es: {
+                page_title: "Términos y Condiciones – Kunz Sourcing",
+                back: "← Volver a la página de inicio",
+                title: "Términos y Condiciones",
+                scope_title: "Ámbito de aplicación",
+                scope_text: "Los presentes Términos y Condiciones (T&C) se aplican a todas las relaciones comerciales entre <strong>Kunz Sourcing</strong> (en adelante: Vendedor) y <strong>clientes comerciales</strong> (en adelante: Comprador) a través del sitio web kunzsourcing.com. Se trata exclusivamente de operaciones B2B; los consumidores privados quedan excluidos.",
+                sec1_title: "§1 Celebración del contrato",
+                sec1_p1: "La presentación de los productos en el sitio web no constituye una oferta jurídicamente vinculante. Al enviar una consulta de pedido a través del formulario de contacto, correo electrónico o WhatsApp, el Comprador expresa un interés no vinculante.",
+                sec1_p2: "El contrato solo se celebra tras la aceptación expresa del pedido por parte del Vendedor (envío de una factura B2B oficial) y el posterior pago del Comprador. Hasta ese momento, el Vendedor no está sujeto a ninguna obligación de entrega.",
+                sec2_title: "§2 Precios y pago",
+                sec2_p1: "Todos los precios se indican en euros (€) por kilogramo, más los eventuales costes de envío. La cantidad mínima de pedido (MOQ) es de <strong>20 kilogramos</strong> por pedido.",
+                sec2_p2: "El pago se realiza exclusivamente por adelantado mediante <strong>transferencia bancaria SEPA</strong> a la cuenta comercial europea indicada por el Vendedor. La mercancía se enviará únicamente tras la recepción del pago íntegro.",
+                sec3_title: "§3 Envío y transmisión del riesgo",
+                sec3_p1: "El envío se realiza directamente desde Uruguay mediante <strong>EMS (Express Mail Service)</strong>. El plazo de entrega es de aproximadamente <strong>20–30 días</strong> desde la confirmación del envío.",
+                sec3_p2: "Al tratarse de una operación B2B, el riesgo de pérdida accidental y deterioro de la mercancía pasa al Comprador en el momento en que el Vendedor entrega la mercancía al proveedor de servicios de transporte.",
+                sec4_title: "§4 Derechos de importación y despacho de aduanas",
+                sec4_text: "El Comprador es responsable, como importador, del correcto despacho de aduanas y del pago de cualquier <strong>IVA de importación, aranceles u otros gravámenes</strong> en Alemania. El Vendedor entrega desde Uruguay; no se acuerda la modalidad DDP (Delivered Duty Paid), salvo que se pacte expresamente por escrito lo contrario.",
+                sec5_title: "§5 Paquete de muestra",
+                sec5_text: "El paquete de muestra de 1 kg (88 € incl. envío exprés) sirve para el control de calidad antes de un pedido principal. En un pedido posterior de 20 kg, el precio íntegro del paquete de muestra se abonará como crédito. El paquete de muestra queda excluido del derecho de desistimiento, ya que se trata de mercancía B2B personalizada.",
+                sec6_title: "§6 Garantía",
+                sec6_text: "Las reclamaciones de garantía del Comprador prescriben a los <strong>12 meses</strong> desde la transmisión del riesgo. El Comprador está obligado a inspeccionar la mercancía inmediatamente tras su recepción en busca de defectos evidentes y a reclamarlos por escrito dentro de un plazo de 7 días.",
+                sec7_title: "§7 Responsabilidad",
+                sec7_text: "El Vendedor responde sin limitación únicamente por dolo y negligencia grave. Por negligencia leve, el Vendedor solo responde en caso de incumplimiento de obligaciones contractuales esenciales (obligaciones cardinales), y ello limitado al daño típico y previsible del contrato. Se excluye cualquier responsabilidad adicional.",
+                sec8_title: "§8 Derecho aplicable y jurisdicción",
+                sec8_text: "Se aplica el derecho de la República de Uruguay. Para controversias derivadas de contratos con Compradores domiciliados en Alemania, las partes acuerdan como fuero competente Montevideo, Uruguay, siempre que el Comprador sea comerciante en el sentido del Código de Comercio alemán (HGB).",
+                sec9_title: "§9 Cláusula de salvedad",
+                sec9_text: "Si alguna disposición de estos T&C es o llegara a ser total o parcialmente inválida, el resto del contrato seguirá siendo válido. La disposición inválida será sustituida por una regulación válida que se aproxime lo más posible a la finalidad económica de la disposición inválida.",
+                footer_imp: "Aviso legal",
+                footer_agb: "T&C",
+                footer_priv: "Privacidad"
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('ks_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
+            document.documentElement.lang = lang;
+
+            const t = translations[lang];
+            if (!t) return;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    if (el.tagName === 'TITLE') {
+                        document.title = t[key];
+                    } else {
+                        el.innerHTML = t[key];
+                    }
+                }
+            });
+        }
+
+        const savedLang = localStorage.getItem('ks_lang') || 'de';
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(savedLang);
+        });
+    </script>
+    <a href="https://wa.me/message/FDT6WPLEOMFAE1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chat" title="WhatsApp Chat">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115.1-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-13.4-32.3-18.3-44.2-4.8-11.6-9.7-10-13.4-10.2-3.5-.2-7.5-.2-11.5-.2-4 0-10.5 1.5-16 7.4-5.5 5.9-21.1 20.6-21.1 50.2 0 29.6 21.6 58.2 24.6 62.3 3 4.1 41.3 63.1 101.6 88.5 50.5 21.2 60.8 17 71.8 15.8 11-1.2 33.3-13.6 38-26.8 4.7-13.2 4.7-24.6 3.3-26.8-1.4-2.3-5.1-3.7-10.7-6.5z"/></svg>
+    </a>
+</body>
+</html>
