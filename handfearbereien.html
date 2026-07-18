@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Kunz Sourcing – Premium Rohwolle für Handfärbereien & Kleinunternehmer</title>
+    <meta name="description" content="Direktimport von 100% Merinogarn aus Uruguay für deutsche Handfärbereien und Manufakturen. B2B-Abnahme ab 20kg. 1kg-Testpaket verfügbar.">
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #FAF7F2;
+            --color-wool: #F5EDE3;
+            --color-sand: #D4C4B0;
+            --color-forest: #2C5F2D;
+            --color-forest-light: #3A7A3B;
+            --color-charcoal: #2B2B2B;
+            --color-gray: #6B6B6B;
+            --color-light-gray: #E8E4DE;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-charcoal);
+            background: var(--color-cream);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-light-gray);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-forest);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding-right: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .logo img {
+            height: 2rem;
+            width: 2rem;
+            display: block;
+        }
+        .logo span { font-weight: 400; color: var(--color-charcoal); }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            position: relative;
+            white-space: nowrap;
+        }
+        .nav-links a:hover { color: var(--color-forest); }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--color-forest);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--color-forest);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.8rem !important;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { background: var(--color-forest-light); color: white !important; }
+        .lang-switcher {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+            background: var(--color-wool);
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-light-gray);
+            flex-shrink: 0;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+            opacity: 0.5;
+        }
+        .lang-btn:hover { opacity: 0.8; background: rgba(0,0,0,0.05); }
+        .lang-btn.active { opacity: 1; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+        .hero-content { flex: 1; }
+        .hero-visual { flex: 1; position: relative; }
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.2rem;
+            line-height: 1.15;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--color-forest);
+        }
+        .hero-sub {
+            font-size: 1.15rem;
+            color: var(--color-gray);
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+            line-height: 1.7;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--color-forest);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-forest);
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: var(--color-forest-light);
+            border-color: var(--color-forest-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(44, 95, 45, 0.2);
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--color-forest);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            border: 2px solid var(--color-forest);
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+        .btn-secondary:hover {
+            background: var(--color-forest);
+            color: white;
+        }
+        .hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--color-wool) 0%, var(--color-sand) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-image-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 200%; height: 200%;
+            background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);
+            animation: slide 20s linear infinite;
+        }
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(0, 0); }
+        }
+        .hero-image-placeholder span {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--color-charcoal);
+            opacity: 0.6;
+            z-index: 1;
+            text-align: center;
+            padding: 1rem;
+        }
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+        }
+        .section-header p {
+            color: var(--color-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .usps {
+            background: white;
+            padding: 6rem 2rem;
+        }
+        .usps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .usp-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        .usp-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--color-wool);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+        .usp-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-charcoal);
+        }
+        .usp-card p {
+            color: var(--color-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--color-light-gray);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .product-image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: var(--color-wool);
+            display: block;
+            overflow: hidden;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .product-info { padding: 2rem; }
+        .product-info h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .product-info .subtitle {
+            color: var(--color-forest);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .product-info p {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .specs {
+            background: var(--color-cream);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+        .specs strong { color: var(--color-charcoal); }
+        .b2b-section {
+            background: var(--color-charcoal);
+            color: white;
+            padding: 6rem 2rem;
+        }
+        .b2b-section .section-header h2,
+        .b2b-section .section-header p { color: white; }
+        .b2b-section .section-header p { opacity: 0.8; }
+        .price-highlight {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .price-tag {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--color-sand);
+            margin-bottom: 0.5rem;
+        }
+        .price-highlight p { opacity: 0.8; font-size: 0.95rem; }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -1.5rem;
+            top: 2rem;
+            color: var(--color-sand);
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--color-forest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .step h4 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .step p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        .sample-section {
+            background: linear-gradient(to bottom, var(--color-cream), white);
+        }
+        .sample-box {
+            background: white;
+            border: 2px solid var(--color-forest);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .sample-box::before {
+            content: 'MUSTERPAKET';
+            position: absolute;
+            top: 1.5rem;
+            right: -3rem;
+            background: var(--color-forest);
+            color: white;
+            padding: 0.5rem 3rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transform: rotate(45deg);
+        }
+        .sample-box h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .sample-box .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-forest);
+            margin: 1rem 0;
+        }
+        .promise-box {
+            background: var(--color-cream);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--color-forest);
+        }
+        .promise-box strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-charcoal);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--color-sand), var(--color-wool));
+            border-radius: 8px;
+            overflow: hidden;
+            display: block;
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+        .about-text h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-text p {
+            color: var(--color-gray);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-wool);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-forest);
+            margin-top: 1rem;
+        }
+        .contact-section {
+            background: white;
+            padding: 6rem 2rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-info h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-info > p {
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-detail .icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-wool);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .contact-detail div strong {
+            display: block;
+            color: var(--color-charcoal);
+            margin-bottom: 0.2rem;
+        }
+        .contact-detail div span,
+        .contact-detail div a {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .contact-detail div a:hover { color: var(--color-forest); }
+        .contact-form {
+            background: var(--color-cream);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-light-gray);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--color-light-gray);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            background: white;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-forest);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-submit {
+            width: 100%;
+            background: var(--color-forest);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .form-submit:hover {
+            background: var(--color-forest-light);
+            transform: translateY(-1px);
+        }
+        .form-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--color-gray);
+        }
+        .small-link-banner {
+            background: var(--color-wool);
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            margin-top: 60px;
+        }
+        .small-link-banner a {
+            color: var(--color-forest);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .small-link-banner a:hover { text-decoration: underline; }
+        footer {
+            background: var(--color-charcoal);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer .footer-content {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            text-align: center;
+        }
+        footer .footer-content > div {
+            flex: 1 1 200px;
+            max-width: 260px;
+        }
+        footer h4 {
+            color: white;
+            font-family: var(--font-serif);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+        footer a:hover { color: white; }
+        .footer-logo {
+            display: block;
+            margin: 0 auto 1.5rem;
+            height: 56px;
+            width: 56px;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 1100px) {
+            .nav-links { gap: 1.2rem; }
+            .nav-links a { font-size: 0.82rem; }
+        }
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; padding-top: 6rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-visual { width: 100%; }
+            .usps-grid, .products-grid, .process-steps, .about-content, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .step:not(:last-child)::after { display: none; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0; right: 0;
+                background: var(--color-cream);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                border-bottom: 1px solid var(--color-light-gray);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .btn-secondary { margin-left: 0; margin-top: 1rem; display: block; text-align: center; }
+            .sample-box::before { display: none; }
+            footer .footer-content { flex-direction: column; align-items: center; }
+            .nav-right { gap: 0.5rem; }
+            .lang-switcher { padding: 0.2rem 0.3rem; }
+            .lang-btn { font-size: 0.95rem; padding: 0.15rem 0.3rem; }
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+            .whatsapp-float svg { width: 24px; height: 24px; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo"><img src="Images/Logo.png" alt="Kunz Sourcing Logo">Kunz <span>Sourcing</span></a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero" data-i18n="nav_start">Startseite</a></li>
+                    <li><a href="#garne" data-i18n="nav_garne">Unsere Garne</a></li>
+                    <li><a href="#b2b" data-i18n="nav_b2b">B2B-Konditionen</a></li>
+                    <li><a href="#muster" data-i18n="nav_muster">Das Musterpaket</a></li>
+                    <li><a href="#ueber" data-i18n="nav_ueber">Über uns</a></li>
+                    <li><a href="#kontakt" data-i18n="nav_kontakt">Kontakt</a></li>
+                    <li><a href="index.html" class="nav-cta" data-i18n="nav_gross">Für Großhändler & Industrie →</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
+                    <button class="lang-btn" onclick="setLanguage('en')" title="English">🇪🇳</button>
+                    <button class="lang-btn" onclick="setLanguage('ru')" title="Русский">🇷🇺</button>
+                    <button class="lang-btn" onclick="setLanguage('pl')" title="Polski">🇵🇱</button>
+                    <button class="lang-btn" onclick="setLanguage('es')" title="Español">🇪🇸</button>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü öffnen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="small-link-banner">
+        <span data-i18n="banner_text">Sie suchen Container-Volumen, gekämmte Tops oder gewaschene Vliese für die Industrie? →</span> <a href="index.html" data-i18n="banner_link">Zur Großhandels-Seite</a>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero_h1">Premium Rohwolle aus Uruguay – <em>Direkt von der Quelle in Ihre Färbetöpfe.</em></h1>
+            <p class="hero-sub" data-i18n="hero_sub">
+                Ungefärbtes, ultrafeines Merinogarn für unabhängige Handfärbereien und Manufakturen in Deutschland. 
+                Ohne Zwischenhändler, transparent und zu fairen B2B-Konditionen. Ab 20 kg – mit risikofreiem 1-Kilo-Testpaket.
+            </p>
+            <div>
+                <a href="#kontakt" class="btn-primary" data-i18n="cta_primary">Jetzt 1-Kilo-Musterpaket anfragen</a>
+                <a href="index.html" class="btn-secondary" data-i18n="cta_secondary">Container-Volumen für Industrie</a>
+            </div>
+        </div>
+        <style>
+.hero-image-placeholder::before,
+.hero-image-placeholder::after,
+.hero-visual::before,
+.hero-visual::after {
+    background: none !important;
+    background-image: none !important;
+    display: none !important;
+}
+</style>
+
+<div class="hero-visual">
+    <div class="hero-image-placeholder">
+        <img src="Images/Merinokneul.png" alt="Merino Singles auf rustikalem Holz" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+</div>
+ </section>
+
+    <section class="usps" id="usps">
+        <div class="section-header">
+            <h2 data-i18n="usps_title">Qualität, die man fühlt. Herkunft, der man vertraut.</h2>
+        </div>
+        <div class="usps-grid">
+            <div class="usp-card">
+                <div class="usp-icon">🐑</div>
+                <h3 data-i18n="usp1_title">100 % Uruguay-Merino</h3>
+                <p data-i18n="usp1_desc">Unsere Wolle stammt aus dem optimalen Klima Uruguays und besticht mit einer ultrafeinen Qualität von ca. 19–21 Mikron – perfekt für anspruchsvolle Färbearbeiten.</p>
+            </div>
+            <div class="usp-card">
+                <div class="usp-icon">🚢</div>
+                <h3 data-i18n="usp2_title">Direktimport ohne Umwege</h3>
+                <p data-i18n="usp2_desc">Keine europäischen Großhändler, keine unnötigen Zwischenschritte. Sie kaufen direkt an der Quelle – mit voller Transparenz über Herkunft und Produktion.</p>
+            </div>
+            <div class="usp-card">
+                <div class="usp-icon">🎨</div>
+                <h3 data-i18n="usp3_title">Die perfekte Leinwand</h3>
+                <p data-i18n="usp3_desc">Professionell gewaschen und gesponnen. Komplett roh (Bare Yarn) und bereit zum sofortigen Färben. Die ideale Basis für Ihre kreativen Farbkompositionen.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="garne">
+    <div class="section-header">
+        <h2 data-i18n="garne_title">Unsere Rohgarne für Ihre Kunstwerke</h2>
+        <p data-i18n="garne_desc">Zwei klassische Grundsorten, die den internationalen Standard für Handfärbereien definieren.</p>
+    </div>
+    
+    <div class="products-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Images/Eingarn.png" alt="Produktfoto: Singles auf weißem Hintergrund" data-i18n="img_singles">
+            </div>
+            
+            <div class="product-info">
+                <span class="subtitle" data-i18n="sub_singles">Einfädig · Voluminös</span>
+                <h3 data-i18n="title_singles">Merino Singles</h3>
+                <p data-i18n="text_singles">Luxuriöses, voluminöses und extrem weiches einfädiges Garn. Perfekt für kuschelige Accessoires, Schals und Decken mit exzellentem Farbauftrag.</p>
+                <div class="specs">
+                    <strong data-i18n="specs_label">Spezifikationen:</strong> 
+                    <span data-i18n="specs_singles">100 % Merino, ungefärbt (crudo), ca. 19–21 Mikron, Lauflänge ca. 366m/100g</span>
+                </div>
+                <a href="#kontakt" class="btn-primary" onclick="selectProduct('singles')" data-i18n="btn_singles">Singles anfragen</a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="Images/Mehrgarn.png" alt="Produktfoto: 4-Ply auf weißem Hintergrund" data-i18n="img_4ply">
+            </div>
+            
+            <div class="product-info">
+                <span class="subtitle" data-i18n="sub_4ply">Verzwirnt · Robust</span>
+                <h3 data-i18n="title_4ply">Merino Classic 4-Ply</h3>
+                <p data-i18n="text_4ply">Der robuste Klassiker für den Alltag. 4-fädig verzwirnt, strapazierfähig und formstabil – ideal für Socken, Pullover und Alltagsstrickwaren.</p>
+                <div class="specs">
+                    <strong data-i18n="specs_label">Spezifikationen:</strong> 
+                    <span data-i18n="specs_4ply">100 % Merinowolle; Faserstärke: 17–21 Mikron (feine Qualität); Farbe: Rohweiß, ungefärbt; Individualisierung: Weitere Farben jederzeit auf Anfrage möglich.</span>
+                </div>
+                <a href="#kontakt" class="btn-primary" onclick="selectProduct('4ply')" data-i18n="btn_4ply">4-Ply anfragen</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="b2b-section" id="b2b">
+        <div class="section-header">
+            <h2 data-i18n="b2b_title">Transparenter Handel & Einfacher Bestellprozess</h2>
+            <p data-i18n="b2b_desc">Kein Warenkorb, keine versteckten Kosten. Direkter B2B-Handel mit klaren Konditionen.</p>
+        </div>
+        <div class="price-highlight">
+            <div class="price-tag">88,00 €</div>
+            <p data-i18n="price_kg">pro Kilogramm · Gilt für alle Garnsorten</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;" data-i18n="price_moq">Mindestabnahme: 20 kg pro Bestellung</p>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4 data-i18n="step1_title">Anfrage senden</h4>
+                <p data-i18n="step1_desc">Nutzen Sie unser Kontaktformular und teilen Sie uns Ihre Wunschmenge und Garnsorte mit.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4 data-i18n="step2_title">Rechnung erhalten</h4>
+                <p data-i18n="step2_desc">Wir prüfen die Verfügbarkeit und senden Ihnen eine offizielle B2B-Rechnung.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4 data-i18n="step3_title">Bequem zahlen</h4>
+                <p data-i18n="step3_desc">Überweisen Sie gebührenfrei und sicher per SEPA-Überweisung auf unser europäisches Geschäftskonto.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4 data-i18n="step4_title">Lieferung</h4>
+                <p data-i18n="step4_desc">Direktversand aus Uruguay via EMS. Lieferzeit ca. 20–30 Tage bis zu Ihrer Tür.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sample-section" id="muster">
+        <div class="sample-box">
+            <h3 data-i18n="sample_title">Überzeugen Sie sich selbst – ohne Risiko</h3>
+            <p style="color: var(--color-gray); max-width: 600px; margin: 0 auto;" data-i18n="sample_desc">
+                Wir wissen, dass Sie Wolle anfassen und probefärben müssen, bevor Sie eine Großbestellung tätigen. 
+                Bestellen Sie unser 1-Kilo-Musterpaket (z. B. 500g Singles & 500g 4-Ply) inklusive Express-Versand.
+            </p>
+            <div class="price">88 € <span style="font-size: 1rem; font-weight: 400; color: var(--color-gray);" data-i18n="sample_incl">inkl. Versand</span></div>
+            <div class="promise-box">
+                <strong data-i18n="promise_title">Das Versprechen:</strong>
+                <span data-i18n="promise_text">Wenn Sie sich danach für Ihre erste 20-Kilo-Hauptbestellung entscheiden, schreiben wir Ihnen den vollen Preis des Musterpakets komplett gut!</span>
+            </div>
+            <a href="#kontakt" class="btn-primary" onclick="selectProduct('musterpaket')" data-i18n="btn_sample">Musterpaket anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Images/Stanley.jpeg" alt="Foto: Stanley in Uruguay mit Wolle" data-i18n-alt="about_img">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="about_title">Ihr direkter Draht nach Südamerika</h2>
+                <p data-i18n="about_p1">
+                    Ich bin Stanley Kunz – vor Ort in Uruguay, wo die besten Merinoschafe der Welt grasen. 
+                    Ich kenne die Produktionsstätten persönlich, spreche die Sprache der Produzenten und 
+                    verstehe die Ansprüche deutscher Textilkünstler.
+                </p>
+                <p data-i18n="about_p2">
+                    Mit Kunz Sourcing schlage ich die Brücke zwischen südamerikanischer Premium-Qualität 
+                    und der deutschen Handfärberei-Szene. Kein Opaque-Handel, keine Überraschungen – 
+                    nur erstklassige Rohwolle, die Ihre Farben zum Leuchten bringt.
+                </p>
+                <div class="location-badge">
+                    <span>📍</span> <span data-i18n="location">Direkt aus Uruguay – Montevideo &amp; Umland</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="kontakt">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 data-i18n="contact_title">Kontakt & Bestellanfrage</h2>
+                <p data-i18n="contact_desc">
+                    Füllen Sie das Formular aus – wir melden uns innerhalb von 24 Stunden bei Ihnen. 
+                    Für unverbindliche Anfragen, Musterpaket-Bestellungen oder B2B-Großaufträge ab 20 kg.
+                </p>
+                <div class="contact-detail">
+                    <div class="icon">📧</div>
+                    <div>
+                        <strong data-i18n="lbl_email">E-Mail</strong>
+                        <a href="mailto:Stanley@kunzsourcing.com">Stanley@kunzsourcing.com</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">
+                        <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor" style="color: var(--color-charcoal);"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115.1-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-13.4-32.3-18.3-44.2-4.8-11.6-9.7-10-13.4-10.2-3.5-.2-7.5-.2-11.5-.2-4 0-10.5 1.5-16 7.4-5.5 5.9-21.1 20.6-21.1 50.2 0 29.6 21.6 58.2 24.6 62.3 3 4.1 41.3 63.1 101.6 88.5 50.5 21.2 60.8 17 71.8 15.8 11-1.2 33.3-13.6 38-26.8 4.7-13.2 4.7-24.6 3.3-26.8-1.4-2.3-5.1-3.7-10.7-6.5z"/></svg>
+                    </div>
+                    <div>
+                        <strong data-i18n="lbl_phone">Telefon & WhatsApp</strong>
+                        <a href="https://wa.me/message/FDT6WPLEOMFAE1" target="_blank" rel="noopener noreferrer">+49 6344 9269681</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-charcoal);">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <strong data-i18n="lbl_insta">Instagram</strong>
+                        <a href="https://www.instagram.com/kunzsourcing?igsh=bng0b2xrcGgyMmNp" target="_blank" rel="noopener noreferrer">@kunzsourcing</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">
+                        <svg width="20" height="20" viewBox="0 0 320 512" fill="currentColor" style="color: var(--color-charcoal);"><path d="M279.14 288l14.22-92.66h-88.91v-59.8c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                    </div>
+                    <div>
+                        <strong data-i18n="lbl_fb">Facebook</strong>
+                        <a href="https://www.facebook.com/share/1ELX6g9reX/" target="_blank" rel="noopener noreferrer">Kunz Sourcing</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">📦</div>
+                    <div>
+                        <strong data-i18n="lbl_ship">Versand</strong>
+                        <span data-i18n="val_ship">Direkt aus Uruguay via EMS</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="icon">💶</div>
+                    <div>
+                        <strong data-i18n="lbl_pay">Zahlung</strong>
+                        <span data-i18n="val_pay">SEPA-Überweisung in Euro</span>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vorname" data-i18n="form_vorname">Vorname</label>
+                        <input type="text" id="vorname" name="vorname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nachname" data-i18n="form_nachname">Nachname</label>
+                        <input type="text" id="nachname" name="nachname" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firma" data-i18n="form_firma">Firmenname / Shop-Name</label>
+                    <input type="text" id="firma" name="firma" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="form_email">E-Mail-Adresse</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="adresse" data-i18n="form_adresse">Lieferadresse</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Straße, PLZ, Ort, Deutschland" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="produkt" data-i18n="form_produkt">Gewünschtes Produkt</label>
+                        <select id="produkt" name="produkt" required>
+                            <option value="" data-i18n="opt_select">Bitte wählen...</option>
+                            <option value="singles" data-i18n="opt_singles">Merino Singles (Einfädig)</option>
+                            <option value="4ply" data-i18n="opt_4ply">Merino Classic 4-Ply</option>
+                            <option value="musterpaket" data-i18n="opt_muster">1-Kilo-Musterpaket</option>
+                            <option value="beide" data-i18n="opt_beide">Beide Sorten (B2B)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="menge" data-i18n="form_menge">Gewünschte Menge (kg)</label>
+                        <input type="number" id="menge" name="menge" min="1" placeholder="z. B. 20" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nachricht" data-i18n="form_msg">Nachricht</label>
+                    <textarea id="nachricht" name="nachricht" placeholder="Haben Sie spezielle Wünsche oder Fragen?"></textarea>
+                </div>
+                <button type="submit" class="form-submit" data-i18n="form_submit">Unverbindliche Bestellanfrage senden</button>
+                <p class="form-note" data-i18n="form_note">Kein automatischer Kaufvertrag. Wir prüfen Verfügbarkeit und melden uns mit einer offiziellen B2B-Rechnung.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <img src="Images/Logo.png" alt="Kunz Sourcing Logo" class="footer-logo">
+        <div class="footer-content">
+            <div>
+                <h4>Kunz Sourcing</h4>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6;" data-i18n="footer_desc">
+                    Premium Merinogarn direkt aus Uruguay für deutsche Handfärbereien und Textilmanufakturen.
+                </p>
+            </div>
+            <div>
+                <h4 data-i18n="footer_legal">Rechtliches</h4>
+                <a href="impressum.html" data-i18n="footer_imp">Impressum</a>
+                <a href="datenschutz.html" data-i18n="footer_priv">Datenschutz</a>
+                <a href="agb.html" data-i18n="footer_agb">AGB</a>
+            </div>
+            <div>
+                <h4 data-i18n="footer_contact">Kontakt</h4>
+                <a href="mailto:Stanley@kunzsourcing.com">Stanley@kunzsourcing.com</a>
+                <a href="https://wa.me/message/FDT6WPLEOMFAE1" target="_blank" rel="noopener noreferrer">+49 6344 9269681</a>
+                <span style="color: rgba(255,255,255,0.4); display: block; font-size: 0.75rem; margin-top: -0.3rem; margin-bottom: 0.3rem;">(WhatsApp)</span>
+                <span style="color: rgba(255,255,255,0.6); display: block; margin-top: 0.8rem; font-size: 0.85rem;">
+                    Kunz Sourcing<br>
+                    Stanley Kunz Pazer<br>
+                    80100 Kiyú / Libertad<br>
+                    San José, Uruguay
+                </span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kunz Sourcing. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span> Made with 🧶 in Uruguay.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            de: {
+                page_title: "Kunz Sourcing – Premium Rohwolle für Handfärbereien & Kleinunternehmer",
+                nav_start: "Startseite",
+                nav_garne: "Unsere Garne",
+                nav_b2b: "B2B-Konditionen",
+                nav_muster: "Das Musterpaket",
+                nav_ueber: "Über uns",
+                nav_kontakt: "Kontakt",
+                nav_gross: "Für Großhändler & Industrie →",
+                banner_text: "Sie suchen Container-Volumen, gekämmte Tops oder gewaschene Vliese für die Industrie? →",
+                banner_link: "Zur Großhandels-Seite",
+                hero_h1: "Premium Rohwolle aus Uruguay – <em>Direkt von der Quelle in Ihre Färbetöpfe.</em>",
+                hero_sub: "Ungefärbtes, ultrafeines Merinogarn für unabhängige Handfärbereien und Manufakturen in Deutschland. Ohne Zwischenhändler, transparent und zu fairen B2B-Konditionen. Ab 20 kg – mit risikofreiem 1-Kilo-Testpaket.",
+                cta_primary: "Jetzt 1-Kilo-Musterpaket anfragen",
+                cta_secondary: "Container-Volumen für Industrie",
+                hero_img: "Foto: Merino Singles auf rustikalem Holz",
+                usps_title: "Qualität, die man fühlt. Herkunft, der man vertraut.",
+                usp1_title: "100 % Uruguay-Merino",
+                usp1_desc: "Unsere Wolle stammt aus dem optimalen Klima Uruguays und besticht mit einer ultrafeinen Qualität von ca. 19–21 Mikron – perfekt für anspruchsvolle Färbearbeiten.",
+                usp2_title: "Direktimport ohne Umwege",
+                usp2_desc: "Keine europäischen Großhändler, keine unnötigen Zwischenschritte. Sie kaufen direkt an der Quelle – mit voller Transparenz über Herkunft und Produktion.",
+                usp3_title: "Die perfekte Leinwand",
+                usp3_desc: "Professionell gewaschen und gesponnen. Komplett roh (Bare Yarn) und bereit zum sofortigen Färben. Die ideale Basis für Ihre kreativen Farbkompositionen.",
+                garne_title: "Unsere Rohgarne für Ihre Kunstwerke",
+                garne_desc: "Zwei klassische Grundsorten, die den internationalen Standard für Handfärbereien definieren.",
+                img_singles: "Produktfoto: Singles auf weißem Hintergrund",
+                sub_singles: "Einfädig · Voluminös",
+                title_singles: "Merino Singles",
+                text_singles: "Luxuriöses, voluminöses und extrem weiches einfädiges Garn. Perfekt für kuschelige Accessoires, Schals und Decken mit exzellentem Farbauftrag.",
+                specs_label: "Spezifikationen:",
+                specs_singles: "100 % Merinowolle; Faserstärke: 17–32 Mikron (feine Qualität); Farbe: Rohweiß, ungefärbt; Individualisierung: Weitere Farben jederzeit auf Anfrage möglich.",
+                btn_singles: "Singles anfragen",
+                img_4ply: "Produktfoto: 4-Ply auf weißem Hintergrund",
+                sub_4ply: "Verzwirnt · Robust",
+                title_4ply: "Merino Classic 4-Ply",
+                text_4ply: "Der robuste Klassiker für den Alltag. 4-fädig verzwirnt, strapazierfähig und formstabil – ideal für Socken, Pullover und Alltagsstrickwaren.",
+                specs_4ply: "100 % Merinowolle; Faserstärke: 17–32 Mikron (feine Qualität); Farbe: Rohweiß, ungefärbt; Individualisierung: Weitere Farben jederzeit auf Anfrage möglich.",
+                btn_4ply: "4-Ply anfragen",
+                b2b_title: "Transparenter Handel & Einfacher Bestellprozess",
+                b2b_desc: "Kein Warenkorb, keine versteckten Kosten. Direkter B2B-Handel mit klaren Konditionen.",
+                price_kg: "pro Kilogramm · Gilt für alle Garnsorten",
+                price_moq: "Mindestabnahme: 20 kg pro Bestellung",
+                step1_title: "Anfrage senden",
+                step1_desc: "Nutzen Sie unser Kontaktformular und teilen Sie uns Ihre Wunschmenge und Garnsorte mit.",
+                step2_title: "Rechnung erhalten",
+                step2_desc: "Wir prüfen die Verfügbarkeit und senden Ihnen eine offizielle B2B-Rechnung.",
+                step3_title: "Bequem zahlen",
+                step3_desc: "Überweisen Sie gebührenfrei und sicher per SEPA-Überweisung auf unser europäisches Geschäftskonto.",
+                step4_title: "Lieferung",
+                step4_desc: "Direktversand aus Uruguay via EMS. Lieferzeit ca. 20–30 Tage bis zu Ihrer Tür.",
+                sample_title: "Überzeugen Sie sich selbst – ohne Risiko",
+                sample_desc: "Wir wissen, dass Sie Wolle anfassen und probefärben müssen, bevor Sie eine Großbestellung tätigen. Bestellen Sie unser 1-Kilo-Musterpaket (z. B. 500g Singles & 500g 4-Ply) inklusive Express-Versand.",
+                sample_incl: "inkl. Versand",
+                promise_title: "Das Versprechen:",
+                promise_text: "Wenn Sie sich danach für Ihre erste 20-Kilo-Hauptbestellung entscheiden, schreiben wir Ihnen den vollen Preis des Musterpakets komplett gut!",
+                btn_sample: "Musterpaket anfragen",
+                about_img: "Foto: Stanley in Uruguay mit Wolle",
+                about_title: "Ihr direkter Draht nach Südamerika",
+                about_p1: "Ich bin Stanley Kunz – vor Ort in Uruguay, wo die besten Merinoschafe der Welt grasen. Ich kenne die Produktionsstätten persönlich, spreche die Sprache der Produzenten und verstehe die Ansprüche deutscher Textilkünstler.",
+                about_p2: "Mit Kunz Sourcing schlage ich die Brücke zwischen südamerikanischer Premium-Qualität und der deutschen Handfärberei-Szene. Kein Opaque-Handel, keine Überraschungen – nur erstklassige Rohwolle, die Ihre Farben zum Leuchten bringt.",
+                location: "Direkt aus Uruguay – Montevideo & Umland",
+                contact_title: "Kontakt & Bestellanfrage",
+                contact_desc: "Füllen Sie das Formular aus – wir melden uns innerhalb von 24 Stunden bei Ihnen. Für unverbindliche Anfragen, Musterpaket-Bestellungen oder B2B-Großaufträge ab 20 kg.",
+                lbl_email: "E-Mail",
+                lbl_phone: "Telefon & WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Versand",
+                val_ship: "Direkt aus Uruguay via EMS",
+                lbl_pay: "Zahlung",
+                val_pay: "SEPA-Überweisung in Euro",
+                form_vorname: "Vorname",
+                form_nachname: "Nachname",
+                form_firma: "Firmenname / Shop-Name",
+                form_email: "E-Mail-Adresse",
+                form_adresse: "Lieferadresse",
+                form_produkt: "Gewünschtes Produkt",
+                opt_select: "Bitte wählen...",
+                opt_singles: "Merino Singles (Einfädig)",
+                opt_4ply: "Merino Classic 4-Ply",
+                opt_muster: "1-Kilo-Musterpaket",
+                opt_beide: "Beide Sorten (B2B)",
+                form_menge: "Gewünschte Menge (kg)",
+                form_msg: "Nachricht",
+                form_submit: "Unverbindliche Bestellanfrage senden",
+                form_note: "Kein automatischer Kaufvertrag. Wir prüfen Verfügbarkeit und melden uns mit einer offiziellen B2B-Rechnung.",
+                footer_desc: "Premium Merinogarn direkt aus Uruguay für deutsche Handfärbereien und Textilmanufakturen.",
+                footer_legal: "Rechtliches",
+                footer_imp: "Impressum",
+                footer_priv: "Datenschutz",
+                footer_agb: "AGB",
+                footer_contact: "Kontakt",
+                footer_rights: "Alle Rechte vorbehalten."
+            },
+            en: {
+                page_title: "Kunz Sourcing – Premium Raw Wool for Hand Dyers & Small Businesses",
+                nav_start: "Home",
+                nav_garne: "Our Yarns",
+                nav_b2b: "B2B Conditions",
+                nav_muster: "The Sample Pack",
+                nav_ueber: "About Us",
+                nav_kontakt: "Contact",
+                nav_gross: "For Wholesalers & Industry →",
+                banner_text: "Looking for container volumes, combed tops or washed fleeces for industry? →",
+                banner_link: "To the wholesale page",
+                hero_h1: "Premium Raw Wool from Uruguay – <em>Directly from the source into your dye pots.</em>",
+                hero_sub: "Undyed, ultra-fine Merino yarn for independent hand dyers and manufactories in Germany. No middlemen, transparent and at fair B2B conditions. From 20 kg – with risk-free 1-kg sample pack.",
+                cta_primary: "Request 1-kg sample pack now",
+                cta_secondary: "Container volumes for industry",
+                hero_img: "Photo: Merino singles on rustic wood",
+                usps_title: "Quality you can feel. Origin you can trust.",
+                usp1_title: "100 % Uruguay Merino",
+                usp1_desc: "Our wool comes from Uruguay's optimal climate and impresses with an ultra-fine quality of approx. 19–21 micron – perfect for demanding dyeing work.",
+                usp2_title: "Direct import without detours",
+                usp2_desc: "No European wholesalers, no unnecessary intermediaries. You buy directly at the source – with full transparency about origin and production.",
+                usp3_title: "The perfect canvas",
+                usp3_desc: "Professionally washed and spun. Completely raw (bare yarn) and ready for immediate dyeing. The ideal basis for your creative colour compositions.",
+                garne_title: "Our Raw Yarns for Your Artworks",
+                garne_desc: "Two classic basic types that define the international standard for hand dyers.",
+                img_singles: "Product photo: Singles on white background",
+                sub_singles: "Single-ply · Voluminous",
+                title_singles: "Merino Singles",
+                text_singles: "Luxurious, voluminous and extremely soft single-ply yarn. Perfect for cosy accessories, scarves and blankets with excellent colour uptake.",
+                specs_label: "Specifications:",
+                specs_singles: "100 % Merino, undyed (crudo), approx. 19–21 micron, yardage approx. 366m/100g",
+                btn_singles: "Enquire about singles",
+                img_4ply: "Product photo: 4-Ply on white background",
+                sub_4ply: "Plied · Robust",
+                title_4ply: "Merino Classic 4-Ply",
+                text_4ply: "The robust classic for everyday use. 4-ply plied, durable and shape-stable – ideal for socks, jumpers and everyday knitwear.",
+                specs_4ply: "100 % Merino, undyed, 4-ply, approx. 19–21 micron, yardage approx. 200m/100g",
+                btn_4ply: "Enquire about 4-Ply",
+                b2b_title: "Transparent Trading & Simple Ordering Process",
+                b2b_desc: "No shopping cart, no hidden costs. Direct B2B trade with clear conditions.",
+                price_kg: "per kilogramme · Applies to all yarn types",
+                price_moq: "Minimum order: 20 kg per order (200 skeins of 100g each)",
+                step1_title: "Send enquiry",
+                step1_desc: "Use our contact form and tell us your desired quantity and yarn type.",
+                step2_title: "Receive invoice",
+                step2_desc: "We check availability and send you an official B2B invoice.",
+                step3_title: "Pay conveniently",
+                step3_desc: "Transfer fee-free and securely via SEPA bank transfer to our European business account.",
+                step4_title: "Delivery",
+                step4_desc: "Direct shipping from Uruguay via EMS. Delivery time approx. 20–30 days to your door.",
+                sample_title: "Convince yourself – risk-free",
+                sample_desc: "We know you need to touch and test-dye the wool before placing a large order. Order our 1-kg sample pack (e.g. 500g singles & 500g 4-Ply) including express shipping.",
+                sample_incl: "incl. shipping",
+                promise_title: "The promise:",
+                promise_text: "If you then decide on your first 20-kg main order, we will credit you the full price of the sample pack completely!",
+                btn_sample: "Request sample pack",
+                about_img: "Photo: Stanley in Uruguay with wool",
+                about_title: "Your direct line to South America",
+                about_p1: "I am Stanley Kunz – on site in Uruguay, where the best Merino sheep in the world graze. I know the production facilities personally, speak the language of the producers and understand the demands of German textile artists.",
+                about_p2: "With Kunz Sourcing, I bridge the gap between South American premium quality and the German hand-dyeing scene. No opaque trading, no surprises – just first-class raw wool that makes your colours shine.",
+                location: "Directly from Uruguay – Montevideo & surroundings",
+                contact_title: "Contact & Order Enquiry",
+                contact_desc: "Fill out the form – we will get back to you within 24 hours. For non-binding enquiries, sample pack orders or B2B bulk orders from 20 kg.",
+                lbl_email: "E-Mail",
+                lbl_phone: "Phone & WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Shipping",
+                val_ship: "Direct from Uruguay via EMS",
+                lbl_pay: "Payment",
+                val_pay: "SEPA bank transfer in Euro",
+                form_vorname: "First name",
+                form_nachname: "Last name",
+                form_firma: "Company name / Shop name",
+                form_email: "E-mail address",
+                form_adresse: "Delivery address",
+                form_produkt: "Desired product",
+                opt_select: "Please select...",
+                opt_singles: "Merino Singles (Single-ply)",
+                opt_4ply: "Merino Classic 4-Ply",
+                opt_muster: "1-kg sample pack",
+                opt_beide: "Both types (B2B)",
+                form_menge: "Desired quantity (kg)",
+                form_msg: "Message",
+                form_submit: "Send non-binding order enquiry",
+                form_note: "No automatic purchase contract. We check availability and get back to you with an official B2B invoice.",
+                footer_desc: "Premium Merino yarn directly from Uruguay for German hand dyers and textile manufactories.",
+                footer_legal: "Legal",
+                footer_imp: "Legal Notice",
+                footer_priv: "Privacy Policy",
+                footer_agb: "Terms & Conditions",
+                footer_contact: "Contact",
+                footer_rights: "All rights reserved."
+            },
+            ru: {
+                page_title: "Kunz Sourcing – Премиальная сырьевая шерсть для красильщиков и малых предприятий",
+                nav_start: "Главная",
+                nav_garne: "Наши пряжи",
+                nav_b2b: "B2B-условия",
+                nav_muster: "Пробный набор",
+                nav_ueber: "О нас",
+                nav_kontakt: "Контакты",
+                nav_gross: "Для оптовиков и промышленности →",
+                banner_text: "Ищете контейнерные объемы, гребенные топсы или промытые флисы для промышленности? →",
+                banner_link: "На страницу оптовых продаж",
+                hero_h1: "Премиальная сырьевая шерсть из Уругвая – <em>Напрямую из источника в ваши красильные чаны.</em>",
+                hero_sub: "Некрашеная, ультратонкая мериносовая пряжа для независимых красильщиков и мануфактур в Германии. Без посредников, прозрачно и по справедливым B2B-условиям. От 20 кг – с беспроигрышным тестовым набором 1 кг.",
+                cta_primary: "Запросить тестовый набор 1 кг",
+                cta_secondary: "Контейнерные объемы для промышленности",
+                hero_img: "Фото: Мериносовые синглсы на деревянном фоне",
+                usps_title: "Качество, которое чувствуется. Происхождение, которому доверяют.",
+                usp1_title: "100 % уругвайский меринос",
+                usp1_desc: "Наша шерсть из оптимального климата Уругвая впечатляет ультратонким качеством около 19–21 микрон – идеально для сложных красильных работ.",
+                usp2_title: "Прямой импорт без обходных путей",
+                usp2_desc: "Никаких европейских оптовиков, никаких лишних посредников. Вы покупаете напрямую у источника – с полной прозрачностью происхождения и производства.",
+                usp3_title: "Идеальный холст",
+                usp3_desc: "Профессионально промытая и сотканная. Полностью сырьевая (bare yarn) и готова к немедленному окрашиванию. Идеальная основа для ваших творческих цветовых композиций.",
+                garne_title: "Наши сырьевые пряжи для ваших произведений искусства",
+                garne_desc: "Два классических базовых сорта, определяющих международный стандарт для красильщиков.",
+                img_singles: "Фото продукта: Синглсы на белом фоне",
+                sub_singles: "Однониточная · Объемная",
+                title_singles: "Merino Singles",
+                text_singles: "Роскошная, объемная и чрезвычайно мягкая однониточная пряжа. Идеально для уютных аксессуаров, шарфов и пледов с отличным восприятием краски.",
+                specs_label: "Характеристики:",
+                specs_singles: "100 % меринос, некрашеный (crudo), около 19–21 микрон, метраж около 366м/100г",
+                btn_singles: "Запросить синглсы",
+                img_4ply: "Фото продукта: 4-Ply на белом фоне",
+                sub_4ply: "Скрученная · Прочная",
+                title_4ply: "Merino Classic 4-Ply",
+                text_4ply: "Прочная классика на каждый день. 4-ниточная скрутка, износостойкая и формоустойчивая – идеально для носков, свитеров и повседневного трикотажа.",
+                specs_4ply: "100 % меринос, некрашеный, 4-ниточная, около 19–21 микрон, метраж около 200м/100г",
+                btn_4ply: "Запросить 4-Ply",
+                b2b_title: "Прозрачная торговля и простой процесс заказа",
+                b2b_desc: "Никакой корзины, никаких скрытых расходов. Прямая B2B-торговля с четкими условиями.",
+                price_kg: "за килограмм · Применяется ко всем сортам пряжи",
+                price_moq: "Минимальный заказ: 20 кг за заказ (200 мотков по 100г)",
+                step1_title: "Отправить запрос",
+                step1_desc: "Используйте нашу контактную форму и сообщите желаемое количество и сорт пряжи.",
+                step2_title: "Получить счет",
+                step2_desc: "Мы проверяем наличие и отправляем вам официальный B2B-счет.",
+                step3_title: "Удобная оплата",
+                step3_desc: "Переводите без комиссии и безопасно через SEPA-перевод на наш европейский счет.",
+                step4_title: "Доставка",
+                step4_desc: "Прямая доставка из Уругвая через EMS. Срок доставки около 20–30 дней до вашей двери.",
+                sample_title: "Убедитесь сами – без риска",
+                sample_desc: "Мы знаем, что вы должны потрогать и пробно окрасить шерсть, прежде чем сделать крупный заказ. Закажите наш тестовый набор 1 кг (например, 500г синглсов и 500г 4-Ply) включая экспресс-доставку.",
+                sample_incl: "включая доставку",
+                promise_title: "Обещание:",
+                promise_text: "Если после этого вы решите сделать первый основной заказ на 20 кг, мы полностью зачтем вам стоимость тестового набора!",
+                btn_sample: "Запросить тестовый набор",
+                about_img: "Фото: Стэнли в Уругвае с шерстью",
+                about_title: "Ваша прямая связь с Южной Америкой",
+                about_p1: "Я Стэнли Кунц – на месте в Уругвае, где пасутся лучшие в мире мериносовые овцы. Я лично знаю производственные объекты, говорю на языке производителей и понимаю требования немецких текстильных художников.",
+                about_p2: "С Kunz Sourcing я строю мост между южноамериканским премиальным качеством и немецкой сценой ручного крашения. Никакого непрозрачного трейдинга, никаких сюрпризов – только первоклассная сырьевая шерсть, которая заставляет ваши цвета сиять.",
+                location: "Напрямую из Уругвая – Монтевидео и окрестности",
+                contact_title: "Контакты и запрос на заказ",
+                contact_desc: "Заполните форму – мы ответим в течение 24 часов. Для необязывающих запросов, заказов тестовых наборов или B2B-крупных заказов от 20 кг.",
+                lbl_email: "Эл. почта",
+                lbl_phone: "Телефон и WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Доставка",
+                val_ship: "Напрямую из Уругвая через EMS",
+                lbl_pay: "Оплата",
+                val_pay: "SEPA-перевод в евро",
+                form_vorname: "Имя",
+                form_nachname: "Фамилия",
+                form_firma: "Название компании / магазина",
+                form_email: "Адрес эл. почты",
+                form_adresse: "Адрес доставки",
+                form_produkt: "Желаемый продукт",
+                opt_select: "Выберите...",
+                opt_singles: "Merino Singles (Однониточная)",
+                opt_4ply: "Merino Classic 4-Ply",
+                opt_muster: "Тестовый набор 1 кг",
+                opt_beide: "Оба сорта (B2B)",
+                form_menge: "Желаемое количество (кг)",
+                form_msg: "Сообщение",
+                form_submit: "Отправить необязывающий запрос на заказ",
+                form_note: "Автоматический договор купли-продажи не заключается. Мы проверим наличие и свяжемся с вами с официальным B2B-счетом.",
+                footer_desc: "Премиальная мериносовая пряжа напрямую из Уругвая для немецких красильщиков и текстильных мануфактур.",
+                footer_legal: "Юридическая информация",
+                footer_imp: "Импрессум",
+                footer_priv: "Политика конфиденциальности",
+                footer_agb: "Условия использования",
+                footer_contact: "Контакты",
+                footer_rights: "Все права защищены."
+            },
+            pl: {
+                page_title: "Kunz Sourcing – Wełna surowa premium dla farbiarni ręcznych i małych firm",
+                nav_start: "Strona główna",
+                nav_garne: "Nasze przędze",
+                nav_b2b: "Warunki B2B",
+                nav_muster: "Zestaw próbny",
+                nav_ueber: "O nas",
+                nav_kontakt: "Kontakt",
+                nav_gross: "Dla hurtowników i przemysłu →",
+                banner_text: "Szukasz wolumenów kontenerowych, grzebieniowanych topsów lub mytych run dla przemysłu? →",
+                banner_link: "Do strony dla hurtu",
+                hero_h1: "Wełna surowa premium z Urugwaju – <em>Bezpośrednio od źródła do Twoich garnków farbiarskich.</em>",
+                hero_sub: "Niebarwiona, ultra-cienka przędza merynosowa dla niezależnych farbiarni ręcznych i manufaktur w Niemczech. Bez pośredników, przejrzyście i na sprawiedliwych warunkach B2B. Od 20 kg – z bezpiecznym zestawem próbnym 1 kg.",
+                cta_primary: "Zamów teraz zestaw próbny 1 kg",
+                cta_secondary: "Wolumeny kontenerowe dla przemysłu",
+                hero_img: "Zdjęcie: przędza merynosowa singles na rustykalnym drewnie",
+                usps_title: "Jakość, którą można poczuć. Pochodzenie, któremu można ufać.",
+                usp1_title: "100 % merynos z Urugwaju",
+                usp1_desc: "Nasza wełna pochodzi z optymalnego klimatu Urugwaju i zachwyca ultra-cienką jakością ok. 19–21 mikronów – idealną do wymagających prac farbiarskich.",
+                usp2_title: "Import bezpośredni bez pośredników",
+                usp2_desc: "Żadnych europejskich hurtowników, żadnych niepotrzebnych ogniw. Kupujesz bezpośrednio u źródła – z pełną przejrzystością pochodzenia i produkcji.",
+                usp3_title: "Idealne płótno",
+                usp3_desc: "Profesjonalnie myta i skręcana. Całkowicie surowa (bare yarn) i gotowa do natychmiastowego farbowania. Idealna baza dla Twoich twórczych kompozycji kolorystycznych.",
+                garne_title: "Nasze surowe przędze dla Twoich dzieł",
+                garne_desc: "Dwa klasyczne podstawowe rodzaje, definiujące międzynarodowy standard dla farbiarni ręcznych.",
+                img_singles: "Zdjęcie produktu: singles na białym tle",
+                sub_singles: "Jednonitkowa · obszerna",
+                title_singles: "Merino Singles",
+                text_singles: "Luksusowa, obszerna i wyjątkowo miękka przędza jednonitkowa. Idealna do przytulnych dodatków, szali i koców, z doskonałym przyjmowaniem barwnika.",
+                specs_label: "Specyfikacje:",
+                specs_singles: "100 % merynos, niebarwiona (crudo), ok. 19–21 mikronów, długość ok. 366m/100g",
+                btn_singles: "Zapytaj o singles",
+                img_4ply: "Zdjęcie produktu: 4-Ply na białym tle",
+                sub_4ply: "Skręcana · wytrzymała",
+                title_4ply: "Merino Classic 4-Ply",
+                text_4ply: "Wytrzymały klasyk na każdy dzień. Skręcona z 4 nici, wytrzymała i stabilna kształtowo – idealna na skarpety, swetry i codziennie dzianiny.",
+                specs_4ply: "100 % merynos, niebarwiona, 4-nitkowa, ok. 19–21 mikronów, długość ok. 200m/100g",
+                btn_4ply: "Zapytaj o 4-Ply",
+                b2b_title: "Przejrzysty handel i prosty proces zamawiania",
+                b2b_desc: "Bez koszyka zakupowego, bez skrytych kosztów. Bezpośredni handel B2B z jasnymi warunkami.",
+                price_kg: "za kilogram · dotyczy wszystkich rodzajów przędzy",
+                price_moq: "Minimalne zamówienie: 20 kg na zamówienie (200 zwitków po 100g)",
+                step1_title: "Wyślij zapytanie",
+                step1_desc: "Skorzystaj z naszego formularza kontaktowego i podaj żądaną ilość oraz rodzaj przędzy.",
+                step2_title: "Otrzymaj fakturę",
+                step2_desc: "Sprawdzamy dostępność i wysyłamy Ci oficjalną fakturę B2B.",
+                step3_title: "Wygodna płatność",
+                step3_desc: "Przelej bezpiecznie i bez opłat za pomocą przelewu SEPA na nasze europejskie konto firmowe.",
+                step4_title: "Dostawa",
+                step4_desc: "Wysyłka bezpośrednia z Urugwaju przez EMS. Czas dostawy ok. 20–30 dni do Twoich drzwi.",
+                sample_title: "Przekonaj się sam – bez ryzyka",
+                sample_desc: "Wiemy, że musisz dotknąć i przetestować farbowanie wełny, zanim złożysz większe zamówienie. Zamów nasz zestaw próbny 1 kg (np. 500g singles i 500g 4-Ply) wraz z wysyłką ekspresową.",
+                sample_incl: "z wysyłką",
+                promise_title: "Obietnica:",
+                promise_text: "Jeśli następnie zdecydujesz się na pierwsze główne zamówienie 20 kg, zaliczymy Ci w całości cenę zestawu próbnego!",
+                btn_sample: "Zamów zestaw próbny",
+                about_img: "Zdjęcie: Stanley w Urugwaju z wełną",
+                about_title: "Twoje bezpośrednie połączenie z Ameryką Południową",
+                about_p1: "Jestem Stanley Kunz – na miejscu w Urugwaju, gdzie wypasają się najlepsze na świecie owce merynosowe. Znam osobiście zakłady produkcyjne, mówię językiem producentów i rozumiem wymagania niemieckich artystów tekstylnych.",
+                about_p2: "Z Kunz Sourcing buduję most między południowoamerykańską jakością premium a niemiecką sceną farbiarni ręcznych. Żadnego niejasnego handlu, żadnych niespodzianek – tylko pierwszorzędna wełna surowa, która sprawia, że Twoje kolory zabłysną.",
+                location: "Bezpośrednio z Urugwaju – Montevideo i okolice",
+                contact_title: "Kontakt i zapytanie o zamówienie",
+                contact_desc: "Wypełnij formularz – odpowiemy w ciągu 24 godzin. Dla niewiążących zapytań, zamówień zestawów próbnych lub zamówień hurtowych B2B od 20 kg.",
+                lbl_email: "E-mail",
+                lbl_phone: "Telefon i WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Wysyłka",
+                val_ship: "Bezpośrednio z Urugwaju przez EMS",
+                lbl_pay: "Płatność",
+                val_pay: "Przelew SEPA w euro",
+                form_vorname: "Imię",
+                form_nachname: "Nazwisko",
+                form_firma: "Nazwa firmy / sklepu",
+                form_email: "Adres e-mail",
+                form_adresse: "Adres dostawy",
+                form_produkt: "Żądany produkt",
+                opt_select: "Wybierz...",
+                opt_singles: "Merino Singles (jednonitkowa)",
+                opt_4ply: "Merino Classic 4-Ply",
+                opt_muster: "Zestaw próbny 1 kg",
+                opt_beide: "Obydwa rodzaje (B2B)",
+                form_menge: "Żądana ilość (kg)",
+                form_msg: "Wiadomość",
+                form_submit: "Wyślij niewiążące zapytanie o zamówienie",
+                form_note: "Brak automatycznej umowy kupna. Sprawdzimy dostępność i skontaktujemy się z oficjalną fakturą B2B.",
+                footer_desc: "Przędza merynosowa premium bezpośrednio z Urugwaju dla niemieckich farbiarni ręcznych i manufaktur tekstylnych.",
+                footer_legal: "Informacje prawne",
+                footer_imp: "Nota prawna",
+                footer_priv: "Polityka prywatności",
+                footer_agb: "OWH",
+                footer_contact: "Kontakt",
+                footer_rights: "Wszelkie prawa zastrzeżone."
+            },
+            es: {
+                page_title: "Kunz Sourcing – Lana cruda premium para tintorerías artesanales y pequeñas empresas",
+                nav_start: "Inicio",
+                nav_garne: "Nuestros hilados",
+                nav_b2b: "Condiciones B2B",
+                nav_muster: "El paquete de muestra",
+                nav_ueber: "Sobre nosotros",
+                nav_kontakt: "Contacto",
+                nav_gross: "Para mayoristas e industria →",
+                banner_text: "¿Buscas volúmenes de contenedor, tops peinados o vellones lavados para la industria? →",
+                banner_link: "Ir a la página de venta al mayor",
+                hero_h1: "Lana cruda premium desde Uruguay – <em>Directamente desde la fuente a tus ollas de teñido.</em>",
+                hero_sub: "Hilo de merino sin teñir y ultrafino para tintorerías artesanales independientes y manufacturas en Alemania. Sin intermediarios, transparente y en condiciones B2B justas. Desde 20 kg, con un paquete de muestra de 1 kg sin riesgo.",
+                cta_primary: "Solicitar ahora paquete de muestra de 1 kg",
+                cta_secondary: "Volúmenes de contenedor para la industria",
+                hero_img: "Foto: hilo merino singles sobre madera rústica",
+                usps_title: "Calidad que se siente. Origen en el que se puede confiar.",
+                usp1_title: "100 % merino de Uruguay",
+                usp1_desc: "Nuestra lana proviene del clima óptimo de Uruguay e impresiona con una calidad ultrafina de aprox. 19–21 micrones, perfecta para trabajos de teñido exigentes.",
+                usp2_title: "Importación directa sin desvíos",
+                usp2_desc: "Sin mayoristas europeos, sin intermediarios innecesarios. Compras directamente en la fuente, con total transparencia sobre el origen y la producción.",
+                usp3_title: "El lienzo perfecto",
+                usp3_desc: "Lavado y hilado profesionalmente. Completamente crudo (bare yarn) y listo para teñir de inmediato. La base ideal para tus composiciones de color creativas.",
+                garne_title: "Nuestros hilados crudos para tus obras",
+                garne_desc: "Dos tipos básicos clásicos que definen el estándar internacional para tintorerías artesanales.",
+                img_singles: "Foto de producto: singles sobre fondo blanco",
+                sub_singles: "Un cabo · voluminoso",
+                title_singles: "Merino Singles",
+                text_singles: "Hilo de un solo cabo, lujoso, voluminoso y extremadamente suave. Perfecto para accesorios acogedores, bufandas y mantas, con una excelente absorción del color.",
+                specs_label: "Especificaciones:",
+                specs_singles: "100 % merino, sin teñir (crudo), aprox. 19–21 micrones, metraje aprox. 366m/100g",
+                btn_singles: "Consultar sobre singles",
+                img_4ply: "Foto de producto: 4-Ply sobre fondo blanco",
+                sub_4ply: "Retorcido · resistente",
+                title_4ply: "Merino Classic 4-Ply",
+                text_4ply: "El clásico resistente para el día a día. Retorcido de 4 cabos, duradero y estable en su forma; ideal para calcetines, jerséis y prendas de punto cotidianas.",
+                specs_4ply: "100 % merino, sin teñir, 4 cabos, aprox. 19–21 micrones, metraje aprox. 200m/100g",
+                btn_4ply: "Consultar sobre 4-Ply",
+                b2b_title: "Comercio transparente y proceso de pedido sencillo",
+                b2b_desc: "Sin carrito de compra, sin costes ocultos. Comercio B2B directo con condiciones claras.",
+                price_kg: "por kilogramo · válido para todos los tipos de hilo",
+                price_moq: "Pedido mínimo: 20 kg por pedido (200 madejas de 100 g)",
+                step1_title: "Enviar consulta",
+                step1_desc: "Usa nuestro formulario de contacto e indícanos la cantidad deseada y el tipo de hilo.",
+                step2_title: "Recibir factura",
+                step2_desc: "Comprobamos la disponibilidad y te enviamos una factura B2B oficial.",
+                step3_title: "Pago cómodo",
+                step3_desc: "Transfiere de forma segura y sin comisiones mediante transferencia SEPA a nuestra cuenta comercial europea.",
+                step4_title: "Entrega",
+                step4_desc: "Envío directo desde Uruguay vía EMS. Tiempo de entrega aprox. 20–30 días hasta tu puerta.",
+                sample_title: "Compruébalo tú mismo, sin riesgo",
+                sample_desc: "Sabemos que necesitas tocar y probar el teñido de la lana antes de hacer un pedido grande. Solicita nuestro paquete de muestra de 1 kg (por ejemplo, 500g de singles y 500g de 4-Ply) con envío exprés incluido.",
+                sample_incl: "envío incluido",
+                promise_title: "La promesa:",
+                promise_text: "Si después decides realizar tu primer pedido principal de 20 kg, ¡te abonaremos íntegramente el precio del paquete de muestra!",
+                btn_sample: "Solicitar paquete de muestra",
+                about_img: "Foto: Stanley en Uruguay con lana",
+                about_title: "Tu línea directa a Sudamérica",
+                about_p1: "Soy Stanley Kunz, presente en Uruguay, donde pastan las mejores ovejas merino del mundo. Conozco personalmente las instalaciones de producción, hablo el idioma de los productores y comprendo las exigencias de los artistas textiles alemanes.",
+                about_p2: "Con Kunz Sourcing tiendo un puente entre la calidad premium sudamericana y la escena alemana de tintorerías artesanales. Sin comercio opaco, sin sorpresas: solo lana cruda de primera calidad que hace brillar tus colores.",
+                location: "Directamente desde Uruguay – Montevideo y alrededores",
+                contact_title: "Contacto y consulta de pedido",
+                contact_desc: "Rellena el formulario; te responderemos en 24 horas. Para consultas sin compromiso, pedidos de paquetes de muestra o pedidos B2B al mayor desde 20 kg.",
+                lbl_email: "Correo electrónico",
+                lbl_phone: "Teléfono y WhatsApp",
+                lbl_insta: "Instagram",
+                lbl_fb: "Facebook",
+                lbl_ship: "Envío",
+                val_ship: "Directamente desde Uruguay vía EMS",
+                lbl_pay: "Pago",
+                val_pay: "Transferencia SEPA en euros",
+                form_vorname: "Nombre",
+                form_nachname: "Apellido",
+                form_firma: "Nombre de la empresa / tienda",
+                form_email: "Dirección de correo electrónico",
+                form_adresse: "Dirección de entrega",
+                form_produkt: "Producto deseado",
+                opt_select: "Seleccione...",
+                opt_singles: "Merino Singles (un cabo)",
+                opt_4ply: "Merino Classic 4-Ply",
+                opt_muster: "Paquete de muestra de 1 kg",
+                opt_beide: "Ambos tipos (B2B)",
+                form_menge: "Cantidad deseada (kg)",
+                form_msg: "Mensaje",
+                form_submit: "Enviar consulta de pedido sin compromiso",
+                form_note: "No se genera un contrato de compra automático. Comprobamos la disponibilidad y te responderemos con una factura B2B oficial.",
+                footer_desc: "Hilo merino premium directamente desde Uruguay para tintorerías artesanales y manufacturas textiles alemanas.",
+                footer_legal: "Aviso legal",
+                footer_imp: "Aviso legal",
+                footer_priv: "Política de privacidad",
+                footer_agb: "Términos y condiciones",
+                footer_contact: "Contacto",
+                footer_rights: "Todos los derechos reservados."
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('ks_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
+            document.documentElement.lang = lang;
+
+            const t = translations[lang];
+            if (!t) return;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    if (el.tagName === 'TITLE') {
+                        document.title = t[key];
+                    } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = t[key];
+                    } else if (el.tagName === 'OPTION') {
+                        el.textContent = t[key];
+                    } else {
+                        el.innerHTML = t[key];
+                    }
+                }
+            });
+
+            document.querySelectorAll('select option[data-i18n]').forEach(opt => {
+                const key = opt.getAttribute('data-i18n');
+                if (t[key] !== undefined) opt.textContent = t[key];
+            });
+
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const key = el.getAttribute('data-i18n-alt');
+                if (t[key] !== undefined) el.alt = t[key];
+            });
+        }
+
+        const savedLang = localStorage.getItem('ks_lang') || 'de';
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(savedLang);
+        });
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        function selectProduct(product) {
+            const select = document.getElementById('produkt');
+            if (select) {
+                select.value = product;
+                document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const lang = localStorage.getItem('ks_lang') || 'de';
+            const subjects = { de: 'Bestellanfrage', en: 'Order Enquiry', ru: 'Запрос на заказ', pl: 'Zapytanie o zamówienie', es: 'Consulta de pedido' };
+            const alerts = { 
+                de: 'Vielen Dank für Ihre Anfrage! Ihr E-Mail-Programm wird nun geöffnet. Alternativ können Sie uns direkt unter Stanley@kunzsourcing.com kontaktieren.',
+                en: 'Thank you for your enquiry! Your email program will now open. Alternatively, you can contact us directly at Stanley@kunzsourcing.com.',
+                ru: 'Спасибо за ваш запрос! Откроется ваша почтовая программа. Также вы можете связаться с нами напрямую по адресу Stanley@kunzsourcing.com.',
+                pl: 'Dziękujemy za zapytanie! Twój program e-mail zostanie teraz otwarty. Alternatywnie możesz skontaktować się z nami bezpośrednio pod adresem Stanley@kunzsourcing.com.',
+                es: '¡Gracias por tu consulta! Tu programa de correo electrónico se abrirá ahora. Alternativamente, puedes contactarnos directamente en Stanley@kunzsourcing.com.'
+            };
+            const subject = subjects[lang] + ' Kunz Sourcing – ' + data.get('firma');
+            const body = `Name: ${data.get('vorname')} ${data.get('nachname')}
+Firma: ${data.get('firma')}
+E-Mail: ${data.get('email')}
+Adresse: ${data.get('adresse')}
+Produkt: ${data.get('produkt')}
+Menge: ${data.get('menge')} kg
+
+Nachricht:
+${data.get('nachricht')}`;
+            window.location.href = `mailto:Stanley@kunzsourcing.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            alert(alerts[lang]);
+        }
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            else header.style.boxShadow = 'none';
+        });
+    </script>
+    <a href="https://wa.me/message/FDT6WPLEOMFAE1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chat" title="WhatsApp Chat">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115.1-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-13.4-32.3-18.3-44.2-4.8-11.6-9.7-10-13.4-10.2-3.5-.2-7.5-.2-11.5-.2-4 0-10.5 1.5-16 7.4-5.5 5.9-21.1 20.6-21.1 50.2 0 29.6 21.6 58.2 24.6 62.3 3 4.1 41.3 63.1 101.6 88.5 50.5 21.2 60.8 17 71.8 15.8 11-1.2 33.3-13.6 38-26.8 4.7-13.2 4.7-24.6 3.3-26.8-1.4-2.3-5.1-3.7-10.7-6.5z"/></svg>
+    </a>
+</body>
+</html>
