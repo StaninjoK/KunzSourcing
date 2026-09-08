@@ -845,9 +845,9 @@
         <div class="hero-content">
             <h1 data-i18n="hero_h1">Premium Merinowolle in Container-Volumen – <em>Direkt aus Uruguay für die europäische Textilindustrie.</em></h1>
             <p class="hero-sub" data-i18n="hero_sub">
-                Wir verarbeiten Wolle mit einer Feinheit zwischen 17 und 30 Mikron. 
-                Gekämmte Tops und gewaschene Vliese für die Kammgarn-, Kardier- und Karbonisierungsindustrie. 
-                Seefracht in ca. 40 Tagen. Preise auf Anfrage – je nach Menge, Volumen und Kundentreue.
+                Wir beschaffen Merinowolle zwischen 17 und 30 Mikron bei ausgewählten Partnerbetrieben.
+                Gekämmte Tops und gewaschene Vliese werden nach vereinbarter Spezifikation angeboten.
+                Verfügbarkeit, Laborwerte, Verpackung und Lieferzeit bestätigen wir für die konkrete Anfrage.
             </p>
             <div>
                 <a href="#kontakt" class="btn-primary" data-i18n="cta_primary">Individuelles Angebot anfordern</a>
@@ -1010,7 +1010,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <h4 data-i18n="step2_title">Angebot & Proben</h4>
-                <p data-i18n="step2_desc">Wir erstellen ein individuelles Angebot und senden Laborwerte bzw. Muster.</p>
+                <p data-i18n="step2_desc">Wir prüfen Verfügbarkeit und stellen verfügbare Laborwerte, Spezifikationen und auf Wunsch Muster bereit.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
@@ -1020,7 +1020,7 @@
             <div class="step">
                 <div class="step-number">4</div>
                 <h4 data-i18n="step4_title">Produktion</h4>
-                <p data-i18n="step4_desc">Qualitätskontrolle vor Ort in Uruguay durch Stanley Kunz persönlich.</p>
+                <p data-i18n="step4_desc">Kunz Sourcing koordiniert die vereinbarten Kontrollen und Dokumente mit dem liefernden Partnerbetrieb.</p>
             </div>
             <div class="step">
                 <div class="step-number">5</div>
@@ -1038,7 +1038,7 @@
     <section class="pricing-section" id="preise">
         <div class="pricing-box">
             <h3 data-i18n="pricing_title">Preise auf Anfrage</h3>
-            <p data-i18n="pricing_desc">Als Direktimporteur aus Uruguay kalkulieren wir fair und individuell. Ihr Preis hängt von mehreren Faktoren ab:</p>
+            <p data-i18n="pricing_desc">Wir kalkulieren jedes Angebot auf Grundlage Ihrer Spezifikation, der verfügbaren Ware und der vereinbarten Lieferbedingungen. Der Preis hängt unter anderem von folgenden Faktoren ab:</p>
             <div class="pricing-factors">
                 <div class="pricing-factor">
                     <strong data-i18n="factor1_title">Menge</strong>
@@ -1065,14 +1065,14 @@
             <div class="about-text">
                 <h2 data-i18n="about_title">Ihr direkter Draht nach Südamerika</h2>
                 <p data-i18n="about_p1">
-                    Ich bin Stanley Kunz – vor Ort in Uruguay, wo die besten Merinoschafe der Welt grasen. 
-                    Ich kenne die Produktionsstätten persönlich, spreche die Sprache der Produzenten und 
-                    verstehe die Ansprüche deutscher Textilkünstler.
+                    Ich bin Stanley Kunz und betreue Kunz Sourcing vor Ort in Uruguay. Kunz Sourcing ist der auf
+                    internationalen B2B-Handel spezialisierte Geschäftsbereich von Kunz Global. Wir liefern nach
+                    Kundenspezifikation und übernehmen Beschaffung, Qualitätsabstimmung und Exportabwicklung.
                 </p>
                 <p data-i18n="about_p2">
-                    Mit Kunz Sourcing schlage ich die Brücke zwischen südamerikanischer Premium-Qualität 
-                    und der deutschen Handfärberei-Szene. Kein Opaque-Handel, keine Überraschungen – 
-                    nur erstklassige Rohwolle, die Ihre Farben zum Leuchten bringt.
+                    Für jede Anfrage klären wir Feinheit, Faserlänge, Verarbeitungszustand, Farbe, Verpackung,
+                    Mindestmenge und verfügbare Menge. Produktdaten, Laborwerte und weitere Nachweise werden
+                    entsprechend der konkret angebotenen Ware bereitgestellt.
                 </p>
                 <div class="location-badge">
                     <span>📍</span> <span data-i18n="location">Direkt aus Uruguay – Montevideo &amp; Umland</span>
@@ -1086,8 +1086,9 @@
             <div class="contact-info">
                 <h2 data-i18n="contact_title">Kontakt für Industrieanfragen</h2>
                 <p data-i18n="contact_desc">
-                    Teilen Sie uns Ihre geplante Menge, den gewünschten Feingrade und den Verarbeitungszustand mit. 
-                    Wir melden uns innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot.
+                    Teilen Sie uns Menge, gewünschte Feinheit, Verarbeitungszustand, Zielland und Zielhafen mit.
+                    Wir bestätigen den Eingang kurzfristig und melden uns nach Prüfung von Verfügbarkeit,
+                    Spezifikation und Lieferantenkonditionen.
                 </p>
                 <div class="contact-detail">
                     <div class="icon">📧</div>
@@ -1201,6 +1202,16 @@
                     <label for="termin" data-i18n="form_termin">Gewünschter Lieferzeitraum</label>
                     <input type="text" id="termin" name="termin" placeholder="z. B. Q4 2026 oder flexibel">
                 </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zielland" data-i18n="form_country">Zielland *</label>
+                        <input type="text" id="zielland" name="zielland" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zielhafen" data-i18n="form_port">Gewünschter Zielhafen *</label>
+                        <input type="text" id="zielhafen" name="zielhafen" required>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="nachricht" data-i18n="form_msg">Nachricht & Besonderheiten</label>
                     <textarea id="nachricht" name="nachricht" placeholder="Haben Sie spezielle Anforderungen an die Faserlänge, Farbe (crudo/weiß), Verpackung oder Zertifizierung?"></textarea>
@@ -1259,7 +1270,7 @@
                 banner_text: "Sie suchen kleinere Mengen ab 20 kg, Singles oder ein 1-Kilo-Testpaket? →",
                 banner_link: "Zur Handfärbereien-Seite",
                 hero_h1: "Premium Merinowolle in Container-Volumen – <em>Direkt aus Uruguay für die europäische Textilindustrie.</em>",
-                hero_sub: "Wir verarbeiten Wolle mit einer Feinheit zwischen 17 und 30 Mikron. Gekämmte Tops und gewaschene Vliese für die Kammgarn-, Kardier- und Karbonisierungsindustrie. Seefracht in ca. 40 Tagen. Preise auf Anfrage – je nach Menge, Volumen und Kundentreue.",
+                hero_sub: "Wir beschaffen Merinowolle zwischen 17 und 30 Mikron bei ausgewählten Partnerbetrieben. Gekämmte Tops und gewaschene Vliese werden nach vereinbarter Spezifikation angeboten. Verfügbarkeit, Laborwerte, Verpackung und Lieferzeit bestätigen wir für die konkrete Anfrage.",
                 cta_primary: "Individuelles Angebot anfordern",
                 cta_secondary: "Für Handfärbereien & Kleinunternehmer",
                 hero_img: "Foto: Große Mengen Merinowolle in Ballen / Container-Verladung in Uruguay",
@@ -1314,7 +1325,7 @@
                 step6_title: "Ankunft",
                 step6_desc: "Ankunft im Zielhafen. Zollabfertigung durch Sie als Importeur.",
                 pricing_title: "Preise auf Anfrage",
-                pricing_desc: "Als Direktimporteur aus Uruguay kalkulieren wir fair und individuell. Ihr Preis hängt von mehreren Faktoren ab:",
+                pricing_desc: "Wir kalkulieren jedes Angebot auf Grundlage Ihrer Spezifikation, der verfügbaren Ware und der vereinbarten Lieferbedingungen. Der Preis hängt unter anderem von folgenden Faktoren ab:",
                 factor1_title: "Menge",
                 factor1_desc: "20ft oder 40ft Container? Teilladung? Je höher das Volumen, desto günstiger der Kilopreis.",
                 factor2_title: "Feingrade",
@@ -1323,7 +1334,7 @@
                 factor3_desc: "Bestandskunden und Wiederholungsbesteller profitieren von Rabattstaffeln und Prioritätsproduktion.",
                 pricing_cta: "Individuelles Angebot anfordern",
                 contact_title: "Kontakt für Industrieanfragen",
-                contact_desc: "Teilen Sie uns Ihre geplante Menge, den gewünschten Feingrade und den Verarbeitungszustand mit. Wir melden uns innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot.",
+                contact_desc: "Teilen Sie uns Menge, gewünschte Feinheit, Verarbeitungszustand, Zielland und Zielhafen mit. Wir bestätigen den Eingang kurzfristig und melden uns nach Prüfung von Verfügbarkeit, Spezifikation und Lieferantenkonditionen.",
                 lbl_email: "E-Mail",
                 lbl_phone: "Telefon & WhatsApp",
                 lbl_insta: "Instagram",
@@ -1360,8 +1371,10 @@
                 form_note: "Kein automatischer Kaufvertrag. Wir prüfen Verfügbarkeit und melden uns mit einem maßgeschneiderten Angebot.",
                 about_img: "Foto: Stanley in Uruguay mit Wolle",
                 about_title: "Ihr direkter Draht nach Südamerika",
-                about_p1: "Ich bin Stanley Kunz – vor Ort in Uruguay, wo die besten Merinoschafe der Welt grasen. Ich kenne die Produktionsstätten persönlich, spreche die Sprache der Produzenten und verstehe die Ansprüche deutscher Textilkünstler.",
-                about_p2: "Mit Kunz Sourcing schlage ich die Brücke zwischen südamerikanischer Premium-Qualität und der deutschen Handfärberei-Szene. Kein Opaque-Handel, keine Überraschungen – nur erstklassige Rohwolle, die Ihre Farben zum Leuchten bringt.",
+                about_p1: "Ich bin Stanley Kunz und betreue Kunz Sourcing vor Ort in Uruguay. Kunz Sourcing ist der auf internationalen B2B-Handel spezialisierte Geschäftsbereich von Kunz Global. Wir liefern nach Kundenspezifikation und übernehmen Beschaffung, Qualitätsabstimmung und Exportabwicklung.",
+                about_p2: "Für jede Anfrage klären wir Feinheit, Faserlänge, Verarbeitungszustand, Farbe, Verpackung, Mindestmenge und verfügbare Menge. Produktdaten, Laborwerte und weitere Nachweise werden entsprechend der konkret angebotenen Ware bereitgestellt.",
+                form_country: "Zielland *",
+                form_port: "Gewünschter Zielhafen *",
                 location: "Direkt aus Uruguay – Montevideo & Umland",
                 footer_desc: "Premium Merinowolle in Container-Volumen direkt aus Uruguay für die europäische Textilindustrie.",
                 footer_legal: "Rechtliches",
@@ -1480,6 +1493,8 @@
                 opt_fleece: "Washed fleeces",
                 opt_both: "Both – depending on availability",
                 form_termin: "Desired Delivery Period",
+                form_country: "Destination country *",
+                form_port: "Preferred destination port *",
                 form_msg: "Message & Special Requirements",
                 form_submit: "Send industrial enquiry",
                 form_note: "No automatic purchase contract. We check availability and get back to you with a customised offer.",
@@ -1605,6 +1620,8 @@
                 opt_fleece: "Промытые флисы",
                 opt_both: "Оба варианта – в зависимости от наличия",
                 form_termin: "Желаемый срок поставки",
+                form_country: "Страна назначения *",
+                form_port: "Предпочтительный порт назначения *",
                 form_msg: "Сообщение и особые требования",
                 form_submit: "Отправить промышленный запрос",
                 form_note: "Автоматический договор купли-продажи не заключается. Мы проверим наличие и свяжемся с вами с индивидуальным предложением.",
@@ -1730,6 +1747,8 @@
                 opt_fleece: "Myte runa",
                 opt_both: "Obydwa – zależnie od dostępności",
                 form_termin: "Żądany termin dostawy",
+                form_country: "Kraj docelowy *",
+                form_port: "Preferowany port docelowy *",
                 form_msg: "Wiadomość i szczególne wymagania",
                 form_submit: "Wyślij zapytanie przemysłowe",
                 form_note: "Brak automatycznej umowy kupna. Sprawdzimy dostępność i skontaktujemy się z indywidualną ofertą.",
@@ -1855,6 +1874,8 @@
                 opt_fleece: "Vellones lavados",
                 opt_both: "Ambos – según disponibilidad",
                 form_termin: "Plazo de entrega deseado",
+                form_country: "País de destino *",
+                form_port: "Puerto de destino preferido *",
                 form_msg: "Mensaje y requisitos especiales",
                 form_submit: "Enviar consulta industrial",
                 form_note: "No se genera un contrato de compra automático. Comprobaremos la disponibilidad y te responderemos con una oferta personalizada.",
@@ -1948,6 +1969,8 @@ Menge: ${data.get('menge')}
 Feingrade: ${data.get('feingrade')}
 Verarbeitungszustand: ${data.get('zustand')}
 Gewünschter Lieferzeitraum: ${data.get('termin')}
+Zielland: ${data.get('zielland')}
+Zielhafen: ${data.get('zielhafen')}
 
 Nachricht:
 ${data.get('nachricht')}`;
