@@ -148,10 +148,10 @@
             position: relative;
             overflow: hidden;
         }
-        .choice-visual.beef { background: linear-gradient(135deg, #C89A6A 0%, var(--color-beef) 100%); }
-        .choice-visual.wool { background: linear-gradient(135deg, var(--color-wool) 0%, var(--color-sand) 100%); }
+        .choice-visual.beef { background: url("Images/Fleisch1.png") center/cover no-repeat; }
+        .choice-visual.wool { background: url("Images/Wolle1.png") center/cover no-repeat; }
         .choice-visual::before {
-            content: '';
+            content: none;
             position: absolute;
             width: 200%; height: 200%;
             background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.08) 20px, rgba(255,255,255,0.08) 40px);
@@ -159,6 +159,7 @@
         }
         @keyframes slide { 0% { transform: translate(-50%, -50%); } 100% { transform: translate(0, 0); } }
         .choice-visual span {
+            display: none;
             font-family: var(--font-serif);
             font-size: 1.3rem;
             color: white;

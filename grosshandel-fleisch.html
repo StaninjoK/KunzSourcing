@@ -205,7 +205,7 @@
         .hero-image-placeholder {
             width: 100%;
             aspect-ratio: 4/5;
-            background: linear-gradient(135deg, var(--color-wool) 0%, var(--color-sand) 100%);
+            background: url("Images/Weiderinder.png") center/cover no-repeat;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -214,7 +214,7 @@
             overflow: hidden;
         }
         .hero-image-placeholder::before {
-            content: '';
+            content: none;
             position: absolute;
             width: 200%; height: 200%;
             background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);
@@ -225,6 +225,7 @@
             100% { transform: translate(0, 0); }
         }
         .hero-image-placeholder span {
+            display: none;
             font-family: var(--font-serif);
             font-size: 1.2rem;
             color: var(--color-charcoal);
@@ -334,6 +335,7 @@
             text-align: center;
             padding: 1rem;
         }
+        .product-image span { display: none; }
         .product-info { padding: 2rem; }
         .product-info h3 {
             font-family: var(--font-serif);
@@ -940,7 +942,7 @@
         </div>
         <div class="products-grid">
             <div class="product-card">
-                <div class="product-image"><span data-i18n="img_prime">Foto: Premium-Teilstücke (Prime Cuts)</span></div>
+                <div class="product-image" style="background: url('Images/Cuts.png') center/cover no-repeat;"><span data-i18n="img_prime">Foto: Premium-Teilstücke (Prime Cuts)</span></div>
                 <div class="product-info">
                     <span class="subtitle" data-i18n="sub_prime">Gastronomie & Feinkosthandel</span>
                     <h3 data-i18n="title_prime">Premium-Teilstücke (Prime Cuts)</h3>
@@ -953,7 +955,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-image"><span data-i18n="img_trim">Foto: Verarbeitungsschnitte für die Fleischindustrie</span></div>
+                <div class="product-image" style="background: url('Images/Hälfte.png') center/cover no-repeat;"><span data-i18n="img_trim">Foto: Verarbeitungsschnitte für die Fleischindustrie</span></div>
                 <div class="product-info">
                     <span class="subtitle" data-i18n="sub_trim">Fleischverarbeitende Industrie</span>
                     <h3 data-i18n="title_trim">Verarbeitungsschnitte & Ganze Rinderhälften</h3>
