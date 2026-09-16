@@ -1,0 +1,269 @@
+[
+  {
+    "name": "warehouse-bales",
+    "sizes": [
+      {
+        "width": 1600,
+        "height": 747
+      },
+      {
+        "width": 1200,
+        "height": 560
+      },
+      {
+        "width": 800,
+        "height": 374
+      },
+      {
+        "width": 480,
+        "height": 224
+      }
+    ]
+  },
+  {
+    "name": "tops-cans",
+    "sizes": [
+      {
+        "width": 1600,
+        "height": 747
+      },
+      {
+        "width": 1200,
+        "height": 560
+      },
+      {
+        "width": 800,
+        "height": 374
+      },
+      {
+        "width": 480,
+        "height": 224
+      }
+    ]
+  },
+  {
+    "name": "gill-slivers",
+    "sizes": [
+      {
+        "width": 1600,
+        "height": 747
+      },
+      {
+        "width": 1200,
+        "height": 560
+      },
+      {
+        "width": 800,
+        "height": 374
+      },
+      {
+        "width": 480,
+        "height": 224
+      }
+    ]
+  },
+  {
+    "name": "scouring",
+    "sizes": [
+      {
+        "width": 1200,
+        "height": 560
+      },
+      {
+        "width": 800,
+        "height": 374
+      },
+      {
+        "width": 480,
+        "height": 224
+      }
+    ]
+  },
+  {
+    "name": "scoured-dryer",
+    "sizes": [
+      {
+        "width": 1200,
+        "height": 560
+      },
+      {
+        "width": 800,
+        "height": 374
+      },
+      {
+        "width": 480,
+        "height": 224
+      }
+    ]
+  },
+  {
+    "name": "forklift-bales",
+    "sizes": [
+      {
+        "width": 1200,
+        "height": 560
+      },
+      {
+        "width": 800,
+        "height": 374
+      },
+      {
+        "width": 480,
+        "height": 224
+      }
+    ]
+  },
+  {
+    "name": "tops-hand",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "tops-bump",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "tops-cage",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "tops-can-coil",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "tops-shelf",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "greasy-wool",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "warehouse-tall",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "bales-export",
+    "sizes": [
+      {
+        "width": 1200,
+        "height": 1500
+      },
+      {
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "width": 480,
+        "height": 600
+      }
+    ]
+  },
+  {
+    "name": "stanley-kunz",
+    "sizes": [
+      {
+        "width": 840,
+        "height": 1050
+      },
+      {
+        "width": 600,
+        "height": 750
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  }
+]

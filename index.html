@@ -1,494 +1,476 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">Kunz Sourcing – Premium Rindfleisch & Merinowolle aus Uruguay</title>
-    <meta name="description" content="Kunz Sourcing liefert uruguayisches Weiderindfleisch und Merinowolle nach Kundenspezifikation und übernimmt Beschaffung, Qualitätsabstimmung und Exportabwicklung.">
-    <link rel="icon" type="image/png" href="Images/Logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-cream: #FAF7F2;
-            --color-wool: #F5EDE3;
-            --color-sand: #D4C4B0;
-            --color-forest: #2C5F2D;
-            --color-forest-light: #3A7A3B;
-            --color-beef: #7A2E2E;
-            --color-beef-light: #953838;
-            --color-charcoal: #2B2B2B;
-            --color-gray: #6B6B6B;
-            --color-light-gray: #E8E4DE;
-            --font-serif: 'Playfair Display', Georgia, serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--font-sans);
-            color: var(--color-charcoal);
-            background: var(--color-cream);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: rgba(250, 247, 242, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--color-light-gray);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-forest);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-        .logo img { height: 2rem; width: 2rem; display: block; }
-        .logo span { font-weight: 400; color: var(--color-charcoal); }
-        .lang-switcher {
-            display: flex;
-            gap: 0.4rem;
-            align-items: center;
-            background: var(--color-wool);
-            padding: 0.3rem 0.5rem;
-            border-radius: 6px;
-            border: 1px solid var(--color-light-gray);
-        }
-        .lang-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            transition: all 0.2s;
-            opacity: 0.5;
-        }
-        .lang-btn:hover { opacity: 0.8; background: rgba(0,0,0,0.05); }
-        .lang-btn.active { opacity: 1; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .hero {
-            padding: 10rem 2rem 3rem;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero-eyebrow {
-            display: inline-block;
-            color: var(--color-forest);
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1rem;
-        }
-        .hero h1 {
-            font-family: var(--font-serif);
-            font-size: 2.8rem;
-            line-height: 1.2;
-            color: var(--color-charcoal);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        .hero-sub {
-            font-size: 1.1rem;
-            color: var(--color-gray);
-            max-width: 620px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-        .choice-section {
-            padding: 3rem 2rem 6rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .choice-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-        }
-        .choice-card {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--color-light-gray);
-            background: white;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .choice-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 48px rgba(0,0,0,0.12);
-        }
-        .choice-visual {
-            aspect-ratio: 16/11;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .choice-visual.beef { background: url("Images/Fleisch1.png") center/cover no-repeat; }
-        .choice-visual.wool { background: url("Images/Wolle1.png") center/cover no-repeat; }
-        .choice-visual::before {
-            content: none;
-            position: absolute;
-            width: 200%; height: 200%;
-            background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.08) 20px, rgba(255,255,255,0.08) 40px);
-            animation: slide 20s linear infinite;
-        }
-        @keyframes slide { 0% { transform: translate(-50%, -50%); } 100% { transform: translate(0, 0); } }
-        .choice-visual span {
-            display: none;
-            font-family: var(--font-serif);
-            font-size: 1.3rem;
-            color: white;
-            z-index: 1;
-            text-align: center;
-            padding: 1rem;
-            font-weight: 600;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.25);
-        }
-        .choice-body { padding: 2.2rem; flex: 1; display: flex; flex-direction: column; }
-        .choice-body .subtitle {
-            font-weight: 600;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 0.6rem;
-            display: block;
-        }
-        .choice-card.beef .choice-body .subtitle { color: var(--color-beef); }
-        .choice-card.wool .choice-body .subtitle { color: var(--color-forest); }
-        .choice-body h2 {
-            font-family: var(--font-serif);
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-        }
-        .choice-body p {
-            color: var(--color-gray);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
-        .choice-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-            padding: 0.85rem 1.6rem;
-            border-radius: 4px;
-            text-align: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        .choice-card.beef .choice-cta { background: var(--color-beef); color: white; }
-        .choice-card.beef:hover .choice-cta { background: var(--color-beef-light); }
-        .choice-card.wool .choice-cta { background: var(--color-forest); color: white; }
-        .choice-card.wool:hover .choice-cta { background: var(--color-forest-light); }
-        .trust-strip {
-            border-top: 1px solid var(--color-light-gray);
-            padding: 3rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-        .trust-strip div h3 {
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            margin-bottom: 0.4rem;
-            color: var(--color-charcoal);
-        }
-        .trust-strip div p {
-            font-size: 0.85rem;
-            color: var(--color-gray);
-        }
-        footer {
-            background: var(--color-charcoal);
-            color: rgba(255,255,255,0.6);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            font-size: 0.85rem;
-        }
-        footer a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
-        footer a:hover { color: white; }
-        .footer-logo { display: block; margin: 0 auto 1.5rem; height: 56px; width: 56px; }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-            z-index: 9999;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
-        @media (max-width: 860px) {
-            .choice-grid { grid-template-columns: 1fr; }
-            .trust-strip { grid-template-columns: 1fr; gap: 1.5rem; }
-            .hero h1 { font-size: 2.1rem; }
-        }
-        @media (max-width: 600px) {
-            .hero { padding: 8.5rem 1.5rem 2rem; }
-            .lang-switcher { padding: 0.2rem 0.3rem; }
-            .lang-btn { font-size: 0.95rem; padding: 0.15rem 0.3rem; }
-            .whatsapp-float { width: 50px; height: 50px; bottom: 16px; right: 16px; }
-            .whatsapp-float svg { width: 24px; height: 24px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kunz Sourcing — Sourcing and export partner in Uruguay | Wool tops, scoured wool</title>
+  <meta name="description" content="Kunz Sourcing is the Uruguay-based sourcing and export division of Kunz Global. We identify suppliers, validate lots against your specification and coordinate export from Montevideo — currently wool tops and scoured wool for European spinners, traders and brands.">
+  <link rel="canonical" href="https://kunzsourcing.com/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f2ec">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kunz Sourcing">
+  <meta property="og:title" content="Kunz Sourcing — Sourcing from Uruguay, handled on the ground">
+  <meta property="og:description" content="Uruguay-based sourcing and export partner for wool tops, scoured wool and further agricultural raw materials. Supplier matching, lot validation and export coordination from Montevideo.">
+  <meta property="og:url" content="https://kunzsourcing.com/">
+  <meta property="og:image" content="https://kunzsourcing.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kunz Sourcing — Sourcing from Uruguay, handled on the ground">
+  <meta name="twitter:description" content="Uruguay-based sourcing and export partner for wool tops, scoured wool and further agricultural raw materials.">
+  <meta name="twitter:image" content="https://kunzsourcing.com/assets/img/og-image.jpg">
+
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kunz Sourcing",
+    "alternateName": "Kunz Sourcing by Kunz Global",
+    "url": "https://kunzsourcing.com/",
+    "logo": "https://kunzsourcing.com/assets/img/logo-512.png",
+    "description": "Uruguay-based sourcing and export division of Kunz Global: wool tops, scoured wool and further agricultural raw materials for international B2B buyers.",
+    "email": "Stanley@kunzsourcing.com",
+    "founder": { "@type": "Person", "name": "Stanley Kunz" },
+    "parentOrganization": { "@type": "Organization", "name": "Kunz Global", "url": "https://kunzglobal.com/" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kiyú / Libertad",
+      "addressLocality": "San José",
+      "postalCode": "80100",
+      "addressCountry": "UY"
+    },
+    "areaServed": ["Europe", "Uruguay"],
+    "knowsLanguage": ["en", "de", "es"],
+    "sameAs": [
+      "https://www.instagram.com/kunzsourcing",
+      "https://www.facebook.com/share/1ELX6g9reX/",
+      "https://kunzglobal.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <header id="header">
-        <nav>
-            <a href="index.html" class="logo"><img src="Images/Logo.png" alt="Kunz Sourcing Logo">Kunz <span>Sourcing</span></a>
-            <div class="lang-switcher">
-                <button class="lang-btn active" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
-                <button class="lang-btn" onclick="setLanguage('en')" title="English">🇪🇳</button>
-                <button class="lang-btn" onclick="setLanguage('ru')" title="Русский">🇷🇺</button>
-                <button class="lang-btn" onclick="setLanguage('pl')" title="Polski">🇵🇱</button>
-                <button class="lang-btn" onclick="setLanguage('es')" title="Español">🇪🇸</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Kunz Sourcing — home">
+        <img src="assets/img/logo-96.png" width="40" height="40" alt="">
+        <span class="brand__name"><strong>Kunz</strong> <span>Sourcing</span><span class="brand__sub">by Kunz Global · Uruguay</span></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#origin">Origin</a>
+        <a href="#categories">What we source</a>
+        <a href="wool.html">Wool</a>
+        <a href="#process">How we work</a>
+        <a href="#documentation">Documentation</a>
+        <a href="#presence">About</a>
+        <a class="btn btn--primary btn--sm" href="#request">Sourcing request</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <p class="eyebrow reveal">Kunz Sourcing · San José, Uruguay</p>
+            <h1 id="hero-title" class="reveal" style="--i:1">Sourcing from Uruguay, <em>handled on the ground.</em></h1>
+          </div>
+          <div class="hero__aside reveal" style="--i:2">
+            <p class="lede">Kunz Sourcing is the sourcing and export division of Kunz Global. From our base in Uruguay we identify suppliers, validate lots against your specification and coordinate shipment from the Port of Montevideo — currently focused on wool tops and scoured wool for spinners, traders and brands in Europe.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="#request">Discuss your sourcing requirements <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost" href="wool.html">Wool specifications</a>
             </div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <span class="hero-eyebrow" data-i18n="eyebrow">Direkt aus Uruguay</span>
-        <h1 data-i18n="h1">KUNZ SOURCING – Ihr Premium-Zugang zu Uruguays Exzellenz</h1>
-        <p class="hero-sub" data-i18n="hero_sub">Kunz Sourcing ist der auf den internationalen B2B-Handel mit uruguayischem Weiderindfleisch und Merinowolle spezialisierte Geschäftsbereich von Kunz Global. Wir liefern nach Kundenspezifikation und übernehmen die Beschaffung, Qualitätsabstimmung und Exportabwicklung in Uruguay.</p>
-    </section>
-
-    <section class="choice-section">
-        <div class="choice-grid">
-            <a href="grosshandel-fleisch.html" class="choice-card beef">
-                <div class="choice-visual beef"><span data-i18n="beef_visual">Uruguayisches<br>Weiderindfleisch</span></div>
-                <div class="choice-body">
-                    <span class="subtitle" data-i18n="beef_subtitle">Premium Rindfleisch</span>
-                    <h2 data-i18n="beef_title">Uruguayisches Weiderindfleisch</h2>
-                    <p data-i18n="beef_desc">Weiderindfleisch nach vereinbarter Spezifikation – mit verfügbaren Herkunfts-, Qualitäts- und Betriebsnachweisen für den jeweiligen Zielmarkt.</p>
-                    <span class="choice-cta" data-i18n="beef_cta">Rindfleisch entdecken →</span>
-                </div>
-            </a>
-            <a href="grosshandel-wolle.html" class="choice-card wool">
-                <div class="choice-visual wool"><span data-i18n="wool_visual">Ultrafeine<br>Merinowolle</span></div>
-                <div class="choice-body">
-                    <span class="subtitle" data-i18n="wool_subtitle">Premium Merinowolle</span>
-                    <h2 data-i18n="wool_title">Uruguayische Merinowolle</h2>
-                    <p data-i18n="wool_desc">17–30 Mikron in Container-Volumen, gekämmte Tops oder gewaschene Vliese – für die europäische Textilindustrie und Handfärbereien.</p>
-                    <span class="choice-cta" data-i18n="wool_cta">Merinowolle entdecken →</span>
-                </div>
-            </a>
+          </div>
         </div>
 
-        <div class="trust-strip">
-            <div>
-                <h3 data-i18n="trust1_title">Direkt aus Uruguay</h3>
-                <p data-i18n="trust1_desc">Persönliche Qualitätskontrolle vor Ort durch Stanley Kunz.</p>
-            </div>
-            <div>
-                <h3 data-i18n="trust2_title">Volle Rückverfolgbarkeit</h3>
-                <p data-i18n="trust2_desc">Von der Erzeugung bis zur Anlieferung lückenlos dokumentiert.</p>
-            </div>
-            <div>
-                <h3 data-i18n="trust3_title">B2B-Handel & Export</h3>
-                <p data-i18n="trust3_desc">Lieferung nach Kundenspezifikation mit Beschaffung, Qualitätsabstimmung und Exportabwicklung in Uruguay.</p>
-            </div>
-        </div>
+        <figure class="hero__media reveal" style="--i:3">
+          <picture>
+            <source type="image/webp" srcset="assets/img/warehouse-bales-1600.webp 1600w, assets/img/warehouse-bales-1200.webp 1200w, assets/img/warehouse-bales-800.webp 800w, assets/img/warehouse-bales-480.webp 480w" sizes="(min-width: 1340px) 1240px, 92vw">
+            <img src="assets/img/warehouse-bales-1200.jpg" srcset="assets/img/warehouse-bales-1600.jpg 1600w, assets/img/warehouse-bales-1200.jpg 1200w, assets/img/warehouse-bales-800.jpg 800w, assets/img/warehouse-bales-480.jpg 480w" sizes="(min-width: 1340px) 1240px, 92vw" width="1600" height="747" alt="Press-packed bales of wool tops stacked in the warehouse of a Uruguayan combing mill" fetchpriority="high" decoding="async">
+          </picture>
+          <figcaption class="hero__caption"><span>Wool tops, press-packed for export · partner combing mill, Uruguay</span><span>July 2026</span></figcaption>
+        </figure>
+
+        <dl class="fact-strip">
+          <div class="fact-strip__item reveal"><dt class="fact-strip__label">Based in</dt><dd class="fact-strip__value">San José, Uruguay</dd></div>
+          <div class="fact-strip__item reveal" style="--i:1"><dt class="fact-strip__label">Part of</dt><dd class="fact-strip__value">Kunz Global, registered in Uruguay since 2025</dd></div>
+          <div class="fact-strip__item reveal" style="--i:2"><dt class="fact-strip__label">Current focus</dt><dd class="fact-strip__value">Wool tops &amp; scoured wool, 17–30 micron, produced to order</dd></div>
+          <div class="fact-strip__item reveal" style="--i:3"><dt class="fact-strip__label">Documentation</dt><dd class="fact-strip__value">Mill certificate per lot, IWTO test certificates on request</dd></div>
+        </dl>
+      </div>
     </section>
 
-    <footer>
-        <img src="Images/Logo.png" alt="Kunz Sourcing Logo" class="footer-logo">
-        <p>© 2026 Kunz Sourcing · <a href="impressum.html" data-i18n="footer_imp">Impressum</a> · <a href="agb.html" data-i18n="footer_agb">AGB</a> · <a href="datenschutz.html" data-i18n="footer_priv">Datenschutz</a></p>
-    </footer>
+    <!-- ============ ORIGIN ============ -->
+    <section class="section section--dark" id="origin" aria-labelledby="origin-title">
+      <div class="container">
+        <div class="origin__grid">
+          <div class="origin__intro">
+            <p class="eyebrow reveal">Uruguay as a sourcing origin</p>
+            <h2 id="origin-title" class="reveal" style="--i:1">Why professional buyers look to Uruguay.</h2>
+            <p class="lede reveal" style="--i:2">A small country with an outsized position in wool: a pastoral farming system, an industrial base that processes fibre at origin, and export institutions that European buyers can verify.</p>
+            <p class="origin__note reveal" style="--i:3">Kunz Sourcing does not farm or process wool itself. We work with established Uruguayan mills and producers and put our name on the coordination: supplier selection, validation, documentation and export.</p>
+          </div>
+          <div class="facts">
+            <div class="fact reveal"><div class="fact__index">01</div><h3>Grown on grass, year-round</h3><p>Sheep graze natural pasture in a temperate climate. Wool here is a product of extensive farming, not of sheds and feedlots.</p></div>
+            <div class="fact reveal" style="--i:1"><div class="fact__index">02</div><h3>Processed at origin</h3><p>Uruguay is one of the world's leading exporters of wool tops. Most of its clip is scoured or combed in-country, so buyers can source semi-processed fibre directly from the origin.</p></div>
+            <div class="fact reveal" style="--i:2"><div class="fact__index">03</div><h3>Independently tested</h3><p>IWTO-licensed laboratories in Montevideo test lots for yield, mean fibre diameter, vegetable matter and length. The certificates travel with the goods.</p></div>
+            <div class="fact reveal" style="--i:3"><div class="fact__index">04</div><h3>Reliable to trade with</h3><p>An investment-grade economy with stable institutions, a national livestock traceability system and regular container services from Montevideo to Northern Europe and the Mediterranean.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        const translations = {
-            de: {
-                page_title: "Kunz Sourcing – Premium Rindfleisch & Merinowolle aus Uruguay",
-                eyebrow: "Direkt aus Uruguay",
-                h1: "KUNZ SOURCING – Ihr Premium-Zugang zu Uruguays Exzellenz",
-                hero_sub: "Kunz Sourcing ist der auf den internationalen B2B-Handel mit uruguayischem Weiderindfleisch und Merinowolle spezialisierte Geschäftsbereich von Kunz Global. Wir liefern nach Kundenspezifikation und übernehmen die Beschaffung, Qualitätsabstimmung und Exportabwicklung in Uruguay.",
-                beef_visual: "Uruguayisches<br>Weiderindfleisch",
-                beef_subtitle: "Premium Rindfleisch",
-                beef_title: "Uruguayisches Weiderindfleisch",
-                beef_desc: "Weiderindfleisch nach vereinbarter Spezifikation – mit verfügbaren Herkunfts-, Qualitäts- und Betriebsnachweisen für den jeweiligen Zielmarkt.",
-                beef_cta: "Rindfleisch entdecken →",
-                wool_visual: "Ultrafeine<br>Merinowolle",
-                wool_subtitle: "Premium Merinowolle",
-                wool_title: "Uruguayische Merinowolle",
-                wool_desc: "17–30 Mikron in Container-Volumen, gekämmte Tops oder gewaschene Vliese – für die europäische Textilindustrie und Handfärbereien.",
-                wool_cta: "Merinowolle entdecken →",
-                trust1_title: "Direkt aus Uruguay",
-                trust1_desc: "Persönliche Qualitätskontrolle vor Ort durch Stanley Kunz.",
-                trust2_title: "Volle Rückverfolgbarkeit",
-                trust2_desc: "Von der Erzeugung bis zur Anlieferung lückenlos dokumentiert.",
-                trust3_title: "B2B-Handel & Export",
-                trust3_desc: "Lieferung nach Kundenspezifikation mit Beschaffung, Qualitätsabstimmung und Exportabwicklung in Uruguay.",
-                footer_imp: "Impressum",
-                footer_agb: "AGB",
-                footer_priv: "Datenschutz"
-            },
-            en: {
-                page_title: "Kunz Sourcing – Premium Beef & Merino Wool from Uruguay",
-                eyebrow: "Direct from Uruguay",
-                h1: "KUNZ SOURCING – Your Premium Gateway to Uruguayan Excellence",
-                hero_sub: "Kunz Sourcing is Kunz Global’s specialist division for international B2B trade in Uruguayan pasture-raised beef and Merino wool. We supply to customer specification and manage sourcing, quality coordination and export handling in Uruguay.",
-                beef_visual: "Uruguayan<br>Pasture-Raised Beef",
-                beef_subtitle: "Premium Beef",
-                beef_title: "Uruguayan Grass-Fed Beef",
-                beef_desc: "Pasture-raised beef to agreed specifications, with available origin, quality and facility documentation for the relevant destination market.",
-                beef_cta: "Explore Beef →",
-                wool_visual: "Ultra-Fine<br>Merino Wool",
-                wool_subtitle: "Premium Merino Wool",
-                wool_title: "Uruguayan Merino Wool",
-                wool_desc: "17–30 micron in container volumes, combed tops or washed fleece – for the European textile industry and hand dyers.",
-                wool_cta: "Explore Merino Wool →",
-                trust1_title: "Direct from Uruguay",
-                trust1_desc: "Personal on-site quality control by Stanley Kunz.",
-                trust2_title: "Full Traceability",
-                trust2_desc: "Fully documented from production to delivery.",
-                trust3_title: "B2B Trade & Export",
-                trust3_desc: "Supply to customer specification, including sourcing, quality coordination and export handling in Uruguay.",
-                footer_imp: "Legal Notice",
-                footer_agb: "Terms & Conditions",
-                footer_priv: "Privacy Policy"
-            },
-            ru: {
-                page_title: "Kunz Sourcing – Премиальная говядина и мериносовая шерсть из Уругвая",
-                eyebrow: "Напрямую из Уругвая",
-                h1: "KUNZ SOURCING – Ваш премиальный доступ к превосходству Уругвая",
-                hero_sub: "Мы закупаем у выбранных предприятий-партнёров и экспортируем уругвайскую говядину и мериносовую шерсть по согласованной спецификации для международных B2B-покупателей.",
-                beef_visual: "Говядина<br>пастбищного выращивания",
-                beef_subtitle: "Премиальная говядина",
-                beef_title: "Уругвайская говядина травяного откорма",
-                beef_desc: "Отрубы, упаковка, происхождение и доступные подтверждающие документы согласовываются для конкретного предложения. Рефрижераторные контейнерные поставки для B2B-покупателей.",
-                beef_cta: "Узнать больше о говядине →",
-                wool_visual: "Ультратонкая<br>мериносовая шерсть",
-                wool_subtitle: "Премиальная мериносовая шерсть",
-                wool_title: "Уругвайская мериносовая шерсть",
-                wool_desc: "17–30 микрон, контейнерные объёмы, гребенная лента или мытое руно – для европейской текстильной промышленности и ручных красильщиков.",
-                wool_cta: "Узнать больше о шерсти →",
-                trust1_title: "Напрямую из Уругвая",
-                trust1_desc: "Личный контроль качества на месте Стэнли Кунцем.",
-                trust2_title: "Полная прослеживаемость",
-                trust2_desc: "Полная документация от производства до поставки.",
-                trust3_title: "B2B-закупки и экспорт",
-                trust3_desc: "Контейнерные объёмы с надёжной холодильной цепью и логистикой.",
-                footer_imp: "Юридическая информация",
-                footer_agb: "Условия использования",
-                footer_priv: "Политика конфиденциальности"
-            },
-            pl: {
-                page_title: "Kunz Sourcing – Premium wołowina i wełna merynosowa z Urugwaju",
-                eyebrow: "Bezpośrednio z Urugwaju",
-                h1: "KUNZ SOURCING – Twoja premium brama do doskonałości Urugwaju",
-                hero_sub: "Pozyskujemy od wybranych zakładów partnerskich i eksportujemy urugwajską wołowinę oraz wełnę merynosową według uzgodnionej specyfikacji dla międzynarodowych kupców B2B.",
-                beef_visual: "Wołowina<br>z chowu pastwiskowego",
-                beef_subtitle: "Premium wołowina",
-                beef_title: "Urugwajska wołowina z wypasu trawiastego",
-                beef_desc: "Elementy, opakowanie, pochodzenie i dostępne dokumenty potwierdzające są uzgadniane dla konkretnej oferty. Dostawy kontenerami chłodniczymi dla kupców B2B.",
-                beef_cta: "Odkryj wołowinę →",
-                wool_visual: "Ultra-cienka<br>wełna merynosowa",
-                wool_subtitle: "Premium wełna merynosowa",
-                wool_title: "Urugwajska wełna merynosowa",
-                wool_desc: "17–30 mikronów, objętości kontenerowe, czesanka lub myte runo – dla europejskiego przemysłu tekstylnego i farbiarni ręcznych.",
-                wool_cta: "Odkryj wełnę merynosową →",
-                trust1_title: "Bezpośrednio z Urugwaju",
-                trust1_desc: "Osobista kontrola jakości na miejscu przez Stanleya Kunza.",
-                trust2_title: "Pełna identyfikowalność",
-                trust2_desc: "Pełna dokumentacja od produkcji do dostawy.",
-                trust3_title: "Sourcing i eksport B2B",
-                trust3_desc: "Objętości kontenerowe z rzetelnym łańcuchem chłodniczym i logistyką.",
-                footer_imp: "Nota prawna",
-                footer_agb: "OWH",
-                footer_priv: "Polityka prywatności"
-            },
-            es: {
-                page_title: "Kunz Sourcing – Carne premium y lana merino de Uruguay",
-                eyebrow: "Directamente desde Uruguay",
-                h1: "KUNZ SOURCING – Tu acceso premium a la excelencia uruguaya",
-                hero_sub: "Nos abastecemos mediante establecimientos asociados seleccionados y exportamos carne uruguaya y lana merino según la especificación acordada para compradores B2B internacionales.",
-                beef_visual: "Carne uruguaya<br>de cría a pasto",
-                beef_subtitle: "Carne premium",
-                beef_title: "Carne uruguaya de pastoreo",
-                beef_desc: "Los cortes, el embalaje, el origen y los documentos justificativos disponibles se acuerdan para la oferta concreta. Envíos en contenedores refrigerados para compradores B2B.",
-                beef_cta: "Descubrir la carne →",
-                wool_visual: "Lana merino<br>ultrafina",
-                wool_subtitle: "Lana merino premium",
-                wool_title: "Lana merino uruguaya",
-                wool_desc: "17–30 micrones en volúmenes de contenedor, tops peinados o vellones lavados – para la industria textil europea y tintorerías artesanales.",
-                wool_cta: "Descubrir la lana merino →",
-                trust1_title: "Directamente desde Uruguay",
-                trust1_desc: "Control de calidad personal in situ por Stanley Kunz.",
-                trust2_title: "Trazabilidad completa",
-                trust2_desc: "Documentado íntegramente desde la producción hasta la entrega.",
-                trust3_title: "Sourcing y exportación B2B",
-                trust3_desc: "Volúmenes de contenedor con cadena de frío y logística fiables.",
-                footer_imp: "Aviso legal",
-                footer_agb: "Términos y condiciones",
-                footer_priv: "Política de privacidad"
-            }
-        };
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section" id="categories" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">What we source</p>
+            <h2 id="categories-title" class="reveal" style="--i:1">Categories, by status.</h2>
+          </div>
+          <p class="lede reveal" style="--i:2">We prefer a short list we can stand behind to a long list we cannot. Each category states plainly where it stands today.</p>
+        </div>
 
-        function setLanguage(lang) {
-            localStorage.setItem('ks_lang', lang);
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
-            document.documentElement.lang = lang;
+        <div class="index-list">
+          <a class="index-row reveal" href="wool.html">
+            <span class="index-row__num">01</span>
+            <div class="index-row__title"><h3>Wool &amp; natural fibres</h3><span class="pill pill--active">Active</span></div>
+            <p class="index-row__text">Wool tops (combed) and scoured wool, produced to order at an established Uruguayan combing mill. Usual finenesses from 17 to 30 micron, shipped as full container loads with a certificate for every lot.</p>
+            <span class="index-row__cta link-arrow">Wool specifications <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <div class="index-row reveal" style="--i:1">
+            <span class="index-row__num">02</span>
+            <div class="index-row__title"><h3>Beef</h3><span class="pill pill--soon">In development</span></div>
+            <p class="index-row__text">Pasture-raised Uruguayan beef for European importers, sourced through export-approved plants. The category is being set up; we take early enquiries from importers and wholesalers and are open about timelines.</p>
+            <a class="index-row__cta link-arrow" href="#request">Early enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="index-row reveal" style="--i:2">
+            <span class="index-row__num">03</span>
+            <div class="index-row__title"><h3>Further agricultural raw materials</h3><span class="pill">On request</span></div>
+            <p class="index-row__text">Uruguay produces more than wool and beef. If your requirement falls outside our current categories, we check supplier availability, documentation and export conditions before we say yes.</p>
+            <a class="index-row__cta link-arrow" href="#request">Describe your requirement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            const t = translations[lang];
-            if (!t) return;
+    <!-- ============ WOOL FEATURE ============ -->
+    <section class="section section--paper-2" id="wool" aria-labelledby="wool-title">
+      <div class="container">
+        <div class="feature">
+          <div class="feature__media feature__media--stack reveal">
+            <figure class="media" style="aspect-ratio: 4 / 4.2;">
+              <picture>
+                <source type="image/webp" srcset="assets/img/tops-cans-1600.webp 1600w, assets/img/tops-cans-1200.webp 1200w, assets/img/tops-cans-800.webp 800w, assets/img/tops-cans-480.webp 480w" sizes="(min-width: 900px) 42vw, 92vw">
+                <img src="assets/img/tops-cans-1200.jpg" srcset="assets/img/tops-cans-1600.jpg 1600w, assets/img/tops-cans-1200.jpg 1200w, assets/img/tops-cans-800.jpg 800w, assets/img/tops-cans-480.jpg 480w" sizes="(min-width: 900px) 42vw, 92vw" width="1600" height="747" alt="Combed wool tops coiled into cans at the combing line" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <figure class="media media--4x5">
+              <picture>
+                <source type="image/webp" srcset="assets/img/tops-bump-740.webp 740w, assets/img/tops-bump-560.webp 560w, assets/img/tops-bump-400.webp 400w" sizes="(min-width: 900px) 20vw, 45vw">
+                <img src="assets/img/tops-bump-560.jpg" srcset="assets/img/tops-bump-740.jpg 740w, assets/img/tops-bump-560.jpg 560w, assets/img/tops-bump-400.jpg 400w" sizes="(min-width: 900px) 20vw, 45vw" width="740" height="925" alt="Close-up of a wool top bump, white and undyed" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <figure class="media media--4x5">
+              <picture>
+                <source type="image/webp" srcset="assets/img/tops-hand-740.webp 740w, assets/img/tops-hand-560.webp 560w, assets/img/tops-hand-400.webp 400w" sizes="(min-width: 900px) 20vw, 45vw">
+                <img src="assets/img/tops-hand-560.jpg" srcset="assets/img/tops-hand-740.jpg 740w, assets/img/tops-hand-560.jpg 560w, assets/img/tops-hand-400.jpg 400w" sizes="(min-width: 900px) 20vw, 45vw" width="740" height="925" alt="Combed wool web held up to the light to check evenness" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+          </div>
+          <div>
+            <p class="eyebrow reveal">Wool &amp; natural fibres</p>
+            <h2 id="wool-title" class="reveal" style="--i:1">Wool tops and scoured wool, produced to order.</h2>
+            <p class="lede reveal" style="--i:2">Two product forms cover most industrial requirements: combed tops for worsted spinning, and scoured wool for woollen spinning, carding and felting. Lots are produced against confirmed orders at a combing mill whose products carry Oeko-Tex® Standard 100 certification, and every combing lot ships with the mill's laboratory certificate.</p>
+            <dl class="spec-list reveal" style="--i:3">
+              <div><dt>Product forms</dt><dd>Wool tops (combed sliver) · scoured wool</dd></div>
+              <div><dt>Fineness</dt><dd>17–30 micron, usual production range</dd></div>
+              <div><dt>Packaging</dt><dd>Press-packed bales, approx. 400 kg</dd></div>
+              <div><dt>Container loads</dt><dd>Approx. 12 t per 20 ft · 25 t per 40 ft</dd></div>
+              <div><dt>Lead time</dt><dd>Typically 30–60 days after order confirmation</dd></div>
+              <div><dt>Delivery terms</dt><dd>FOB Montevideo · CIF on request</dd></div>
+            </dl>
+            <a class="link-arrow reveal" style="--i:4" href="wool.html">Full specifications, testing and shipping details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (t[key] !== undefined) {
-                    if (el.tagName === 'TITLE') {
-                        document.title = t[key];
-                    } else {
-                        el.innerHTML = t[key];
-                    }
-                }
-            });
-        }
+    <!-- ============ PROCESS ============ -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">How we work</p>
+            <h2 id="process-title" class="reveal" style="--i:1">Five steps between your requirement and a loaded container.</h2>
+          </div>
+          <p class="lede reveal" style="--i:2">A sourcing partner is only useful if the process is predictable. This is ours, and it is the same for a first container and a yearly programme.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><div class="step__num">01</div><h3>Requirement</h3><p>You define product form, fineness, quantity, destination and timing. We reply with what is realistic from Uruguay — including what is not.</p></li>
+          <li class="step reveal" style="--i:1"><div class="step__num">02</div><h3>Supplier matching</h3><p>We match the requirement to a producing mill or supplier and confirm capacity and lead time before we quote anything.</p></li>
+          <li class="step reveal" style="--i:2"><div class="step__num">03</div><h3>Product validation</h3><p>Specifications are checked against lot certificates. Samples and independent IWTO test certificates are arranged on request.</p></li>
+          <li class="step reveal" style="--i:3"><div class="step__num">04</div><h3>Commercial coordination</h3><p>Quotation, contract and payment terms are agreed operation by operation. Pricing follows the wool market at the time of order.</p></li>
+          <li class="step reveal" style="--i:4"><div class="step__num">05</div><h3>Export coordination</h3><p>With a licensed customs broker and freight forwarder in Uruguay we coordinate bale marking, documents and loading at the Port of Montevideo.</p></li>
+        </ol>
+        <p class="steps-note reveal">We do not publish price lists or minimum quantities. Wool is traded on the market of the day, and a serious quotation needs your specification first. Terms are discussed individually with each buyer.</p>
+      </div>
+    </section>
 
-        const savedLang = localStorage.getItem('ks_lang') || 'de';
-        document.addEventListener('DOMContentLoaded', () => {
-            setLanguage(savedLang);
-        });
-    </script>
-    <a href="https://wa.me/message/FDT6WPLEOMFAE1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chat" title="WhatsApp Chat">
-        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L2 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115.1-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.6-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.6-9.7-1.5-2.8-13.4-32.3-18.3-44.2-4.8-11.6-9.7-10-13.4-10.2-3.5-.2-7.5-.2-11.5-.2-4 0-10.5 1.5-16 7.4-5.5 5.9-21.1 20.6-21.1 50.2 0 29.6 21.6 58.2 24.6 62.3 3 4.1 41.3 63.1 101.6 88.5 50.5 21.2 60.8 17 71.8 15.8 11-1.2 33.3-13.6 38-26.8 4.7-13.2 4.7-24.6 3.3-26.8-1.4-2.3-5.1-3.7-10.7-6.5z"/></svg>
-    </a>
+    <!-- ============ PRESENCE ============ -->
+    <section class="section section--white" id="presence" aria-labelledby="presence-title">
+      <div class="container">
+        <div class="feature feature--flip">
+          <div class="feature__media reveal">
+            <figure class="media media--4x5">
+              <picture>
+                <source type="image/webp" srcset="assets/img/stanley-kunz-840.webp 840w, assets/img/stanley-kunz-600.webp 600w, assets/img/stanley-kunz-400.webp 400w" sizes="(min-width: 900px) 40vw, 92vw">
+                <img src="assets/img/stanley-kunz-600.jpg" srcset="assets/img/stanley-kunz-840.jpg 840w, assets/img/stanley-kunz-600.jpg 600w, assets/img/stanley-kunz-400.jpg 400w" sizes="(min-width: 900px) 40vw, 92vw" width="840" height="1050" alt="Stanley Kunz, head of Kunz Sourcing" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <figcaption class="media__caption">Stanley Kunz · Kunz Sourcing, San José, Uruguay</figcaption>
+          </div>
+          <div>
+            <p class="eyebrow reveal">Local presence. International standards.</p>
+            <h2 id="presence-title" class="reveal" style="--i:1">One counterpart in Uruguay, accountable for the whole chain.</h2>
+            <p class="lede reveal" style="--i:2">Kunz Sourcing is led by Stanley Kunz from San José, Uruguay. He visits the mill, checks lots before they are packed and is the person you reach when a question comes up — in English, German or Spanish, with working hours that overlap with Europe.</p>
+            <div class="points">
+              <div class="point reveal"><span class="point__mark">i.</span><div><h4>On the ground</h4><p>Supplier visits, lot checks and loading supervision in person, not by phone.</p></div></div>
+              <div class="point reveal" style="--i:1"><span class="point__mark">ii.</span><div><h4>Verifiable documents</h4><p>Every claim we make about a lot is backed by a certificate you can read, from a laboratory you can look up.</p></div></div>
+              <div class="point reveal" style="--i:2"><span class="point__mark">iii.</span><div><h4>Straight answers</h4><p>If Uruguay is not the right origin for a requirement, we say so early. Long-term buyers matter more to us than a single container.</p></div></div>
+              <div class="point reveal" style="--i:3"><span class="point__mark">iv.</span><div><h4>Licensed partners in Uruguay</h4><p>Customs brokerage, freight forwarding and tax matters are handled with established Uruguayan specialists.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOCUMENTATION ============ -->
+    <section class="section section--paper-2" id="documentation" aria-labelledby="documentation-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">Quality &amp; documentation</p>
+            <h2 id="documentation-title" class="reveal" style="--i:1">Paper you can check before you commit.</h2>
+          </div>
+          <p class="lede reveal" style="--i:2">No certificate, no offer. These are the documents behind a Kunz Sourcing wool lot, from the mill's own laboratory to the export file.</p>
+        </div>
+        <div class="doc-cols">
+          <div class="doc-col reveal">
+            <h3>Mill quality certificate</h3>
+            <p>Issued for every combing lot by the mill's laboratory.</p>
+            <ul>
+              <li>Fineness (Airflow)</li>
+              <li>Hausman mean length, barbe and CVH (Almeter)</li>
+              <li>Short-fibre content below 40 mm and 30 mm</li>
+              <li>Sliver evenness (CV %) and residual grease</li>
+              <li>Neps and pinpoints per 100 g</li>
+              <li>Vegetable matter, jute and polypropylene</li>
+              <li>Dark and coloured fibres per 25 g</li>
+            </ul>
+          </div>
+          <div class="doc-col reveal" style="--i:1">
+            <h3>IWTO test certificates</h3>
+            <p>Issued by LATU, Uruguay's IWTO-licensed test house, on request or as agreed in the contract.</p>
+            <ul>
+              <li>Wool base and vegetable matter base</li>
+              <li>Mean fibre diameter (LaserScan) and its CV</li>
+              <li>Commercial yields and clean masses</li>
+              <li>Conditioning certificate and invoice mass</li>
+              <li>Bale-by-bale packing list with gross, tare and net weights</li>
+            </ul>
+          </div>
+          <div class="doc-col reveal" style="--i:2">
+            <h3>Export file</h3>
+            <p>Prepared with a licensed customs broker in Montevideo.</p>
+            <ul>
+              <li>Commercial invoice and packing list</li>
+              <li>Bill of lading</li>
+              <li>Certificate of origin as required by the destination</li>
+              <li>Mill certification: Oeko-Tex® Standard 100, on request</li>
+              <li>Samples of the offered lot, on request</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KUNZ GLOBAL ============ -->
+    <section class="section" id="group" aria-labelledby="group-title">
+      <div class="container">
+        <div class="group">
+          <div>
+            <img class="group__logo reveal" src="assets/img/logo-192.png" width="64" height="64" alt="" loading="lazy">
+            <p class="eyebrow reveal">Kunz Global</p>
+            <h2 id="group-title" class="reveal" style="--i:1">A division of Kunz Global, Uruguay.</h2>
+            <p class="lede reveal" style="--i:2">Kunz Global is the company of Stanley Kunz, registered in Uruguay since 2025 (RUT 220451740014) and based in San José. Kunz Sourcing is its sourcing and export division; the other divisions serve Uruguayan agriculture and B2B sales.</p>
+          </div>
+          <ul class="divisions reveal" style="--i:2">
+            <li><div><strong>Kunz Sourcing</strong><span>Sourcing and export from Uruguay — this site</span></div><span class="pill pill--active">You are here</span></li>
+            <li><div><strong>Kunz Agrotech</strong><span>Agricultural drone services in Uruguay</span></div><a class="link-arrow" href="https://kunzagrotech.com" rel="noopener">kunzagrotech.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+            <li><div><strong>Kunz Akquise</strong><span>B2B lead generation and sales</span></div><a class="link-arrow" href="https://kunzakquise.com" rel="noopener">kunzakquise.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+            <li><div><strong>Kunz Global</strong><span>Group website</span></div><a class="link-arrow" href="https://kunzglobal.com" rel="noopener">kunzglobal.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REQUEST ============ -->
+    <section class="section section--paper-2" id="request" aria-labelledby="request-title">
+      <div class="container">
+        <div class="request">
+          <div>
+            <p class="eyebrow reveal">Sourcing request</p>
+            <h2 id="request-title" class="reveal" style="--i:1">Tell us what you need to buy.</h2>
+            <p class="lede reveal" style="--i:2">The more precise your specification, the more useful our first answer. We reply within one working day with availability, lead time and the documents we can provide — or with a clear no.</p>
+            <dl class="contact-list reveal" style="--i:3">
+              <div><dt>E-mail</dt><dd><a href="mailto:Stanley@kunzsourcing.com">Stanley@kunzsourcing.com</a></dd></div>
+              <div><dt>WhatsApp</dt><dd><a href="https://wa.me/message/FDT6WPLEOMFAE1" target="_blank" rel="noopener noreferrer">+49 6344 9269681</a><small>Business account, messages answered from Uruguay</small></dd></div>
+              <div><dt>Office</dt><dd>Kunz Sourcing · Kunz Global<br>Kiyú / Libertad, 80100 San José, Uruguay</dd></div>
+              <div><dt>Time zone</dt><dd>UTC−3 (Montevideo)<small>Afternoons in Europe are mornings in Uruguay</small></dd></div>
+              <div><dt>Languages</dt><dd>English · German · Spanish</dd></div>
+            </dl>
+          </div>
+
+          <form class="form reveal" id="sourcing-request" data-endpoint="" data-mailto="Stanley@kunzsourcing.com" novalidate>
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="f-product">Product</label>
+                <select id="f-product" name="product" required>
+                  <option value="Wool tops (combed)">Wool tops (combed)</option>
+                  <option value="Scoured wool">Scoured wool</option>
+                  <option value="Beef (in development)">Beef (in development)</option>
+                  <option value="Other agricultural raw material">Other agricultural raw material</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-volume">Estimated volume</label>
+                <select id="f-volume" name="volume" required>
+                  <option value="" disabled selected>Select …</option>
+                  <option value="One 20 ft container">One 20 ft container</option>
+                  <option value="One 40 ft container">One 40 ft container</option>
+                  <option value="Several containers per year">Several containers per year</option>
+                  <option value="Not yet defined">Not yet defined</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-spec">Required specification</label>
+                <input id="f-spec" name="specification" type="text" required placeholder="e.g. 18–19 micron tops, white, Hauteur ≥ 70 mm" autocomplete="off">
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="f-country">Destination country</label>
+                <input id="f-country" name="country" type="text" required autocomplete="country-name">
+              </div>
+              <div class="field">
+                <label for="f-company">Company</label>
+                <input id="f-company" name="company" type="text" required autocomplete="organization">
+              </div>
+            </div>
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="f-email">Business e-mail</label>
+                <input id="f-email" name="email" type="email" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="f-message">Additional requirements <span class="opt">(optional)</span></label>
+                <textarea id="f-message" name="message" placeholder="Timing, certificates required, delivery terms, existing supplier relationships …"></textarea>
+              </div>
+            </div>
+            <div class="honeypot" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <input type="hidden" name="t" value="">
+            <label class="form__consent"><input type="checkbox" name="consent" required> <span>I agree that Kunz Sourcing processes this information to answer my request. See the <a class="link-inline" href="privacy.html">privacy policy</a>.</span></label>
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Send sourcing request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <span class="form__hint">No price lists, no automated offers. Every request is read by Stanley Kunz.</span>
+            </div>
+            <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo-white-192.png" width="44" height="44" alt="" loading="lazy">
+          <span class="brand__name"><strong>Kunz</strong> Sourcing</span>
+          <p>Sourcing and export division of Kunz Global. Wool tops, scoured wool and further agricultural raw materials from Uruguay for professional buyers.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:Stanley@kunzsourcing.com">Stanley@kunzsourcing.com</a></li>
+            <li><a href="https://wa.me/message/FDT6WPLEOMFAE1" target="_blank" rel="noopener noreferrer">WhatsApp Business</a></li>
+            <li>Kiyú / Libertad<br>80100 San José, Uruguay</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#origin">Uruguay as origin</a></li>
+            <li><a href="#categories">What we source</a></li>
+            <li><a href="wool.html">Wool &amp; natural fibres</a></li>
+            <li><a href="#process">How we work</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#request">Sourcing request</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Group &amp; legal</h4>
+          <ul>
+            <li><a href="https://kunzglobal.com" rel="noopener">Kunz Global</a></li>
+            <li><a href="https://www.instagram.com/kunzsourcing" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/1ELX6g9reX/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="legal-notice.html">Legal notice</a></li>
+            <li><a href="terms.html">Terms &amp; conditions</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Kunz Sourcing · a division of Kunz Global · Stanley Kunz Pazer · RUT 220451740014 · San José, Uruguay</span>
+        <span>Offers are addressed to business customers only.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

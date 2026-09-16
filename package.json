@@ -1,0 +1,16 @@
+{
+  "name": "kunzsourcing-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Kunz Sourcing — static website (kunzsourcing.com), hosted on GitHub Pages. No dependencies, no build step.",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/check.mjs",
+    "images": "node scripts/build-images.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
