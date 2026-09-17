@@ -1,27 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kunzsourcing.com/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/de/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/es/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/pl/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/"/>
   </url>
   <url>
     <loc>https://kunzsourcing.com/sourcing.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/sourcing.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/de/sourcing.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/sourcing.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/es/sourcing.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/sourcing.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/pl/sourcing.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/sourcing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/sourcing.html"/>
   </url>
   <url>
     <loc>https://kunzsourcing.com/wool.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/wool.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/de/wool.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/wool.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/es/wool.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/wool.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/pl/wool.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/wool.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/wool.html"/>
   </url>
   <url>
     <loc>https://kunzsourcing.com/beef.html</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/beef.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/de/beef.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/beef.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/es/beef.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/beef.html"/>
+  </url>
+  <url>
+    <loc>https://kunzsourcing.com/pl/beef.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kunzsourcing.com/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kunzsourcing.com/de/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kunzsourcing.com/es/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://kunzsourcing.com/pl/beef.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kunzsourcing.com/beef.html"/>
   </url>
 </urlset>

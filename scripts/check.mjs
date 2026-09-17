@@ -15,7 +15,7 @@ const warn = [];
 async function listHtml(dir) {
   const out = [];
   for (const entry of await readdir(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith(".") || entry.name === "node_modules" || entry.name === "scripts") continue;
+    if (entry.name.startsWith(".") || ["node_modules", "scripts", "i18n", "assets"].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) out.push(...(await listHtml(full)));
     else if (entry.name.endsWith(".html")) out.push(full);
@@ -54,20 +54,31 @@ for (const file of publicPages) {
     if (!/<meta name="description" content="[^"]{40,}"/i.test(html)) problems.push(`${rel}: missing/short meta description`);
     if (!/<link rel="canonical"/i.test(html)) problems.push(`${rel}: missing canonical`);
   }
-  if (["index.html", "wool.html", "beef.html", "sourcing.html"].includes(rel)) {
+  if (!isRedirect) {
+    for (const code of ["en", "de", "es", "pl", "x-default"]) {
+      if (!html.includes(`hreflang="${code}" href="https://kunzsourcing.com/`)) problems.push(`${rel}: missing hreflang ${code}`);
+    }
+    if (!/<details class="lang" data-lang-switch>/.test(html)) problems.push(`${rel}: missing language switcher`);
+    const expected = rel.includes("/") ? rel.split("/")[0] : "en";
+    if (!new RegExp(`<html lang="${expected}"`).test(html)) problems.push(`${rel}: html lang should be ${expected}`);
+    if (expected !== "en" && /\b(Discuss your sourcing requirements|Skip to content)\b/.test(html)) {
+      problems.push(`${rel}: untranslated English text found`);
+    }
+  }
+  if (["index.html", "wool.html", "beef.html", "sourcing.html"].includes(path.basename(rel))) {
     for (const tag of ["og:title", "og:description", "og:image", "og:url", "twitter:card"]) {
       if (!html.includes(`property="${tag}"`) && !html.includes(`name="${tag}"`)) problems.push(`${rel}: missing ${tag}`);
     }
   }
 
   // --- placeholders / forbidden public content
-  if (/lorem ipsum|TODO|TBD|\[insert/i.test(html)) problems.push(`${rel}: placeholder text found`);
+  if (/lorem ipsum|\[insert/i.test(html) || /\b(TODO|TBD|FIXME)\b/.test(html)) problems.push(`${rel}: placeholder text found`);
   if (!isRedirect && /(USD|EUR|€|\$)\s?\d/.test(html)) problems.push(`${rel}: a price-like value is present in public copy`);
   if (!isRedirect && /minimum order quantity[^.]*\d+\s?(t|kg|tonnes)/i.test(html)) problems.push(`${rel}: an MOQ figure is present in public copy`);
 
   // --- links and assets
   const refs = [];
-  for (const m of html.matchAll(/<(a|link|script|img|source)\b[^>]*>/gi)) {
+  for (const m of html.matchAll(/<(a|link|script|img|source|meta)\b[^>]*>/gi)) {
     const tag = m[0];
     for (const name of ["href", "src", "srcset"]) {
       const v = attr(tag, name);
@@ -120,7 +131,7 @@ for (const file of publicPages) {
 // --- sitemap
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
 for (const m of sitemap.matchAll(/<loc>https:\/\/kunzsourcing\.com\/([^<]*)<\/loc>/g)) {
-  const f = m[1] || "index.html";
+  const f = !m[1] || m[1].endsWith("/") ? m[1] + "index.html" : m[1];
   if (!(await exists(path.join(root, f)))) problems.push(`sitemap.xml: ${f} does not exist`);
 }
 if (!(await exists(path.join(root, "CNAME")))) problems.push("CNAME is missing (custom domain would be lost)");

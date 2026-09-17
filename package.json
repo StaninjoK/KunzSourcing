@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "serve": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs",
-    "test": "node scripts/check.mjs",
+    "i18n": "node scripts/build-i18n.mjs",
+    "check": "node scripts/build-i18n.mjs --check && node scripts/check.mjs",
+    "test": "node scripts/build-i18n.mjs --check && node scripts/check.mjs",
     "images": "node scripts/build-images.mjs"
   },
   "engines": {

@@ -19,6 +19,20 @@ Static website for **kunzsourcing.com**, hosted on GitHub Pages (branch `main`, 
 | `scripts/` | `serve.mjs` (local preview), `check.mjs` (link/meta/image checks), `build-images.mjs` (regenerates `assets/img` from the originals) |
 | `CNAME` | Custom domain for GitHub Pages — do not delete |
 
+## Languages
+
+English is the source language (pages in the repository root). German, Spanish and Polish pages live in `de/`, `es/` and `pl/` and are **generated** — do not edit them by hand.
+
+1. Edit the English page.
+2. `node scripts/build-i18n.mjs --extract` writes all English text segments to `i18n/_segments.json`.
+3. Add or update the translations in `i18n/de.json`, `i18n/es.json`, `i18n/pl.json` (key = English text).
+4. `node scripts/build-i18n.mjs` regenerates the three language folders, the hreflang links, the language switcher, the footer language list and `sitemap.xml`.
+5. `node scripts/build-i18n.mjs --check` fails if a translation is missing or a generated file is stale.
+
+Form option values stay in English on purpose (they end up in the request e-mail and in `?product=` links). UI texts created by JavaScript (form messages, menu labels, language hint) are in `assets/js/site.js`.
+
+The old German URLs (`grosshandel-wolle`, `handfearbereien`, `grosshandel-fleisch`, `impressum`, `agb`, `datenschutz`) redirect to the matching pages in `de/`.
+
 ## Local preview and checks
 
 ```bash

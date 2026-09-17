@@ -33,8 +33,23 @@ createServer(async (req, res) => {
     if (!file.startsWith(root)) throw Object.assign(new Error("forbidden"), { code: "EACCES" });
     let info = await stat(file).catch(() => null);
     if (info && info.isDirectory()) {
+      if (!pathname.endsWith("/")) {
+        // Like GitHub Pages: /de → /de/
+        res.writeHead(301, { location: pathname + "/" });
+        res.end();
+        return;
+      }
       file = path.join(file, "index.html");
       info = await stat(file).catch(() => null);
+    }
+    if (!info && !path.extname(file)) {
+      // Like GitHub Pages: /impressum → /impressum.html
+      const withHtml = file + ".html";
+      const alt = await stat(withHtml).catch(() => null);
+      if (alt) {
+        file = withHtml;
+        info = alt;
+      }
     }
     if (!info) {
       const notFound = path.join(root, "404.html");
