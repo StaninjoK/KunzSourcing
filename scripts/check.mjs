@@ -54,7 +54,7 @@ for (const file of publicPages) {
     if (!/<meta name="description" content="[^"]{40,}"/i.test(html)) problems.push(`${rel}: missing/short meta description`);
     if (!/<link rel="canonical"/i.test(html)) problems.push(`${rel}: missing canonical`);
   }
-  if (["index.html", "wool.html"].includes(rel)) {
+  if (["index.html", "wool.html", "beef.html", "sourcing.html"].includes(rel)) {
     for (const tag of ["og:title", "og:description", "og:image", "og:url", "twitter:card"]) {
       if (!html.includes(`property="${tag}"`) && !html.includes(`name="${tag}"`)) problems.push(`${rel}: missing ${tag}`);
     }

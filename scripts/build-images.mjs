@@ -66,6 +66,15 @@ const images = [
   },
 ];
 
+// Beef visuals: renders from the previous website (no real plant photos yet).
+const OLD = "Webseite/Webseite Aktuell/Images/";
+images.push(
+  { name: "cattle-pasture", src: OLD + "Weiderinder.png", crop: { left: 0, top: 600, width: 1122, height: 600 }, widths: [1100, 800, 480] },
+  { name: "cattle-tall", src: OLD + "Weiderinder.png", aspect: [4, 5], widths: [740, 560, 400] },
+  { name: "beef-cuts", src: OLD + "Cuts.png", widths: [1200, 800, 480] },
+  { name: "beef-carcass", src: OLD + "Hälfte.png", widths: [1200, 800, 480] }
+);
+
 const LOGO = "Webseite/Webseite Aktuell/Images/Logo.png";
 
 async function processPhoto(img) {
@@ -78,7 +87,10 @@ async function processPhoto(img) {
 
   let cropW = orientedW;
   let cropH = orientedH;
-  if (img.aspect) {
+  if (img.crop) {
+    cropW = img.crop.width;
+    cropH = img.crop.height;
+  } else if (img.aspect) {
     const [aw, ah] = img.aspect;
     if (orientedW / orientedH > aw / ah) cropW = Math.round(orientedH * (aw / ah));
     else cropH = Math.round(orientedW * (ah / aw));
@@ -89,7 +101,9 @@ async function processPhoto(img) {
     const width = Math.min(w, cropW);
     const height = Math.round(width * (cropH / cropW));
     let pipeline = sharp(input).rotate();
-    if (img.aspect) {
+    if (img.crop) {
+      pipeline = pipeline.extract(img.crop);
+    } else if (img.aspect) {
       pipeline = pipeline.resize({ width: cropW, height: cropH, fit: "cover", position: img.position || "centre" });
     }
     pipeline = pipeline

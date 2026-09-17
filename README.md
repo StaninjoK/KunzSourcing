@@ -6,8 +6,10 @@ Static website for **kunzsourcing.com**, hosted on GitHub Pages (branch `main`, 
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Home: hero, Uruguay as origin, categories, wool feature, process, presence, documentation, Kunz Global, sourcing request |
-| `wool.html` | Wool & natural fibres: product forms, fineness, processing, certificate data, packaging & shipping |
+| `index.html` | Home: hero, Uruguay as origin, what we source (wool + beef), process, presence, documentation, Kunz Global, general sourcing request |
+| `sourcing.html` | What we source: product-area panels, side-by-side comparison, further categories |
+| `wool.html` | Wool & natural fibres: at a glance, product forms, fineness, processing, certificate data, shipping timeline, pricing factors, wool request form |
+| `beef.html` | Beef: at a glance, status note, Uruguay as beef origin, sourcing options, quality & documentation, process, logistics, pricing factors, beef request form |
 | `legal-notice.html`, `terms.html`, `privacy.html` | Legal pages (English) |
 | `404.html` | GitHub Pages error page |
 | `grosshandel-wolle.html`, `handfearbereien.html`, `grosshandel-fleisch.html`, `impressum.html`, `agb.html`, `datenschutz.html` | Redirect stubs for the URLs of the previous site |

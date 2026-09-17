@@ -92,106 +92,121 @@
     window.setTimeout(sweep, 600);
   }
 
-  /* ----- Sourcing request form ----- */
-  var form = document.getElementById("sourcing-request");
-  if (!form) return;
-
-  // Optional: a POST endpoint (e.g. a Google Apps Script web app) that accepts
-  // application/x-www-form-urlencoded and answers {"ok":true}. Leave empty to use
-  // the e-mail fallback, which opens the visitor's mail client with the request prefilled.
-  var ENDPOINT = form.getAttribute("data-endpoint") || "";
-  var TO = form.getAttribute("data-mailto") || "Stanley@kunzsourcing.com";
-
-  var feedback = document.getElementById("form-feedback");
-  var button = form.querySelector('button[type="submit"]');
-  var stamp = form.elements.namedItem("t");
-  var setStamp = function () {
-    if (stamp) stamp.value = String(Date.now());
-  };
-  setStamp();
-
-  // Pre-select the product when the page is opened with ?product=…
-  var wanted = new URLSearchParams(location.search).get("product");
-  var productField = form.elements.namedItem("product");
-  if (wanted && productField) {
-    var match = Array.prototype.some.call(productField.options, function (o) {
-      return o.value === wanted;
+  /* ----- Sub-navigation scroll spy (product pages) ----- */
+  var subnav = document.querySelector(".subnav");
+  if (subnav) {
+    var spyLinks = Array.prototype.slice.call(subnav.querySelectorAll('a[href^="#"]'));
+    var spySections = spyLinks.map(function (a) {
+      return document.getElementById(a.getAttribute("href").slice(1));
     });
-    if (match) productField.value = wanted;
+    var spy = function () {
+      var offset = (header ? header.offsetHeight : 0) + subnav.offsetHeight + 32;
+      var current = -1;
+      spySections.forEach(function (s, i) {
+        if (s && s.getBoundingClientRect().top <= offset) current = i;
+      });
+      spyLinks.forEach(function (a, i) {
+        a.classList.toggle("is-active", i === current);
+      });
+    };
+    spy();
+    window.addEventListener("scroll", spy, { passive: true });
   }
 
-  var say = function (text, state) {
-    if (!feedback) return;
-    feedback.textContent = text;
-    if (state) feedback.setAttribute("data-state", state);
-    else feedback.removeAttribute("data-state");
-  };
+  /* ----- Sourcing request forms (one per page, marked with data-request) ----- */
+  // Optional: data-endpoint may point to a POST endpoint (e.g. a Google Apps Script web app)
+  // that accepts application/x-www-form-urlencoded and answers {"ok":true}. Without it the
+  // form opens the visitor's e-mail client with the request prefilled (no server involved).
+  Array.prototype.forEach.call(document.querySelectorAll("form[data-request]"), function (form) {
+    var ENDPOINT = form.getAttribute("data-endpoint") || "";
+    var TO = form.getAttribute("data-mailto") || "Stanley@kunzsourcing.com";
+    var KIND = form.getAttribute("data-request") || "Sourcing request";
+    var feedback = form.querySelector(".form__feedback");
+    var button = form.querySelector('button[type="submit"]');
+    var stamp = form.elements.namedItem("t");
+    var setStamp = function () {
+      if (stamp) stamp.value = String(Date.now());
+    };
+    setStamp();
 
-  var value = function (name) {
-    var el = form.elements.namedItem(name);
-    return el && el.value ? String(el.value).trim() : "";
-  };
-
-  var buildMail = function () {
-    var lines = [
-      "Sourcing request via kunzsourcing.com",
-      "",
-      "Product: " + value("product"),
-      "Required specification: " + value("specification"),
-      "Estimated volume: " + value("volume"),
-      "Destination country: " + value("country"),
-      "",
-      "Company: " + value("company"),
-      "Contact: " + value("name"),
-      "E-mail: " + value("email"),
-      "Phone: " + (value("phone") || "-"),
-      "",
-      "Additional requirements:",
-      value("message") || "-",
-    ];
-    var subject = "Sourcing request – " + value("product") + " – " + value("company");
-    return "mailto:" + TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
-  };
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (!form.reportValidity()) return;
-    var honey = form.elements.namedItem("website");
-    if (honey && honey.value) return; // bot
-
-    if (!ENDPOINT) {
-      window.location.href = buildMail();
-      say(
-        "Your e-mail client should open with the request prefilled. If it does not, write to " +
-          TO +
-          " with the same details.",
-        "ok"
-      );
-      return;
-    }
-
-    var label = button.innerHTML;
-    button.disabled = true;
-    button.textContent = "Sending …";
-    say("", "");
-    fetch(ENDPOINT, { method: "POST", body: new URLSearchParams(new FormData(form)) })
-      .then(function (r) {
-        return r.json().catch(function () {
-          return { ok: false };
-        });
-      })
-      .then(function (res) {
-        if (!res.ok) throw new Error(res.error || "unknown");
-        form.reset();
-        setStamp();
-        say("Thank you. Your request has been received; we reply within one working day.", "ok");
-      })
-      .catch(function () {
-        say("The request could not be sent. Please e-mail " + TO + " directly.", "error");
-      })
-      .finally(function () {
-        button.innerHTML = label;
-        button.disabled = false;
+    // Pre-select options from the query string, e.g. ?product=Scoured%20wool
+    new URLSearchParams(location.search).forEach(function (v, k) {
+      var el = form.elements.namedItem(k);
+      if (!el || el.tagName !== "SELECT") return;
+      var ok = Array.prototype.some.call(el.options, function (o) {
+        return o.value === v;
       });
+      if (ok) el.value = v;
+    });
+
+    var say = function (text, state) {
+      if (!feedback) return;
+      feedback.textContent = text;
+      if (state) feedback.setAttribute("data-state", state);
+      else feedback.removeAttribute("data-state");
+    };
+    var value = function (name) {
+      var el = form.elements.namedItem(name);
+      return el && el.value ? String(el.value).trim() : "";
+    };
+    var labelOf = function (el) {
+      var l = el.id ? form.querySelector('label[for="' + el.id + '"]') : null;
+      var text = l ? l.textContent : el.name;
+      return text.replace(/\(optional\)/i, "").replace(/\s+/g, " ").trim();
+    };
+    var buildMail = function () {
+      var lines = [KIND + " via kunzsourcing.com", ""];
+      Array.prototype.forEach.call(form.elements, function (el) {
+        if (!el.name || el.type === "submit" || el.type === "hidden" || el.type === "checkbox") return;
+        if (el.name === "website") return;
+        lines.push(labelOf(el) + ": " + (String(el.value || "").trim() || "-"));
+      });
+      var subject = KIND;
+      if (value("product")) subject += " – " + value("product");
+      if (value("company")) subject += " – " + value("company");
+      return "mailto:" + TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      var honey = form.elements.namedItem("website");
+      if (honey && honey.value) return; // bot
+
+      if (!ENDPOINT) {
+        window.location.href = buildMail();
+        say(
+          "Your e-mail client should open with the request prefilled. If it does not, write to " +
+            TO +
+            " with the same details.",
+          "ok"
+        );
+        return;
+      }
+
+      var label = button.innerHTML;
+      button.disabled = true;
+      button.textContent = "Sending …";
+      say("", "");
+      fetch(ENDPOINT, { method: "POST", body: new URLSearchParams(new FormData(form)) })
+        .then(function (r) {
+          return r.json().catch(function () {
+            return { ok: false };
+          });
+        })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.error || "unknown");
+          form.reset();
+          setStamp();
+          say("Thank you. Your request has been received; we reply within one working day.", "ok");
+        })
+        .catch(function () {
+          say("The request could not be sent. Please e-mail " + TO + " directly.", "error");
+        })
+        .finally(function () {
+          button.innerHTML = label;
+          button.disabled = false;
+        });
+    });
   });
 })();

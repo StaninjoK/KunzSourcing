@@ -265,5 +265,73 @@
         "height": 500
       }
     ]
+  },
+  {
+    "name": "cattle-pasture",
+    "sizes": [
+      {
+        "width": 1100,
+        "height": 588
+      },
+      {
+        "width": 800,
+        "height": 428
+      },
+      {
+        "width": 480,
+        "height": 257
+      }
+    ]
+  },
+  {
+    "name": "cattle-tall",
+    "sizes": [
+      {
+        "width": 740,
+        "height": 925
+      },
+      {
+        "width": 560,
+        "height": 700
+      },
+      {
+        "width": 400,
+        "height": 500
+      }
+    ]
+  },
+  {
+    "name": "beef-cuts",
+    "sizes": [
+      {
+        "width": 1200,
+        "height": 751
+      },
+      {
+        "width": 800,
+        "height": 500
+      },
+      {
+        "width": 480,
+        "height": 300
+      }
+    ]
+  },
+  {
+    "name": "beef-carcass",
+    "sizes": [
+      {
+        "width": 1200,
+        "height": 751
+      },
+      {
+        "width": 800,
+        "height": 500
+      },
+      {
+        "width": 480,
+        "height": 300
+      }
+    ]
   }
 ]
