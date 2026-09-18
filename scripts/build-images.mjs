@@ -58,10 +58,10 @@ const images = [
     widths: [1200, 800, 480],
   },
   {
+    // 4:5 window starting below the top of the frame, so the face sits in the upper third
     name: "stanley-kunz",
     src: BACKUP + "WhatsApp Image 2026-09-07 at 21.14.54.jpeg",
-    aspect: [4, 5],
-    position: "north",
+    crop: { left: 0, top: 250, width: 857, height: 1071 },
     widths: [840, 600, 400],
   },
 ];
@@ -147,13 +147,19 @@ async function processLogo() {
     .toFile(path.join(outDir, "logo-white-192.png"));
 }
 
+// `--only name[,name]` rebuilds just those photos (no logo, manifest untouched).
+const onlyArg = process.argv.indexOf("--only");
+const only = onlyArg > -1 ? new Set(process.argv[onlyArg + 1].split(",")) : null;
+
 await mkdir(outDir, { recursive: true });
 const manifest = [];
 for (const img of images) {
+  if (only && !only.has(img.name)) continue;
   const r = await processPhoto(img);
   manifest.push(r);
   console.log(r.name, r.sizes.map((s) => `${s.width}x${s.height}`).join(" "));
 }
+if (only) process.exit(0);
 await processLogo();
 await writeFile(path.join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
 console.log("done → " + outDir);

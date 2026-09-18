@@ -79,6 +79,10 @@ svg {
 img {
   height: auto;
 }
+figure,
+dd {
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -784,18 +788,36 @@ body.menu-open .brand .brand__sub {
 }
 
 /* ---------- Hero ---------- */
+/* Hero rhythm: text starts close under the header; the intro column starts on
+   the headline's line, the eyebrow/breadcrumb sits above both (--kicker). */
 .hero {
-  padding-top: clamp(3rem, 8vw, 6.5rem);
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
   padding-bottom: 0;
 }
 .hero__grid {
   display: grid;
   gap: 2rem 3rem;
-  align-items: end;
+  align-items: start;
 }
 @media (min-width: 900px) {
   .hero__grid {
-    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    column-gap: clamp(3rem, 6vw, 5.5rem);
+    --kicker: calc(0.74rem * 1.6 + 1.25rem);
+  }
+  .hero__aside {
+    padding-top: var(--kicker);
+  }
+  .hero__grid .hero__aside .lede {
+    font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  }
+}
+.hero__grid .hero__aside .lede {
+  margin-top: 0;
+}
+@media (max-width: 899px) {
+  .hero__grid {
+    row-gap: 1.5rem;
   }
 }
 .hero h1 {
@@ -862,6 +884,191 @@ html:not([lang="en"]) .hero h1 {
 @media (max-width: 600px) {
   .hero__caption span:last-child {
     display: none;
+  }
+}
+
+/* Home hero: headline left; intro, product route and request on the right. */
+.hero__grid--home {
+  /* small screens: product route and request first, the longer intro after */
+  grid-template-areas: "title" "route" "cta" "lede";
+  row-gap: 1.75rem;
+}
+.hero__title {
+  grid-area: title;
+}
+.hero__lede {
+  grid-area: lede;
+  margin: 0;
+}
+.route {
+  grid-area: route;
+}
+.hero__cta {
+  grid-area: cta;
+}
+@media (min-width: 900px) {
+  .hero__grid--home {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    grid-template-areas: "title lede" "title route" "title cta";
+    grid-template-rows: auto auto 1fr;
+    column-gap: clamp(3rem, 6vw, 5.5rem);
+  }
+  .hero__lede {
+    margin-top: var(--kicker);
+    font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  }
+}
+
+.route__label {
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.route__list {
+  border-top: 1px solid var(--line-strong);
+}
+.route__list a {
+  display: grid;
+  grid-template-columns: 2.1rem minmax(0, 1fr) auto 1.1rem;
+  align-items: baseline;
+  column-gap: 0.9rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  transition: color 0.25s;
+}
+.route__num {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--brass-2);
+}
+.route__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.9vw, 1.7rem);
+  line-height: 1.15;
+}
+.route__meta {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.route__list svg {
+  width: 18px;
+  height: 18px;
+  align-self: center;
+  transition: transform 0.3s var(--ease);
+}
+.route__list a:hover {
+  color: var(--green);
+}
+.route__list a:hover svg {
+  transform: translateX(4px);
+}
+@media (max-width: 420px) {
+  .route__meta {
+    display: none;
+  }
+  .route__list a {
+    grid-template-columns: 2.1rem minmax(0, 1fr) 1.1rem;
+  }
+}
+
+/* Home hero image: wool and beef side by side, roughly 60/40. */
+.hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(0.5rem, 1vw, 1.25rem);
+  height: clamp(260px, 32vw, 460px);
+  margin-top: clamp(2rem, 3.5vw, 3rem);
+}
+.hero-split__item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: var(--radius-img);
+  background: var(--paper-3);
+  color: #fff;
+  isolation: isolate;
+}
+.hero-split__item picture {
+  display: contents;
+}
+.hero-split__item--beef img {
+  object-position: 50% 80%;
+}
+.hero-split__item img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.4s var(--ease);
+}
+.hero-split__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(15, 42, 30, 0.62), rgba(15, 42, 30, 0) 48%);
+  pointer-events: none;
+}
+.hero-split__body {
+  display: block;
+  padding: clamp(0.9rem, 2.2vw, 1.75rem);
+}
+.hero-split__title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.3vw, 2.1rem);
+  line-height: 1.1;
+}
+.hero-split__num {
+  font-size: 0.6em;
+  color: var(--brass);
+}
+.hero-split__title svg {
+  width: 0.7em;
+  height: 0.7em;
+  align-self: center;
+  transition: transform 0.3s var(--ease);
+}
+.hero-split__note {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.78);
+}
+.hero-split__item:hover img {
+  transform: scale(1.03);
+}
+.hero-split__item:hover .hero-split__title svg {
+  transform: translateX(4px);
+}
+@media (max-width: 700px) {
+  .hero-split__note {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-split__item img,
+  .hero-split__title svg,
+  .route__list svg {
+    transition: none;
+  }
+  .hero-split__item:hover img {
+    transform: none;
   }
 }
 
@@ -1658,12 +1865,40 @@ a.index-row:hover .index-row__title h3 {
 
 /* ---------- Page hero (subpages) ---------- */
 .page-hero {
-  padding-top: clamp(3rem, 7vw, 5.5rem);
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+@media (min-width: 900px) {
+  .page-hero .hero__grid {
+    --kicker: calc(0.85rem * 1.6 + 1.5rem);
+  }
 }
 .page-hero h1 {
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   max-width: 16ch;
+}
+/* Legal pages: functional, title close to the header, straight into the text. */
+.page-hero--compact {
+  padding-top: clamp(1.5rem, 2.6vw, 2.25rem);
+  padding-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+.page-hero--compact > .container {
+  padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  border-bottom: 1px solid var(--line);
+}
+.page-hero--compact .breadcrumb {
+  margin-bottom: 0.9rem;
+}
+.page-hero--compact h1 {
+  font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+  max-width: none;
+}
+.page-hero--compact .lede {
+  margin-top: 0.9rem;
+  font-size: 1.1rem;
+}
+.page-hero--compact + .section .prose > h2:first-child {
+  margin-top: 0;
 }
 .page-hero .lede {
   margin-top: 1.5rem;
@@ -1691,6 +1926,13 @@ a.index-row:hover .index-row__title h3 {
 
 /* ---------- Prose (legal pages) ---------- */
 .prose {
+  max-width: 72ch;
+}
+/* inside a container: keep the line length, but align with the page title */
+.container.prose {
+  max-width: none;
+}
+.container.prose > * {
   max-width: 72ch;
 }
 .prose h2 {
@@ -2267,6 +2509,9 @@ a.index-row:hover .index-row__title h3 {
 .feature__head h2,
 .feature__head h3 {
   font-size: clamp(1.9rem, 3vw, 2.6rem);
+}
+.feature h2 + .lede {
+  margin-top: 1.25rem;
 }
 .feature .btn-row {
   margin-top: 1.75rem;

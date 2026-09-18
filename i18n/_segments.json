@@ -186,6 +186,35 @@
     ]
   },
   {
+    "text": "Current sourcing",
+    "pages": [
+      "index.html"
+    ]
+  },
+  {
+    "text": "Wool & natural fibres",
+    "pages": [
+      "index.html",
+      "sourcing.html",
+      "wool.html",
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Active",
+    "pages": [
+      "index.html",
+      "sourcing.html"
+    ]
+  },
+  {
+    "text": "Enquiries open",
+    "pages": [
+      "index.html",
+      "sourcing.html"
+    ]
+  },
+  {
     "text": "Discuss your sourcing requirements",
     "pages": [
       "index.html",
@@ -205,10 +234,16 @@
     ]
   },
   {
-    "text": "July 2026",
+    "text": "Cattle on open natural grassland",
+    "pages": [
+      "index.html"
+    ]
+  },
+  {
+    "text": "Pasture-raised cattle · illustration",
     "pages": [
       "index.html",
-      "wool.html"
+      "beef.html"
     ]
   },
   {
@@ -369,13 +404,6 @@
     ]
   },
   {
-    "text": "Active",
-    "pages": [
-      "index.html",
-      "sourcing.html"
-    ]
-  },
-  {
     "text": "Wool tops and scoured wool, produced to order.",
     "pages": [
       "index.html"
@@ -490,12 +518,6 @@
     ]
   },
   {
-    "text": "Cattle on open natural grassland",
-    "pages": [
-      "index.html"
-    ]
-  },
-  {
     "text": "Premium beef cuts",
     "pages": [
       "index.html"
@@ -512,13 +534,6 @@
     "text": "02 · Beef",
     "pages": [
       "index.html"
-    ]
-  },
-  {
-    "text": "Enquiries open",
-    "pages": [
-      "index.html",
-      "sourcing.html"
     ]
   },
   {
@@ -1386,15 +1401,6 @@
     ]
   },
   {
-    "text": "Wool & natural fibres",
-    "pages": [
-      "index.html",
-      "sourcing.html",
-      "wool.html",
-      "beef.html"
-    ]
-  },
-  {
     "text": "Group & legal",
     "pages": [
       "index.html",
@@ -1883,6 +1889,12 @@
   },
   {
     "text": "Combing line · partner mill, Uruguay",
+    "pages": [
+      "wool.html"
+    ]
+  },
+  {
+    "text": "July 2026",
     "pages": [
       "wool.html"
     ]
@@ -3022,12 +3034,6 @@
   },
   {
     "text": "Cattle grazing on open natural grassland",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Pasture-raised cattle · illustration",
     "pages": [
       "beef.html"
     ]

@@ -99,27 +99,46 @@
     <!-- ============ HERO ============ -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <div class="hero__grid">
-          <div>
+        <div class="hero__grid hero__grid--home">
+          <div class="hero__title">
             <p class="eyebrow reveal">Kunz Sourcing · San José, Uruguay</p>
             <h1 id="hero-title" class="reveal" style="--i:1">Sourcing from Uruguay, <em>handled on the ground.</em></h1>
           </div>
-          <div class="hero__aside reveal" style="--i:2">
-            <p class="lede">Kunz Sourcing is the sourcing and export division of Kunz Global. From our base in Uruguay we identify suppliers, validate lots against your specification and coordinate shipment from the Port of Montevideo. Two product areas today: wool tops and scoured wool for the textile industry, and pasture-raised beef for European importers.</p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="#request">Discuss your sourcing requirements <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a class="btn btn--ghost" href="sourcing.html">What we source</a>
-            </div>
+          <p class="lede hero__lede reveal" style="--i:2">Kunz Sourcing is the sourcing and export division of Kunz Global. From our base in Uruguay we identify suppliers, validate lots against your specification and coordinate shipment from the Port of Montevideo. Two product areas today: wool tops and scoured wool for the textile industry, and pasture-raised beef for European importers.</p>
+          <nav class="route reveal" style="--i:3" aria-labelledby="route-title">
+            <p class="route__label" id="route-title">Current sourcing</p>
+            <ol class="route__list">
+              <li><a href="wool.html"><span class="route__num">01</span><span class="route__name">Wool &amp; natural fibres</span><span class="route__meta">Active</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+              <li><a href="beef.html"><span class="route__num">02</span><span class="route__name">Beef</span><span class="route__meta">Enquiries open</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            </ol>
+          </nav>
+          <div class="btn-row hero__cta reveal" style="--i:4">
+            <a class="btn btn--primary" href="#request">Discuss your sourcing requirements <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
 
-        <figure class="hero__media reveal" style="--i:3">
-          <picture>
-            <source type="image/webp" srcset="assets/img/warehouse-bales-1600.webp 1600w, assets/img/warehouse-bales-1200.webp 1200w, assets/img/warehouse-bales-800.webp 800w, assets/img/warehouse-bales-480.webp 480w" sizes="(min-width: 1340px) 1240px, 92vw">
-            <img src="assets/img/warehouse-bales-1200.jpg" srcset="assets/img/warehouse-bales-1600.jpg 1600w, assets/img/warehouse-bales-1200.jpg 1200w, assets/img/warehouse-bales-800.jpg 800w, assets/img/warehouse-bales-480.jpg 480w" sizes="(min-width: 1340px) 1240px, 92vw" width="1600" height="747" alt="Press-packed bales of wool tops stacked in the warehouse of a Uruguayan combing mill" fetchpriority="high" decoding="async">
-          </picture>
-          <figcaption class="hero__caption"><span>Wool tops, press-packed for export · partner combing mill, Uruguay</span><span>July 2026</span></figcaption>
-        </figure>
+        <div class="hero-split reveal" style="--i:3">
+          <a class="hero-split__item" href="wool.html">
+            <picture>
+              <source type="image/webp" srcset="assets/img/warehouse-bales-1600.webp 1600w, assets/img/warehouse-bales-1200.webp 1200w, assets/img/warehouse-bales-800.webp 800w, assets/img/warehouse-bales-480.webp 480w" sizes="(min-width: 1340px) 740px, 56vw">
+              <img src="assets/img/warehouse-bales-1200.jpg" srcset="assets/img/warehouse-bales-1600.jpg 1600w, assets/img/warehouse-bales-1200.jpg 1200w, assets/img/warehouse-bales-800.jpg 800w, assets/img/warehouse-bales-480.jpg 480w" sizes="(min-width: 1340px) 740px, 56vw" width="1600" height="747" alt="Press-packed bales of wool tops stacked in the warehouse of a Uruguayan combing mill" fetchpriority="high" decoding="async">
+            </picture>
+            <span class="hero-split__body">
+              <span class="hero-split__title"><span class="hero-split__num">01</span>Wool &amp; natural fibres<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="hero-split__note">Wool tops, press-packed for export · partner combing mill, Uruguay</span>
+            </span>
+          </a>
+          <a class="hero-split__item hero-split__item--beef" href="beef.html">
+            <picture>
+              <source type="image/webp" srcset="assets/img/cattle-tall-740.webp 740w, assets/img/cattle-tall-560.webp 560w, assets/img/cattle-tall-400.webp 400w" sizes="(min-width: 1340px) 490px, 38vw">
+              <img src="assets/img/cattle-tall-560.jpg" srcset="assets/img/cattle-tall-740.jpg 740w, assets/img/cattle-tall-560.jpg 560w, assets/img/cattle-tall-400.jpg 400w" sizes="(min-width: 1340px) 490px, 38vw" width="740" height="925" alt="Cattle on open natural grassland" decoding="async">
+            </picture>
+            <span class="hero-split__body">
+              <span class="hero-split__title"><span class="hero-split__num">02</span>Beef<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span class="hero-split__note">Pasture-raised cattle · illustration</span>
+            </span>
+          </a>
+        </div>
 
         <dl class="fact-strip">
           <div class="fact-strip__item reveal"><dt class="fact-strip__label">Based in</dt><dd class="fact-strip__value">San José, Uruguay</dd></div>
