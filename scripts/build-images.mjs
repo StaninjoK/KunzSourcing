@@ -51,6 +51,8 @@ const images = [
   { name: "tops-shelf", src: PROD + "13.47.38.jpeg", aspect: [4, 5], widths: [740, 560, 400] },
   { name: "greasy-wool", src: PROD + "13.47.41 (1).jpeg", aspect: [4, 5], widths: [740, 560, 400] },
   { name: "warehouse-tall", src: PROD + "13.47.56 (2).jpeg", aspect: [4, 5], widths: [740, 560, 400] },
+  // Home selector: 4:3 close-up of the combed fibre on a tops bump, no rack or machinery in frame
+  { name: "wool-fibre", src: PROD + "13.47.55.jpeg", crop: { left: 30, top: 580, width: 687, height: 515 }, warm: true, widths: [680, 480] },
   {
     name: "bales-export",
     src: "Webseite/Webseite Aktuell/Images/nicht genutzte Bilder für Webseite/Original-Verladung.jpeg",
@@ -71,6 +73,8 @@ const OLD = "Webseite/Webseite Aktuell/Images/";
 images.push(
   { name: "cattle-pasture", src: OLD + "Weiderinder.png", crop: { left: 0, top: 600, width: 1122, height: 600 }, widths: [1100, 800, 480] },
   { name: "cattle-tall", src: OLD + "Weiderinder.png", aspect: [4, 5], widths: [740, 560, 400] },
+  // Home selector: same 4:3 frame as wool-fibre
+  { name: "cattle-home", src: OLD + "Weiderinder.png", crop: { left: 0, top: 500, width: 1122, height: 842 }, widths: [1100, 800, 480] },
   { name: "beef-cuts", src: OLD + "Cuts.png", widths: [1200, 800, 480] },
   { name: "beef-carcass", src: OLD + "Hälfte.png", widths: [1200, 800, 480] }
 );
@@ -109,6 +113,8 @@ async function processPhoto(img) {
     pipeline = pipeline
       .resize({ width, height, fit: "cover", position: img.position || "centre", withoutEnlargement: false })
       .modulate({ brightness: 1.02, saturation: 0.92 });
+    // warm: a slight shift towards the paper tone so white fibre sits next to warm landscape photos
+    if (img.warm) pipeline = pipeline.linear([1.02, 1.0, 0.95], [4, 2, -2]);
     const stem = path.join(outDir, `${img.name}-${width}`);
     await pipeline.clone().webp({ quality: 78, effort: 5 }).toFile(stem + ".webp");
     await pipeline.clone().jpeg({ quality: 80, mozjpeg: true, progressive: true }).toFile(stem + ".jpg");

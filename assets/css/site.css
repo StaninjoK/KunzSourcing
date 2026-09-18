@@ -932,10 +932,10 @@ html:not([lang="en"]) .hero h1 {
 }
 .route__list a {
   display: grid;
-  grid-template-columns: 2.1rem minmax(0, 1fr) auto 1.1rem;
+  grid-template-columns: 2.1rem minmax(0, 1fr) 1.1rem;
   align-items: baseline;
   column-gap: 0.9rem;
-  padding: 0.85rem 0;
+  padding: 0.8rem 0;
   border-bottom: 1px solid var(--line);
   color: var(--ink);
   transition: color 0.25s;
@@ -950,14 +950,6 @@ html:not([lang="en"]) .hero h1 {
   font-size: clamp(1.4rem, 1.9vw, 1.7rem);
   line-height: 1.15;
 }
-.route__meta {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  white-space: nowrap;
-}
 .route__list svg {
   width: 18px;
   height: 18px;
@@ -970,38 +962,33 @@ html:not([lang="en"]) .hero h1 {
 .route__list a:hover svg {
   transform: translateX(4px);
 }
-@media (max-width: 420px) {
-  .route__meta {
-    display: none;
-  }
-  .route__list a {
-    grid-template-columns: 2.1rem minmax(0, 1fr) 1.1rem;
-  }
-}
 
-/* Home hero image: wool and beef side by side, roughly 60/40. */
+/* Home product selector: wool and beef as two identical 50/50 tiles. */
 .hero-split {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: clamp(0.5rem, 1vw, 1.25rem);
-  height: clamp(260px, 32vw, 460px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(0.75rem, 1.2vw, 1.25rem);
   margin-top: clamp(2rem, 3.5vw, 3rem);
+  --tile-pad: clamp(1.1rem, 2.2vw, 1.9rem);
 }
 .hero-split__item {
   position: relative;
   display: flex;
   align-items: flex-end;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   border-radius: var(--radius-img);
   background: var(--paper-3);
   color: #fff;
   isolation: isolate;
 }
+@media (max-width: 599px) {
+  .hero-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .hero-split__item picture {
   display: contents;
-}
-.hero-split__item--beef img {
-  object-position: 50% 80%;
 }
 .hero-split__item img {
   position: absolute;
@@ -1017,49 +1004,74 @@ html:not([lang="en"]) .hero h1 {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to top, rgba(15, 42, 30, 0.62), rgba(15, 42, 30, 0) 48%);
+  background: linear-gradient(to top, rgba(11, 31, 22, 0.74), rgba(11, 31, 22, 0) 56%);
   pointer-events: none;
 }
 .hero-split__body {
   display: block;
-  padding: clamp(0.9rem, 2.2vw, 1.75rem);
+  width: 100%;
+  padding: var(--tile-pad);
+}
+.hero-split__num {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.82);
+}
+.hero-split__num::after {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: currentColor;
 }
 .hero-split__title {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.2rem 0.75rem;
+  align-items: center;
+  gap: 0.9rem;
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.3vw, 2.1rem);
-  line-height: 1.1;
-}
-.hero-split__num {
-  font-size: 0.6em;
-  color: var(--brass);
+  font-size: clamp(2.1rem, 3.6vw, 3.3rem);
+  line-height: 1;
 }
 .hero-split__title svg {
-  width: 0.7em;
-  height: 0.7em;
-  align-self: center;
+  width: 0.55em;
+  height: 0.55em;
   transition: transform 0.3s var(--ease);
 }
-.hero-split__note {
-  display: block;
-  margin-top: 0.45rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.78);
+.hero-split__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+@media (max-width: 899px) {
+  /* narrow tiles: always two lines, so both labels sit at the same height in every language */
+  .hero-split__meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.hero-split__sub {
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero-split__tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.66);
 }
 .hero-split__item:hover img {
   transform: scale(1.03);
 }
 .hero-split__item:hover .hero-split__title svg {
-  transform: translateX(4px);
-}
-@media (max-width: 700px) {
-  .hero-split__note {
-    display: none;
-  }
+  transform: translateX(5px);
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-split__item img,

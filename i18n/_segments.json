@@ -192,29 +192,6 @@
     ]
   },
   {
-    "text": "Wool & natural fibres",
-    "pages": [
-      "index.html",
-      "sourcing.html",
-      "wool.html",
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Active",
-    "pages": [
-      "index.html",
-      "sourcing.html"
-    ]
-  },
-  {
-    "text": "Enquiries open",
-    "pages": [
-      "index.html",
-      "sourcing.html"
-    ]
-  },
-  {
     "text": "Discuss your sourcing requirements",
     "pages": [
       "index.html",
@@ -222,13 +199,19 @@
     ]
   },
   {
-    "text": "Press-packed bales of wool tops stacked in the warehouse of a Uruguayan combing mill",
+    "text": "Close-up of combed white wool tops from a Uruguayan combing mill",
     "pages": [
       "index.html"
     ]
   },
   {
-    "text": "Wool tops, press-packed for export · partner combing mill, Uruguay",
+    "text": "Natural fibres",
+    "pages": [
+      "index.html"
+    ]
+  },
+  {
+    "text": "Partner mill, Uruguay",
     "pages": [
       "index.html"
     ]
@@ -240,10 +223,15 @@
     ]
   },
   {
-    "text": "Pasture-raised cattle · illustration",
+    "text": "Pasture-raised",
     "pages": [
-      "index.html",
-      "beef.html"
+      "index.html"
+    ]
+  },
+  {
+    "text": "Illustration",
+    "pages": [
+      "index.html"
     ]
   },
   {
@@ -404,6 +392,13 @@
     ]
   },
   {
+    "text": "Active",
+    "pages": [
+      "index.html",
+      "sourcing.html"
+    ]
+  },
+  {
     "text": "Wool tops and scoured wool, produced to order.",
     "pages": [
       "index.html"
@@ -534,6 +529,13 @@
     "text": "02 · Beef",
     "pages": [
       "index.html"
+    ]
+  },
+  {
+    "text": "Enquiries open",
+    "pages": [
+      "index.html",
+      "sourcing.html"
     ]
   },
   {
@@ -1393,6 +1395,15 @@
   },
   {
     "text": "Site",
+    "pages": [
+      "index.html",
+      "sourcing.html",
+      "wool.html",
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Wool & natural fibres",
     "pages": [
       "index.html",
       "sourcing.html",
@@ -3034,6 +3045,12 @@
   },
   {
     "text": "Cattle grazing on open natural grassland",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Pasture-raised cattle · illustration",
     "pages": [
       "beef.html"
     ]
