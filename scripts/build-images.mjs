@@ -73,6 +73,8 @@ const OLD = "Webseite/Webseite Aktuell/Images/";
 images.push(
   { name: "cattle-pasture", src: OLD + "Weiderinder.png", crop: { left: 0, top: 600, width: 1122, height: 600 }, widths: [1100, 800, 480] },
   { name: "cattle-tall", src: OLD + "Weiderinder.png", aspect: [4, 5], widths: [740, 560, 400] },
+  // Home selector wool tile: merino sheep on pasture (render, labelled as illustration); crop leaves out the logo top left
+  { name: "sheep-home", src: "IMG/weidebild Merino.png", crop: { left: 360, top: 240, width: 1175, height: 784 }, widths: [1100, 800, 480] },
   // Home selector: same 4:3 frame as wool-fibre
   { name: "cattle-home", src: OLD + "Weiderinder.png", crop: { left: 0, top: 500, width: 1122, height: 842 }, widths: [1100, 800, 480] },
   { name: "beef-cuts", src: OLD + "Cuts.png", widths: [1200, 800, 480] },
