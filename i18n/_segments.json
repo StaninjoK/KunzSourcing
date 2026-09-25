@@ -515,8 +515,7 @@
   {
     "text": "Beef quarters in a chilling room",
     "pages": [
-      "index.html",
-      "beef.html"
+      "index.html"
     ]
   },
   {
@@ -608,8 +607,7 @@
     "text": "Discuss a beef sourcing request",
     "pages": [
       "index.html",
-      "sourcing.html",
-      "beef.html"
+      "sourcing.html"
     ]
   },
   {
@@ -1579,8 +1577,7 @@
   {
     "text": "Premium cuts",
     "pages": [
-      "sourcing.html",
-      "beef.html"
+      "sourcing.html"
     ]
   },
   {
@@ -2037,8 +2034,7 @@
   {
     "text": "Presentation",
     "pages": [
-      "wool.html",
-      "beef.html"
+      "wool.html"
     ]
   },
   {
@@ -2984,7 +2980,7 @@
     ]
   },
   {
-    "text": "Pasture-raised Uruguayan beef sourced to specification for importers, wholesalers and processors: premium cuts, processing cuts and industrial beef from EU-approved export plants, chilled or frozen, in full reefer container loads.",
+    "text": "Catalogue of frozen, grass-fed Uruguayan beef cuts for the EU: tenderloin, striploin, rib eye, picanha, rump, round, flank and forequarter cuts from an EU-approved export plant, vacuum-packed, in full reefer container loads.",
     "pages": [
       "beef.html"
     ]
@@ -3026,13 +3022,13 @@
     ]
   },
   {
-    "text": "Kunz Sourcing handles beef enquiries for European importers, wholesalers and processors. Cuts, packaging and destination are agreed per request, supply comes from EU-approved Uruguayan export plants, and every product claim is backed by the plant's documentation.",
+    "text": "Kunz Sourcing handles beef enquiries for European importers, wholesalers and processors. The catalogue below shows the boneless cuts currently offered by an EU-approved Uruguayan export plant, with trim and packing taken from the plant's specification sheets.",
     "pages": [
       "beef.html"
     ]
   },
   {
-    "text": "Sourcing options",
+    "text": "View the cut catalogue",
     "pages": [
       "beef.html"
     ]
@@ -3058,7 +3054,7 @@
     ]
   },
   {
-    "text": "Beef, chilled or frozen; vacuum-packed cuts or bulk cartons",
+    "text": "Boneless cuts, vacuum-packed, frozen at −18 °C; chilled on request",
     "pages": [
       "beef.html"
     ]
@@ -3076,19 +3072,859 @@
     ]
   },
   {
-    "text": "Status · September 2026",
+    "text": "Current programme · September 2026",
     "pages": [
       "beef.html"
     ]
   },
   {
-    "text": "Kunz Sourcing takes beef enquiries now and is setting up supply with EU-approved Uruguayan plants. We are open about lead times: plant, specification and documentation are confirmed for each enquiry before we quote.",
+    "text": "An EU-approved Uruguayan export plant currently offers the frozen, grass-fed cuts in the catalogue for the European market. Quantities per cut and loading dates change with production; they are confirmed for each enquiry before we quote.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Catalogue",
     "pages": [
       "beef.html"
     ]
   },
   {
     "text": "Logistics",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Beef catalogue",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Boneless cuts for the European market.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The cuts in the current programme of an EU-approved Uruguayan export plant, grouped by primal. Each cut is produced to the plant's specification sheet; the sheet for your cut comes with the offer.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Cut groups",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Loin and rib",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Rump",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Round",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Flank and skirt",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Forequarter",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Packing and standard",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The highest-value cuts of the carcass, for steak programmes in retail, food service and the delicatessen trade.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Beef tenderloin, chain off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Lomo",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Tenderloin",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The most tender muscle of the carcass, supplied chain off and skinned, with the inner side well trimmed. For fillet steaks, medallions and whole roasts.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Trim",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Chain off, skin off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Weight grades",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "2–3, 3–4 and 4–5 lb per piece",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Carton",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "14 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Request this cut",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Beef striploin, chain off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Bife angosto",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Striploin",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The loin muscle behind the rib, from the lumbar and last dorsal vertebrae. For sirloin and strip steaks, entrecôte and roast beef.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Chain off, 3 ribs",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Quality",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Controlled pH",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "4 or 5 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Beef rib eye roll, cap off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Bife ancho",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Rib eye · cube roll",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The rib section of the loin with the cap removed. For rib-eye steaks, entrecôte and roasting.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Cap off, 5 ribs",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Controlled pH (5.8)",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "10 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Three separately trimmed cuts from the rump, including the fat-capped picanha that South American grilling is known for.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Picanha, rump cap with fat cover",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Tapa de cuadril",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Picanha · rump cap",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The cap of the rump with its fat cover. Cut into steaks or roasted whole.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Silverskin off, edges trimmed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Fat cover",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Natural fat cap",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "16 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Heart of rump, trimmed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Corazón de cuadril",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Heart of rump",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The lean centre of the rump, without cap. For rump steaks, roasts and slicing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Trimmed to the membrane",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "10 or 12 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Tri-tip, tail of rump",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Colita de cuadril",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Tri-tip · tail of rump",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The triangular tail of the rump, with a good fat cover and neatly trimmed. For grilling and roasting whole.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Neatly trimmed, fat cover on",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Lean, large cuts of the hindleg for roasting, slicing, schnitzel and further processing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Topside, cap off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Nalga sin tapa",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Topside · cap off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The inside of the round with cap and vein removed, trimmed to the membrane and free of visible fat. For roasts, schnitzel, minute steaks and dicing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Size grades",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "3–4 kg and over 4 kg",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Controlled pH (below 5.8)",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Packing",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Vacuum-packed, cartons",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Outside flat with fat cover",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Cuadrada",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Flat · outside flat",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The outer side of the round, with fat cover and the silverskin removed. For roasting, slicing, braising and curing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Fat on, silverskin off",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "5 or 6 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Beef knuckle, trimmed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Bola de lomo",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Knuckle",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The front of the round, trimmed to the membrane and free of veins, tendons and cartilage. For lean roasts, steaks and dicing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Controlled pH (below 6.0)",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "5 or 6 pieces, individually wrapped",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Also in this group",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Eye round",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Peceto",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Small, even and lean. For roasts, carpaccio and vitello tonnato.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Request round cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Thin, coarse-grained cuts with pronounced flavour, for grilling and for bavette and skirt steaks.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Flap meat",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Pulpón de vacío",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "From the upper part of the flank, trimmed to the membrane. Coarse grain and full flavour; for bavette steaks, grilling and marinating.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "15 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Flank steak",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Bife de vacío",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The flat abdominal muscle, trimmed to the membrane. Grilled whole and sliced across the grain.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "30 packs, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Outside skirt",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Entraña fina",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The diaphragm muscle; intense flavour, for grilling.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Inside skirt",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Falsa entraña",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "From the inner flank; for grilling, fajitas and stir-fry.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Request flank and skirt cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Shoulder, chuck and brisket cuts for braising, food service and the processing industry.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Heart of clod from the shoulder",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Paleta",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Heart of clod",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "The heart of the shoulder clod, with the silverskin left on. For braising, pot roasts, slicing and processing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Silverskin on",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "8 or 10 pieces, vacuum-packed",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Chuck",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Aguja",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Neck and upper shoulder; braising, mince and processing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Oyster blade",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Marucha",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Top blade of the shoulder; flat-iron steaks and braising.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Chuck tender",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Chingolo",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Small, lean shoulder muscle; braising and dicing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Brisket, boneless",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Pecho sin hueso",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Slow cooking, smoking, pastrami and processing.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Request forequarter cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "What applies to every cut in the programme, as set out in the plant's specification sheets.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Vacuum-packed beef cuts packed in an export carton",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Vacuum-packed pieces in the export carton, as supplied.",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Frozen at −18 °C",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Shelf life",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "24 months frozen",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Primary packing",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Vacuum-packed, shrink bag, inner product label per piece",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Secondary packing",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Corrugated export carton, fixed pieces per carton by cut",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Labelling",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Product names in five languages, including German, French and Italian; cartons marked for the EU",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Carcass selection",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Steers and cows, selected by carcass classification and fat grade (1 to 3)",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Feeding",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Grass-fed programme; grain-fed programmes on request",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Destination",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "European Union; other markets on request",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Microbiological limits (including Salmonella, Listeria and STEC) are part of each specification sheet. Chilled cuts, other trims and processing beef can be requested; availability, quantities and loading dates are confirmed per enquiry.",
     "pages": [
       "beef.html"
     ]
@@ -3166,126 +4002,6 @@
     ]
   },
   {
-    "text": "What can be sourced",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Cuts and specifications, agreed per enquiry.",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "There is no catalogue. We work from your specification and confirm with the plant what can be produced, packed and certified for your market.",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Premium beef cuts: rib eye, tenderloin and striploin",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "01 · Premium cuts",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Loin and hindquarter cuts",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "For retail, food service and the delicatessen trade: cuts such as tenderloin (lomo), striploin (bife de chorizo), rib eye and rump. Vacuum-packed and boxed, chilled or frozen, labelled to your requirement.",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Cuts",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "To specification, e.g. tenderloin, striploin, rib eye, rump",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Vacuum-packed, boxed",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Chilled or frozen",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Importers, food service, delicatessen wholesale",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Plant specification and health certificate per lot",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Full reefer container loads",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "02 · Processing cuts and industrial beef",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Forequarter cuts, trimmings, manufacturing beef",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "For the processing industry: forequarter cuts, trimmings and manufacturing beef in bulk cartons to specification. Whole carcasses or quarters only where permitted for origin and destination and operationally feasible.",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Bulk in cartons, to specification",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Frozen or chilled, as agreed",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
-    "text": "Meat processors, industrial buyers",
-    "pages": [
-      "beef.html"
-    ]
-  },
-  {
     "text": "Claims follow the plant's paperwork.",
     "pages": [
       "beef.html"
@@ -3316,7 +4032,7 @@
     ]
   },
   {
-    "text": "Product specification sheet: cuts, trim, weight ranges, packaging",
+    "text": "Specification sheet per cut: anatomy, trim, carcass selection, packing, shelf life and microbiological limits",
     "pages": [
       "beef.html"
     ]
@@ -3442,7 +4158,7 @@
     ]
   },
   {
-    "text": "Quotation, contract and payment terms per operation; deposit and balance as agreed.",
+    "text": "Quotation, contract and payment terms per operation; typically a deposit against the proforma invoice and the balance against copies of the shipping documents.",
     "pages": [
       "beef.html"
     ]
@@ -3520,7 +4236,7 @@
     ]
   },
   {
-    "text": "FOB Montevideo standard · CIF on request",
+    "text": "CFR European port, FOB Montevideo or CIF, per offer",
     "pages": [
       "beef.html"
     ]
@@ -3610,6 +4326,12 @@
     ]
   },
   {
+    "text": "Chilled or frozen",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
     "text": "Condition, packaging and shelf-life requirements change both the plant's price and the logistics.",
     "pages": [
       "beef.html"
@@ -3622,7 +4344,7 @@
     ]
   },
   {
-    "text": "FOB Montevideo or CIF: freight, insurance and the market of the day are part of the number.",
+    "text": "CFR, FOB Montevideo or CIF: freight, insurance and the market of the day are part of the number.",
     "pages": [
       "beef.html"
     ]
@@ -3646,19 +4368,49 @@
     ]
   },
   {
-    "text": "Product type",
+    "text": "Cut group",
     "pages": [
       "beef.html"
     ]
   },
   {
-    "text": "Processing cuts and industrial beef",
+    "text": "Loin and rib cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Rump cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Round cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Flank and skirt cuts",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Forequarter cuts",
     "pages": [
       "beef.html"
     ]
   },
   {
     "text": "Mixed assortment",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Processing cuts and industrial beef",
     "pages": [
       "beef.html"
     ]
@@ -3688,13 +4440,25 @@
     ]
   },
   {
-    "text": "Cuts and requirements",
+    "text": "Cuts of interest",
     "pages": [
       "beef.html"
     ]
   },
   {
-    "text": "Cuts, weight ranges, packaging, labelling, certificates required, existing supplier relationships …",
+    "text": "e.g. striploin, rib eye, picanha",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Requirements",
+    "pages": [
+      "beef.html"
+    ]
+  },
+  {
+    "text": "Quantities per cut, weight grades, packaging, labelling, certificates required, existing supplier relationships …",
     "pages": [
       "beef.html"
     ]

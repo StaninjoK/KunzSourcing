@@ -9,7 +9,7 @@ Static website for **kunzsourcing.com**, hosted on GitHub Pages (branch `main`, 
 | `index.html` | Home: hero, Uruguay as origin, what we source (wool + beef), process, presence, documentation, Kunz Global, general sourcing request |
 | `sourcing.html` | What we source: product-area panels, side-by-side comparison, further categories |
 | `wool.html` | Wool & natural fibres: at a glance, product forms, fineness, processing, certificate data, shipping timeline, pricing factors, wool request form |
-| `beef.html` | Beef: at a glance, status note, Uruguay as beef origin, sourcing options, quality & documentation, process, logistics, pricing factors, beef request form |
+| `beef.html` | Beef: at a glance, current programme note, cut catalogue (five cut groups plus packing and standard), Uruguay as beef origin, quality & documentation, process, logistics, pricing factors, beef request form (`?type=` and `?cuts=` prefill it) |
 | `legal-notice.html`, `terms.html`, `privacy.html` | Legal pages (English) |
 | `404.html` | GitHub Pages error page |
 | `grosshandel-wolle.html`, `handfearbereien.html`, `grosshandel-fleisch.html`, `impressum.html`, `agb.html`, `datenschutz.html` | Redirect stubs for the URLs of the previous site |
@@ -43,6 +43,8 @@ node scripts/check.mjs        # exits 1 on broken links, missing meta or images 
 ## Regenerating images
 
 The original photos are not in the repository. `scripts/build-images.mjs` reads them from the folder `Kunz Sourcing` two levels above this repo (override with `KS_SRC`) and needs the `sharp` package (`SHARP_PATH` may point to an existing installation).
+
+The beef catalogue photos (`cut-*`) are product shots taken from the plant's specification sheets. Only neutral product photos are used; labels, cartons with print and plant logos are left out or blurred (`cut-carton`). `node scripts/build-images.mjs --only cuts` rebuilds just these.
 
 ## Sourcing request form
 

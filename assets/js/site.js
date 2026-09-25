@@ -283,9 +283,14 @@
     };
     setStamp();
 
-    // Pre-select options from the query string, e.g. ?product=Scoured%20wool
+    // Pre-select options from the query string, e.g. ?product=Scoured%20wool;
+    // plain text fields (e.g. ?cuts=Striploin) are filled only while still empty.
     new URLSearchParams(location.search).forEach(function (v, k) {
       var el = form.elements.namedItem(k);
+      if (el && el.tagName === "INPUT" && el.type === "text" && !el.value) {
+        el.value = v.slice(0, 200);
+        return;
+      }
       if (!el || el.tagName !== "SELECT") return;
       var ok = Array.prototype.some.call(el.options, function (o) {
         return o.value === v;
