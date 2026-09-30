@@ -1690,6 +1690,28 @@ a.index-row:hover .index-row__title h3 {
   height: 64px;
   margin-bottom: 1.5rem;
 }
+/* Paco, the group's character: a quiet note, not a feature (brand rule: very low presence on this site) */
+.group__character {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  max-width: 34rem;
+  margin: 2rem 0 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+}
+.group__character img {
+  flex: none;
+  width: 96px;
+  height: auto;
+}
+.group__character figcaption {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
 .divisions {
   border-top: 1px solid var(--line);
 }
